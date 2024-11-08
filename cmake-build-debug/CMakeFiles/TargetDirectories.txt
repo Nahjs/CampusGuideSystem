@@ -1,0 +1,5 @@
+D:/CLion/untitled/cmake-build-debug/CMakeFiles/CampusGuide_DP_QT.dir
+D:/CLion/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/CLion/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/CLion/untitled/cmake-build-debug/CMakeFiles/CampusGuide_DP_QT_autogen_timestamp_deps.dir
+D:/CLion/untitled/cmake-build-debug/CMakeFiles/CampusGuide_DP_QT_autogen.dir
