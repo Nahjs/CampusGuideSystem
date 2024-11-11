@@ -1,16 +1,10 @@
 #ifndef INFORMATION_H
 #define INFORMATION_H
-
 #include <QWidget>
 #include <QGuiApplication>
-#include <QScreen>
-#include "AddInform.h"
-#include "inquiry.h"
-#include "bjutmap.h"
-#include "profession.h"
-#include "frmmain.h"
-#include "recommend.h"
-
+#include "Map.h"
+#include "Choose.h"
+#include "Inquiry.h"
 
 namespace Ui {
 class Information;
@@ -31,39 +25,26 @@ signals:
     void SignalStayTimeRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int);    //传递stayTime_route[allPlaceNum]
 
 private slots:
-    void GoToAddInformation(bool);
-    void GoToInquiry(bool);
-    void GoToProfessionIntro(bool);
-    void GoToRecommend(bool);
-    void GoToMap(bool);
-    void GoToSendEmail();
-    void BjutMapReturnToThis();
+    void ToChoose(bool);
+    void ToIntroduction(bool);
+    void ToPath(bool);
+    void BjtuMapReturnToThis();
 
     //用于传递参数的槽
     void doProcessDataToInform(int);
     void doProcessSaveWalkRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int);
-    void doProcessSaveArriveTimeToInform(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString);    //传递arriveTime[allPlaceNum]
-    void doProcessSaveStayTimeRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int);
-
 
 private:
     Ui::Information *ui;
-    AddInform *addInformaitonForm;
+    Choose *choose;
     Inquiry *inquiry;
-    Profession *profession;
-    Recommend *recommend;
-    bjutmap *MyMap;
-    frmMain w;
-    int flag_addInformation = 0; //标记信息录入界面是否被选中
+    Map *map;
+    int flag_choose = 0; //标记信息录入界面是否被选中
     int flag_inquiry = 0;   //标记信息查询界面是否被选中
-    int flag_profession = 0;    //标记专业介绍界面是否被选中
-    int flag_recommend = 0;    //标记选修课推荐界面是否被选中
+    int flag_path = 0;    //标记路线推荐界面是否被选中
 
     int walkRoute[allPlaceNum];
-    QDateTime arriveTime[allPlaceNum];
-    int stayTime_route[allPlaceNum];
-    int walkTime[allPlaceNum];
-
+    QList<QPushButton*> spotButtons;  // 用于存储景点按钮的列表
     void Init();
 };
 

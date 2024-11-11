@@ -1,5 +1,5 @@
 ﻿#include "Information.h"
-#include "ui_information.h"
+#include "ui_Information.h"
 #include <QDebug>
 #include<stdlib.h>
 
@@ -9,7 +9,6 @@ Information::Information(QWidget *parent) :
 {
     ui->setupUi(this);
     Init();
-
 }
 
 Information::~Information()
@@ -17,213 +16,107 @@ Information::~Information()
     delete ui;
 }
 
-
-/***************************************************功能实现*********************************************/
-
 void Information::Init(){
-
-    /***********************设置背景色****************************************/
-
     setAutoFillBackground(true);
-
+   // ui->addMapButton->hide();
     QPalette palette;
-    palette.setColor(QPalette::Window, QColor(255,255,240));
-    setPalette(palette);
+    palette.setColor(QPalette::Window, Qt::white);
+    this->setPalette(palette);
 
-    /**********************设置背景色完毕**************************************/
+    spotButtons = { ui->spot1, ui->spot2, ui->spot3, ui->spot4, ui->spot5, ui->spot6, ui->spot7 ,ui->spot8,ui->spot9,ui->spot10};
+    for(int i=0; i<10;i++){
+        spotButtons[i]->hide();
+    }
 
-    /**********************设置右侧地点信息栏背景色******************************/
 
-    QPalette p1;
-    p1.setColor(QPalette::Window, QColor(87,87,87));
-    ui->placeInformation->setAutoFillBackground(true);
-    ui->placeInformation->setPalette(p1);
-    ui->pushButton_addMap->hide();
-            /***********************设置完毕******************************************/
-
-    /***********************按钮设置***************************************/
-
-    ui->tb1->setStyleSheet(
-                "QToolButton{background-color:rgb(255, 255, 0);border-style:outset;border:2px groove gray;border-radius:10px;padding:2px 4px;}"
-                "QToolButton:hover{background-color:rgb(255, 255, 136)}"
-                "QToolButton:pressed{background-color:rgb(227, 227, 0);border-style:inset;}"
-                );
-
-    ui->tb2->setStyleSheet(
-                "QToolButton{background-color:rgb(255, 255, 0);border-style:outset;border:2px groove gray;border-radius:10px;padding:2px 4px;}"
-                "QToolButton:hover{background-color:rgb(255, 255, 136)}"
-                "QToolButton:pressed{background-color:rgb(227, 227, 0);border-style:inset;}"
-                );
-
-    ui->tb3->setStyleSheet(
-                "QToolButton{background-color:rgb(255, 255, 0);border-style:outset;border:2px groove gray;border-radius:10px;padding:2px 4px;}"
-                "QToolButton:hover{background-color:rgb(255, 255, 136)}"
-                "QToolButton:pressed{background-color:rgb(227, 227, 0);border-style:inset;}"
-                );
-
-    ui->tb4->setStyleSheet(
-                "QToolButton{background-color:rgb(255, 255, 0);border-style:outset;border:2px groove gray;border-radius:10px;padding:2px 4px;}"
-                "QToolButton:hover{background-color:rgb(255, 255, 136)}"
-                "QToolButton:pressed{background-color:rgb(227, 227, 0);border-style:inset;}"
-                );
-
-    ui->pushButton_addMap->setStyleSheet(
-                "QPushButton{background-color:rgb(255, 181, 106);border-style:outset;border:2px groove gray;border-radius:10px;padding:2px 4px}"
-                "QPushButton:hover{background-color:rgb(255, 213, 170)}"
-                "QPushButton:pressed{background-color:rgb(255, 163, 70);border-style:inset;}"
-                );
-
-    /**********************按钮设置完毕**************************************/
-
-    addInformaitonForm = new AddInform(this);
-    addInformaitonForm->hide();
+    choose = new Choose(this);
+    choose->hide();
     inquiry = new Inquiry(this);
     inquiry->hide();
-    profession = new Profession(this);
-    profession->hide();
-    MyMap = new bjutmap();
-    MyMap->hide();
-    recommend = new Recommend(this);
-    recommend->hide();
+    map = new Map();
+    map->hide();
 
-    //点击信息录入按钮，进入信息录入界面
-    connect(ui->tb1,SIGNAL(clicked(bool)),this,SLOT(GoToAddInformation(bool)));
-    //addInformaitonForm=new AddInformation(this);
-    connect(ui->tb2,SIGNAL(clicked(bool)),this,SLOT(GoToInquiry(bool)));
-    //connect(addInformaitonForm,SIGNAL(AddMap()),this,SLOT(GoToMap()));
-    connect(ui->tb3,SIGNAL(clicked(bool)),this,SLOT(GoToProfessionIntro(bool)));
-    connect(ui->tb4,SIGNAL(clicked(bool)),this,SLOT(GoToRecommend(bool)));
-    connect(ui->pushButton_addMap,SIGNAL(clicked(bool)),this,SLOT(GoToMap(bool)));
-    connect(MyMap,SIGNAL(callSendEmail()),this,SLOT(GoToSendEmail()));
+    //选择景点
+    connect(ui->tb1,SIGNAL(clicked(bool)),this,SLOT(ToChoose(bool)));
+    //查询景点
+    connect(ui->tb2,SIGNAL(clicked(bool)),this,SLOT(ToIntroduction(bool)));
+    //查看地图
+   connect(ui->addMapButton,SIGNAL(clicked(bool)),this,SLOT(ToPath(bool)));
 
+    //将数据从choose传到Information,再从Information传到bjtuMap
+    connect(choose,SIGNAL(signalDataToInform(int)),this,SLOT(doProcessDataToInform(int)));
+    connect(this,SIGNAL(SignalDataToMap(int)),map,SLOT(doProcessDataToMap(int)));
 
-
-    //将数据从addInform传到Information,再从Information传到bjutmap
-    connect(addInformaitonForm,SIGNAL(signalDataToInform(int)),this,SLOT(doProcessDataToInform(int)));
-    connect(this,SIGNAL(SignalDataToMap(int)),MyMap,SLOT(doProcessDataToMap(int)));
-
-    connect(addInformaitonForm,SIGNAL(SignalWalkRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
+    connect(choose,SIGNAL(SignalWalkRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
             this,SLOT(doProcessSaveWalkRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
     connect(this,SIGNAL(SignalWalkRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
-            MyMap,SLOT(doProcessSaveWalkRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
+            map,SLOT(doProcessSaveWalkRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
 
-    connect(addInformaitonForm,SIGNAL(SignalArriveTimeToInform(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)),
-            this,SLOT(doProcessSaveArriveTimeToInform(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)));
-    connect(this,SIGNAL(SignalArriveTimeToMap(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)),
-            MyMap,SLOT(doProcessSaveArriveTimeToMap(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)));
-
-    connect(addInformaitonForm,SIGNAL(SignalStayTimeRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
-            this,SLOT(doProcessSaveStayTimeRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
-    connect(this,SIGNAL(SignalStayTimeRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
-            MyMap,SLOT(doProcessSaveStayTimeRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
-
-    connect(MyMap,SIGNAL(ReturnToInquiry()),this,SLOT(BjutMapReturnToThis()));
-
+  //  connect(choose,SIGNAL(SignalArriveTimeToInform(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)),
+    //        this,SLOT(doProcessSaveArriveTimeToInform(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)));
+   /* connect(this,SIGNAL(SignalArriveTimeToMap(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)),
+            path,SLOT(doProcessSaveArriveTimeToMap(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)));
+*/
+//    connect(choose,SIGNAL(SignalStayTimeRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
+  //          this,SLOT(doProcessSaveStayTimeRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
+  /*  connect(this,SIGNAL(SignalStayTimeRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
+            path,SLOT(doProcessSaveStayTimeRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
+            */
+    connect(map,SIGNAL(ReturnToInquiry()),this,SLOT(BjutMapReturnToThis()));
 
 }
 
-
-
-/*********************************************槽实现**********************************************************/
-
-void Information::GoToAddInformation(bool){
-    flag_addInformation = 1;
-    //addInformaitonForm = new AddInform(this);
-    addInformaitonForm->show();
-    addInformaitonForm->move(230,70);
-    ui->pushButton_addMap->show();
+void Information::ToChoose(bool){
+    flag_choose = 1;
+    choose->show();
+    for(int i=0; i<10;i++){
+        spotButtons[i]->show();
+    }
+    choose->move(760,0);
     ui->label->hide();
+    ui->tb1->hide();
+    ui->tb2->hide();
+    ui->label_3->hide();
+    ui->addMapButton->show();
+
     if(flag_inquiry == 1){
         inquiry->hide();
         flag_inquiry=0;
     }
-    if(flag_profession == 1){
-        profession->hide();
-        flag_profession = 0;
+    if(flag_path == 1){
+        ui->label->hide();
+        flag_path = 0;
     }
-    if(flag_recommend == 1){
-        recommend->hide();
-        flag_recommend = 0;
-    }
+
 }
 
-void Information::GoToInquiry(bool){
+void Information::ToIntroduction(bool){
     flag_inquiry=1;
     //inquiry=new Inquiry(this);
-    if(flag_addInformation == 1){
-        addInformaitonForm->hide();
-        flag_addInformation = 0;
+    if(flag_choose == 1){
+        choose->hide();
+        flag_choose = 0;
      }
-    if(flag_profession == 1){
-        profession->hide();
-        flag_profession = 0;
-    }
-    if(flag_recommend == 1){
-        recommend->hide();
-        flag_recommend = 0;
-    }
-    ui->pushButton_addMap->hide();
+    ui->addMapButton->hide();
+    ui->label->hide();
+    ui->label_3->hide();
+    ui->tb1->hide();
+    ui->tb2->hide();
     inquiry->show();
-    inquiry->move(230,100);
 }
 
-
-void Information::GoToProfessionIntro(bool){
-    flag_profession = 1;
-    if(flag_addInformation == 1){
-        addInformaitonForm->hide();
-        flag_addInformation = 0;
-     }
-    if(flag_inquiry == 1){
-        inquiry->hide();
-        flag_inquiry=0;
-    }
-    if(flag_recommend == 1){
-        recommend->hide();
-        flag_recommend = 0;
-    }
-    ui->label->hide();
-    ui->pushButton_addMap->hide();
-    profession->show();
-    profession->move(230,100);
-
-}
-
-void Information::GoToRecommend(bool){
-    flag_recommend = 1;
-    if(flag_addInformation == 1){
-        addInformaitonForm->hide();
-        flag_addInformation = 0;
-     }
-    if(flag_inquiry == 1){
-        inquiry->hide();
-        flag_inquiry=0;
-    }
-    if(flag_profession == 1){
-        profession->hide();
-        flag_profession = 0;
-    }
-    ui->label->hide();
-    ui->pushButton_addMap->hide();
-    recommend->show();
-    recommend->move(230,100);
-
-}
-
-void Information::GoToMap(bool){
-   // qDebug()<<"11111111111";
-   // MyMap = new bjutmap();
-
-    //inquiry->hide();
+void Information::ToPath(bool){
     this->hide();
-    MyMap->show();
-
+    map->show();
+    if(flag_choose == 1){
+        choose->hide();
+        flag_choose = 0;
+    }
+    if(flag_inquiry == 1){
+        inquiry->hide();
+        flag_inquiry=0;
+    }
 }
-
-/*void Information::doProcessSaveData(int walkRoute_s[allPlaceNum],QDateTime arriveTime_s[allPlaceNum],int stayTime_route_s[allPlaceNum],int walkTime_s[allPlaceNum]){
-    QString str{"555555"};
-    ui->label_2->setText(str);
-}*/
 
 void Information::doProcessDataToInform(int selectedPlaceNum){
     //ui->label_3->setText(QString::number(selectedPlaceNum));
@@ -233,7 +126,7 @@ void Information::doProcessDataToInform(int selectedPlaceNum){
 void Information::doProcessSaveWalkRouteToInform(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j,int k,int l,int m,int n,int o,int p,int q,int r,int s,int t){
     emit SignalWalkRouteToMap(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t);
 }
-
+/*
 void Information::doProcessSaveArriveTimeToInform(QString a,QString b,QString c,QString d,QString e,QString f,QString g,QString h,QString i,QString j,QString k,QString l,QString m,QString n,QString o,QString p,QString q,QString r,QString s,QString t){
     emit SignalArriveTimeToMap(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t);
 }
@@ -241,30 +134,20 @@ void Information::doProcessSaveArriveTimeToInform(QString a,QString b,QString c,
 void Information::doProcessSaveStayTimeRouteToInform(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j,int k,int l,int m,int n,int o,int p,int q,int r,int s,int t){
     emit SignalStayTimeRouteToMap(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t);
 }
+*/
 
-void Information::GoToSendEmail(){
-    //MyMap->hide();
-   // frmMain w;
-    //设置窗体居中
-    QScreen *screen = QGuiApplication::primaryScreen();
-    int deskWidth=screen->availableGeometry().width();
-    int deskHeigth=screen->availableGeometry().height();
-    int frmX=w.width();
-    int frmY=w.height();
-    QPoint movePoint(deskWidth/2-frmX/2,deskHeigth/2-frmY/2);
-    w.move(movePoint);
-    w.show();
-}
+void Information::BjtuMapReturnToThis(){
 
-void Information::BjutMapReturnToThis(){
-    MyMap->hide();
-    this->show();
+    map->hide();
     inquiry->hide();
-    addInformaitonForm->show();
-
+    ui->label->hide();
+    ui->tb1->hide();
+    ui->tb2->hide();
+    ui->label_3->hide();
+    ui->addMapButton->show();
+    choose->show();
+    choose->move(760,0);
 }
-
-
 
 
 

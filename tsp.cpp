@@ -22,6 +22,7 @@ TSP::TSP(int map[allPlaceNum][allPlaceNum]) {
     for (i = 0; i < selectedPlaceNum; i++)
         matrix[i] = new int[selectedPlaceNum];
     for(i=0;i<selectedPlaceNum;i++)
+      //将 map 中对应位置的距离复制到 matrix 中
         for (j = 0; j < selectedPlaceNum; j++) {
             matrix[i][j] = map[selectedPlace[i]][selectedPlace[j]];
         }
@@ -94,11 +95,11 @@ void TSP::getRoute() {
     fp.open("route.txt", ios::out | ios::in);
     int i = 0,j= (1 << (selectedPlaceNum - 1)) - 1;
     int temp_i, temp_j;
-    double each_time = 0;
+   // double each_time = 0;
     for (int k = 0; k < selectedPlaceNum ; k++) {
-        route.push(dp[i][j].pre);
-        each_time = matrix[dp[i][j].pre][dp[i][j].now] / (velocity*1.0);
-        time.push(each_time);
+        route.push(dp[i][j].pre);//从终点开始回溯，将路径节点依次加入 route 队列中。
+        //each_time = matrix[dp[i][j].pre][dp[i][j].now] / (velocity*1.0);
+      //  time.push(each_time);
         temp_i = dp[i][j].now;
         temp_j = dp[i][j].next;
         i = temp_i;
@@ -107,7 +108,7 @@ void TSP::getRoute() {
 
     cout << "具体路径为：" << endl;
     while (!route.empty()) {
-        int x = route.front();
+        int x = route.front();//从 route 队列中取出节点，按顺序打印路径。
         route.pop();
         cout << selectedPlace[x]+1 << " -> ";
         fp << selectedPlace[x] + 1 << " -> ";
@@ -116,14 +117,14 @@ void TSP::getRoute() {
     fp << selectedPlace[0] + 1 << endl;
     cout << endl;
     fp.close();
-
+/*
     cout << "景点两两之间的用时为(单位为分钟)：" << endl;
     while (!time.empty()) {
         double t = time.front();
         time.pop();
         cout << t << "  ";
     }
-    cout << endl;
+    cout << endl;*/
 }
 
 
