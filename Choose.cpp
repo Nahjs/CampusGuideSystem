@@ -19,11 +19,10 @@ Choose::~Choose()
     delete ui;
 }
 void Choose::Init(){
-
-    //connect(ui->pbt,SIGNAL(clicked(bool)),this,SLOT(doProcessAddStartPlace(bool)));
+    connect(ui->ptb,SIGNAL(clicked(bool)),this,SLOT(doProcessAddStartPlace(bool)));
     connect(ui->pbt2,SIGNAL(clicked(bool)),this,SLOT(doProcessAddOtherPlaceAndStartTime(bool)));
     connect(ui->ptb_clear,SIGNAL(clicked(bool)),this,SLOT(doProcessClean(bool)));
-    connect(ui->findroute,SIGNAL(clicked(bool)),this,SLOT(doProcessFindRoute(bool)));
+    connect(ui->pbt2,SIGNAL(clicked(bool)),this,SLOT(doProcessFindRoute(bool)));
     connect(this,SIGNAL(inputFile()),this,SLOT(doProcessInputFile()));
 }
 
@@ -91,7 +90,7 @@ void Choose::GetShortestDistance(){
 }
 
 void Choose::GetRoute(){
-    fp.open("D:\\CLion\\CampusGuide\\route.txt", ios::out | ios::in);
+    fp.open("route.txt", ios::out | ios::in);
     int i = 0,j= (1 << (selectedPlaceNum - 1)) - 1;
     int temp_i, temp_j;
     for (int k = 0; k < selectedPlaceNum ; k++) {
@@ -151,7 +150,6 @@ void Choose::clean(){
 void Choose::doProcessAddStartPlace(bool){
     QString s=ui->textEdit->toPlainText();
     int inputNum = s.toInt();
-    //用户应该输入：0,6,10,30,28,17,24,63,60,41,27,42,25,12,58
         selectedPlace[selectedPlaceNum] = inputNum-1;
         selectedPlaceNum++;
     }
@@ -225,7 +223,6 @@ void Choose::doProcessFindRoute(bool){     //初始化所选择景点的距离�
     InitMatrix(BJTUmap);
     GetShortestDistance();
     GetRoute();
-
     // 发射传递参数的信号
     emit signalDataToInform(selectedPlaceNum);
     emit SignalWalkRouteToInform(walkRoute[0],walkRoute[1],walkRoute[2],walkRoute[3],walkRoute[4],walkRoute[5],walkRoute[6],walkRoute[7],walkRoute[8],

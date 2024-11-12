@@ -1,0 +1,63 @@
+#ifndef BJUTMAP_H
+#define BJUTMAP_H
+
+#include <QWidget>
+#include <QPaintEvent>
+#include <QPainter>
+#include <QWindow>
+#include <QLabel>*
+#include "Choose.h"
+
+#define allPoint 72
+
+namespace Ui {
+    class bjtuMap;
+}
+
+class bjtuMap : public QWidget
+{
+    Q_OBJECT
+
+public:
+    explicit bjtuMap(QWidget *parent = nullptr);
+    ~bjtuMap();
+
+signals:
+    void ReturnToInquiry();
+
+private slots:
+    void doProcessDataToMap(int);
+    void doProcessSaveWalkRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int);
+    void doProcessReturnToInquiry(bool);
+
+protected:
+   void paintEvent(QPaintEvent*event);
+
+private:
+    Ui::bjtuMap *ui;
+    QPoint point[allPoint];            //存储所有的点
+    int flag_point[allPoint][allPoint];   //点与点之间是否有连线标志位，如果有，值为1，否则为0
+    int walkRoute[allPlaceNum];         //walkroute存储的不是下标，而是标号
+    int selectedPlaceNum{0};
+    int s=4;
+    int walk[4]={1,2,3,1};
+    int a=1;
+    int i,help;
+    QWindow *window;
+    QPixmap pic[allPlaceNum];
+    QLabel *label[allPlaceNum];
+
+
+   void Init();
+   void InitPoint();
+   void InitPic();
+
+    void swapFlagPoint(int i, int swap_to);
+
+   void setRouteLine();      //通过设置flag标志位，设置点之间的线段
+   void outputInformation();   //用于页面显示路径等信息
+   void printPlaceOrder();
+
+};
+
+#endif // BJUTMAP_H

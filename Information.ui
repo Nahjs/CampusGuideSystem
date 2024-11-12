@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1115</width>
+    <width>1128</width>
     <height>779</height>
    </rect>
   </property>
@@ -24,10 +24,10 @@
   <widget class="QToolButton" name="tb1">
    <property name="geometry">
     <rect>
-     <x>760</x>
-     <y>60</y>
-     <width>161</width>
-     <height>51</height>
+     <x>360</x>
+     <y>570</y>
+     <width>101</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -38,7 +38,7 @@
     </font>
    </property>
    <property name="text">
-    <string>进入参观</string>
+    <string>导航</string>
    </property>
    <property name="icon">
     <iconset>
@@ -57,10 +57,10 @@
   <widget class="QToolButton" name="tb2">
    <property name="geometry">
     <rect>
-     <x>760</x>
-     <y>270</y>
-     <width>161</width>
-     <height>51</height>
+     <x>490</x>
+     <y>570</y>
+     <width>91</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -71,7 +71,7 @@
     </font>
    </property>
    <property name="text">
-    <string>值不值得去？</string>
+    <string>查询</string>
    </property>
    <property name="icon">
     <iconset>
@@ -110,10 +110,10 @@
   <widget class="QPushButton" name="addMapButton">
    <property name="geometry">
     <rect>
-     <x>760</x>
-     <y>380</y>
-     <width>161</width>
-     <height>51</height>
+     <x>610</x>
+     <y>570</y>
+     <width>91</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -124,7 +124,7 @@
     </font>
    </property>
    <property name="text">
-    <string>看看怎么去？</string>
+    <string>地图</string>
    </property>
    <property name="icon">
     <iconset>
@@ -132,8 +132,8 @@
    </property>
    <property name="iconSize">
     <size>
-     <width>45</width>
-     <height>45</height>
+     <width>30</width>
+     <height>30</height>
     </size>
    </property>
   </widget>
@@ -414,29 +414,6 @@
      <width>50</width>
      <height>50</height>
     </size>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>990</x>
-     <y>610</y>
-     <width>111</width>
-     <height>171</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>v 1 西操 
-v 2 家属区 
-v 3 东门
-v 4 思源楼 
-v 5 明湖 
-v 6 逸夫楼 
-v 7 南门 
-v 8 东教一楼 
-v 9 交大公交站
-v 10 学生活动中心 
-</string>
    </property>
   </widget>
   <widget class="QLabel" name="point0">
@@ -2239,6 +2216,136 @@ v 10 学生活动中心
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="spot11">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>130</y>
+     <width>41</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>45</width>
+     <height>45</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="spot12">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>200</y>
+     <width>41</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>45</width>
+     <height>45</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="spot13">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>260</y>
+     <width>41</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>45</width>
+     <height>45</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="spot14">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>80</y>
+     <width>41</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>45</width>
+     <height>45</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="spot15">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>340</y>
+     <width>31</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>45</width>
+     <height>45</height>
+    </size>
+   </property>
+  </widget>
   <zorder>label_2</zorder>
   <zorder>tb1</zorder>
   <zorder>tb2</zorder>
@@ -2254,7 +2361,6 @@ v 10 学生活动中心
   <zorder>spot1</zorder>
   <zorder>spot7</zorder>
   <zorder>spot4</zorder>
-  <zorder>label_3</zorder>
   <zorder>point0</zorder>
   <zorder>point_1</zorder>
   <zorder>point_2</zorder>
@@ -2327,6 +2433,11 @@ v 10 学生活动中心
   <zorder>point_69</zorder>
   <zorder>point_70</zorder>
   <zorder>point_71</zorder>
+  <zorder>spot11</zorder>
+  <zorder>spot12</zorder>
+  <zorder>spot13</zorder>
+  <zorder>spot14</zorder>
+  <zorder>spot15</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

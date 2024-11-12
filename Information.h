@@ -2,7 +2,7 @@
 #define INFORMATION_H
 #include <QWidget>
 #include <QGuiApplication>
-#include "Map.h"
+#include "bjtuMap.h"
 #include "Choose.h"
 #include "Inquiry.h"
 
@@ -38,7 +38,7 @@ private:
     Ui::Information *ui;
     Choose *choose;
     Inquiry *inquiry;
-    Map *map;
+    bjtuMap *map;
     int flag_choose = 0; //标记信息录入界面是否被选中
     int flag_inquiry = 0;   //标记信息查询界面是否被选中
     int flag_path = 0;    //标记路线推荐界面是否被选中

@@ -18,13 +18,14 @@ Information::~Information()
 
 void Information::Init(){
     setAutoFillBackground(true);
-   // ui->addMapButton->hide();
+
+    ui->addMapButton->hide();
     QPalette palette;
     palette.setColor(QPalette::Window, Qt::white);
     this->setPalette(palette);
 
-    spotButtons = { ui->spot1, ui->spot2, ui->spot3, ui->spot4, ui->spot5, ui->spot6, ui->spot7 ,ui->spot8,ui->spot9,ui->spot10};
-    for(int i=0; i<10;i++){
+    spotButtons = { ui->spot1, ui->spot2, ui->spot3, ui->spot4, ui->spot5, ui->spot6, ui->spot7 ,ui->spot8,ui->spot9,ui->spot10,ui->spot11,ui->spot12,ui->spot13,ui->spot14,ui->spot15};
+    for(int i=0; i<15;i++){
         spotButtons[i]->hide();
     }
 
@@ -33,7 +34,7 @@ void Information::Init(){
     choose->hide();
     inquiry = new Inquiry(this);
     inquiry->hide();
-    map = new Map();
+    map = new bjtuMap();
     map->hide();
 
     //选择景点
@@ -52,42 +53,26 @@ void Information::Init(){
     connect(this,SIGNAL(SignalWalkRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
             map,SLOT(doProcessSaveWalkRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
 
-  //  connect(choose,SIGNAL(SignalArriveTimeToInform(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)),
-    //        this,SLOT(doProcessSaveArriveTimeToInform(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)));
-   /* connect(this,SIGNAL(SignalArriveTimeToMap(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)),
-            path,SLOT(doProcessSaveArriveTimeToMap(QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString,QString)));
-*/
-//    connect(choose,SIGNAL(SignalStayTimeRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
-  //          this,SLOT(doProcessSaveStayTimeRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
-  /*  connect(this,SIGNAL(SignalStayTimeRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
-            path,SLOT(doProcessSaveStayTimeRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
-            */
-    connect(map,SIGNAL(ReturnToInquiry()),this,SLOT(BjutMapReturnToThis()));
+    connect(map,SIGNAL(ReturnToInquiry()),this,SLOT(BjtuMapReturnToThis()));
 
 }
 
 void Information::ToChoose(bool){
     flag_choose = 1;
     choose->show();
-    for(int i=0; i<10;i++){
+    for(int i=0; i<spotButtons.size();i++){
         spotButtons[i]->show();
     }
     choose->move(760,0);
+    ui->addMapButton->show();
     ui->label->hide();
     ui->tb1->hide();
     ui->tb2->hide();
-    ui->label_3->hide();
-    ui->addMapButton->show();
 
     if(flag_inquiry == 1){
         inquiry->hide();
         flag_inquiry=0;
     }
-    if(flag_path == 1){
-        ui->label->hide();
-        flag_path = 0;
-    }
-
 }
 
 void Information::ToIntroduction(bool){
@@ -99,7 +84,6 @@ void Information::ToIntroduction(bool){
      }
     ui->addMapButton->hide();
     ui->label->hide();
-    ui->label_3->hide();
     ui->tb1->hide();
     ui->tb2->hide();
     inquiry->show();
@@ -108,18 +92,9 @@ void Information::ToIntroduction(bool){
 void Information::ToPath(bool){
     this->hide();
     map->show();
-    if(flag_choose == 1){
-        choose->hide();
-        flag_choose = 0;
-    }
-    if(flag_inquiry == 1){
-        inquiry->hide();
-        flag_inquiry=0;
-    }
 }
 
 void Information::doProcessDataToInform(int selectedPlaceNum){
-    //ui->label_3->setText(QString::number(selectedPlaceNum));
     emit SignalDataToMap(selectedPlaceNum);
 }
 
@@ -137,14 +112,9 @@ void Information::doProcessSaveStayTimeRouteToInform(int a,int b,int c,int d,int
 */
 
 void Information::BjtuMapReturnToThis(){
-
     map->hide();
+    this->show();
     inquiry->hide();
-    ui->label->hide();
-    ui->tb1->hide();
-    ui->tb2->hide();
-    ui->label_3->hide();
-    ui->addMapButton->show();
     choose->show();
     choose->move(760,0);
 }

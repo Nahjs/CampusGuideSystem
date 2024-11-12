@@ -14,14 +14,14 @@ find_package(Qt6 COMPONENTS Core Gui Widgets Quick REQUIRED)
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS}
         Information.cpp
         Choose.cpp
-        Map.cpp
+        bjtuMap.cpp
         Inquiry.cpp
         main.cpp
 
         Information.h
         Choose.cpp
         distanceData.h
-        Map.h
+        bjtuMap.h
         Inquiry.h
         introduction.h
         process.h
@@ -29,7 +29,7 @@ add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS}
 
         Information.ui
         Choose.ui
-        Map.ui
+        bjtuMap.ui
         Inquiry.ui
 )
 
