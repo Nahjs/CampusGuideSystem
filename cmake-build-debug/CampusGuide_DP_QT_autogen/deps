@@ -4,8 +4,6 @@ CampusGuide_DP_QT_autogen/timestamp: \
 	D:/CLion/CampusGuide/Choose.h \
 	D:/CLion/CampusGuide/Information.cpp \
 	D:/CLion/CampusGuide/Information.h \
-	D:/CLion/CampusGuide/Inquiry.cpp \
-	D:/CLion/CampusGuide/Inquiry.h \
 	D:/CLion/CampusGuide/bjtuMap.cpp \
 	D:/CLion/CampusGuide/bjtuMap.h \
 	D:/CLion/CampusGuide/cmake-build-debug/CMakeFiles/3.29.3/CMakeCCompiler.cmake \
@@ -27,7 +25,6 @@ CampusGuide_DP_QT_autogen/timestamp: \
 	D:/QT/6.5.3/mingw_64/include/QtCore/QSize \
 	D:/QT/6.5.3/mingw_64/include/QtCore/QSizeF \
 	D:/QT/6.5.3/mingw_64/include/QtCore/QString \
-	D:/QT/6.5.3/mingw_64/include/QtCore/QUrl \
 	D:/QT/6.5.3/mingw_64/include/QtCore/q20memory.h \
 	D:/QT/6.5.3/mingw_64/include/QtCore/q20type_traits.h \
 	D:/QT/6.5.3/mingw_64/include/QtCore/qalgorithms.h \
@@ -198,15 +195,12 @@ CampusGuide_DP_QT_autogen/timestamp: \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/QButtonGroup \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/QLabel \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/QMessageBox \
-	D:/QT/6.5.3/mingw_64/include/QtWidgets/QPushButton \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/QWidget \
-	D:/QT/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/qbuttongroup.h \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/qframe.h \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/qlabel.h \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/qmessagebox.h \
-	D:/QT/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
 	D:/QT/6.5.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -982,6 +976,5 @@ CampusGuide_DP_QT_autogen/timestamp: \
 	D:/QT/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
 	D:/CLion/CampusGuide/Choose.ui \
 	D:/CLion/CampusGuide/Information.ui \
-	D:/CLion/CampusGuide/Inquiry.ui \
 	D:/CLion/CampusGuide/bjtuMap.ui \
 	D:/QT/Tools/CMake_64/bin/cmake.exe

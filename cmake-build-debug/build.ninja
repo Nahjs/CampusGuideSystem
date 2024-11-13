@@ -89,16 +89,6 @@ build CMakeFiles/CampusGuide_DP_QT.dir/bjtuMap.cpp.obj: CXX_COMPILER__CampusGuid
   TARGET_COMPILE_PDB = CMakeFiles\CampusGuide_DP_QT.dir\
   TARGET_PDB = CampusGuide_DP_QT.pdb
 
-build CMakeFiles/CampusGuide_DP_QT.dir/Inquiry.cpp.obj: CXX_COMPILER__CampusGuide_DP_QT_unscanned_Debug D$:/CLion/CampusGuide/Inquiry.cpp || cmake_object_order_depends_target_CampusGuide_DP_QT
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\CampusGuide_DP_QT.dir\Inquiry.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -ID:/CLion/CampusGuide/cmake-build-debug/CampusGuide_DP_QT_autogen/include -isystem D:/QT/6.5.3/mingw_64/include/QtCore -isystem D:/QT/6.5.3/mingw_64/include -isystem D:/QT/6.5.3/mingw_64/mkspecs/win32-g++ -isystem D:/QT/6.5.3/mingw_64/include/QtGui -isystem D:/QT/6.5.3/mingw_64/include/QtWidgets -isystem D:/QT/6.5.3/mingw_64/include/QtQuick -isystem D:/QT/6.5.3/mingw_64/include/QtQml -isystem D:/QT/6.5.3/mingw_64/include/QtQmlIntegration -isystem D:/QT/6.5.3/mingw_64/include/QtNetwork -isystem D:/QT/6.5.3/mingw_64/include/QtQmlModels -isystem D:/QT/6.5.3/mingw_64/include/QtOpenGL
-  OBJECT_DIR = CMakeFiles\CampusGuide_DP_QT.dir
-  OBJECT_FILE_DIR = CMakeFiles\CampusGuide_DP_QT.dir
-  TARGET_COMPILE_PDB = CMakeFiles\CampusGuide_DP_QT.dir\
-  TARGET_PDB = CampusGuide_DP_QT.pdb
-
 build CMakeFiles/CampusGuide_DP_QT.dir/main.cpp.obj: CXX_COMPILER__CampusGuide_DP_QT_unscanned_Debug D$:/CLion/CampusGuide/main.cpp || cmake_object_order_depends_target_CampusGuide_DP_QT
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\CampusGuide_DP_QT.dir\main.cpp.obj.d
@@ -117,7 +107,7 @@ build CMakeFiles/CampusGuide_DP_QT.dir/main.cpp.obj: CXX_COMPILER__CampusGuide_D
 #############################################
 # Link the executable CampusGuide_DP_QT.exe
 
-build CampusGuide_DP_QT.exe: CXX_EXECUTABLE_LINKER__CampusGuide_DP_QT_Debug CMakeFiles/CampusGuide_DP_QT.dir/CampusGuide_DP_QT_autogen/mocs_compilation.cpp.obj CMakeFiles/CampusGuide_DP_QT.dir/Information.cpp.obj CMakeFiles/CampusGuide_DP_QT.dir/Choose.cpp.obj CMakeFiles/CampusGuide_DP_QT.dir/bjtuMap.cpp.obj CMakeFiles/CampusGuide_DP_QT.dir/Inquiry.cpp.obj CMakeFiles/CampusGuide_DP_QT.dir/main.cpp.obj | D$:/QT/6.5.3/mingw_64/lib/libQt6Widgets.a D$:/QT/6.5.3/mingw_64/lib/libQt6Quick.a D$:/QT/6.5.3/mingw_64/lib/libQt6QmlModels.a D$:/QT/6.5.3/mingw_64/lib/libQt6Qml.a D$:/QT/6.5.3/mingw_64/lib/libQt6Network.a D$:/QT/6.5.3/mingw_64/lib/libQt6OpenGL.a D$:/QT/6.5.3/mingw_64/lib/libQt6Gui.a D$:/QT/6.5.3/mingw_64/lib/libQt6Core.a || CampusGuide_DP_QT_autogen CampusGuide_DP_QT_autogen_timestamp_deps
+build CampusGuide_DP_QT.exe: CXX_EXECUTABLE_LINKER__CampusGuide_DP_QT_Debug CMakeFiles/CampusGuide_DP_QT.dir/CampusGuide_DP_QT_autogen/mocs_compilation.cpp.obj CMakeFiles/CampusGuide_DP_QT.dir/Information.cpp.obj CMakeFiles/CampusGuide_DP_QT.dir/Choose.cpp.obj CMakeFiles/CampusGuide_DP_QT.dir/bjtuMap.cpp.obj CMakeFiles/CampusGuide_DP_QT.dir/main.cpp.obj | D$:/QT/6.5.3/mingw_64/lib/libQt6Widgets.a D$:/QT/6.5.3/mingw_64/lib/libQt6Quick.a D$:/QT/6.5.3/mingw_64/lib/libQt6QmlModels.a D$:/QT/6.5.3/mingw_64/lib/libQt6Qml.a D$:/QT/6.5.3/mingw_64/lib/libQt6Network.a D$:/QT/6.5.3/mingw_64/lib/libQt6OpenGL.a D$:/QT/6.5.3/mingw_64/lib/libQt6Gui.a D$:/QT/6.5.3/mingw_64/lib/libQt6Core.a || CampusGuide_DP_QT_autogen CampusGuide_DP_QT_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = D:/QT/6.5.3/mingw_64/lib/libQt6Widgets.a  D:/QT/6.5.3/mingw_64/lib/libQt6Quick.a  D:/QT/6.5.3/mingw_64/lib/libQt6QmlModels.a  D:/QT/6.5.3/mingw_64/lib/libQt6Qml.a  D:/QT/6.5.3/mingw_64/lib/libQt6Network.a  -lws2_32  -lshell32  D:/QT/6.5.3/mingw_64/lib/libQt6OpenGL.a  D:/QT/6.5.3/mingw_64/lib/libQt6Gui.a  D:/QT/6.5.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -luser32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\CampusGuide_DP_QT.dir
@@ -162,7 +152,7 @@ build CampusGuide_DP_QT_autogen_timestamp_deps: phony
 #############################################
 # Utility command for CampusGuide_DP_QT_autogen
 
-build CampusGuide_DP_QT_autogen: phony CMakeFiles/CampusGuide_DP_QT_autogen CampusGuide_DP_QT_autogen/include/ui_Information.h CampusGuide_DP_QT_autogen/include/ui_Choose.h CampusGuide_DP_QT_autogen/include/ui_bjtuMap.h CampusGuide_DP_QT_autogen/include/ui_Inquiry.h CampusGuide_DP_QT_autogen/timestamp CampusGuide_DP_QT_autogen/mocs_compilation.cpp CampusGuide_DP_QT_autogen_timestamp_deps
+build CampusGuide_DP_QT_autogen: phony CMakeFiles/CampusGuide_DP_QT_autogen CampusGuide_DP_QT_autogen/include/ui_Information.h CampusGuide_DP_QT_autogen/include/ui_Choose.h CampusGuide_DP_QT_autogen/include/ui_bjtuMap.h CampusGuide_DP_QT_autogen/timestamp CampusGuide_DP_QT_autogen/mocs_compilation.cpp CampusGuide_DP_QT_autogen_timestamp_deps
 
 
 #############################################
@@ -179,7 +169,7 @@ build CampusGuide_DP_QT_autogen/timestamp CampusGuide_DP_QT_autogen/mocs_compila
 #############################################
 # Phony custom command for CMakeFiles\CampusGuide_DP_QT_autogen
 
-build CMakeFiles/CampusGuide_DP_QT_autogen CampusGuide_DP_QT_autogen/include/ui_Information.h CampusGuide_DP_QT_autogen/include/ui_Choose.h CampusGuide_DP_QT_autogen/include/ui_bjtuMap.h CampusGuide_DP_QT_autogen/include/ui_Inquiry.h | ${cmake_ninja_workdir}CMakeFiles/CampusGuide_DP_QT_autogen ${cmake_ninja_workdir}CampusGuide_DP_QT_autogen/include/ui_Information.h ${cmake_ninja_workdir}CampusGuide_DP_QT_autogen/include/ui_Choose.h ${cmake_ninja_workdir}CampusGuide_DP_QT_autogen/include/ui_bjtuMap.h ${cmake_ninja_workdir}CampusGuide_DP_QT_autogen/include/ui_Inquiry.h: phony CampusGuide_DP_QT_autogen/timestamp || CampusGuide_DP_QT_autogen_timestamp_deps
+build CMakeFiles/CampusGuide_DP_QT_autogen CampusGuide_DP_QT_autogen/include/ui_Information.h CampusGuide_DP_QT_autogen/include/ui_Choose.h CampusGuide_DP_QT_autogen/include/ui_bjtuMap.h | ${cmake_ninja_workdir}CMakeFiles/CampusGuide_DP_QT_autogen ${cmake_ninja_workdir}CampusGuide_DP_QT_autogen/include/ui_Information.h ${cmake_ninja_workdir}CampusGuide_DP_QT_autogen/include/ui_Choose.h ${cmake_ninja_workdir}CampusGuide_DP_QT_autogen/include/ui_bjtuMap.h: phony CampusGuide_DP_QT_autogen/timestamp || CampusGuide_DP_QT_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

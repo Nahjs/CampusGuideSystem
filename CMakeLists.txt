@@ -15,14 +15,14 @@ add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS}
         Information.cpp
         Choose.cpp
         bjtuMap.cpp
-        Inquiry.cpp
+
         main.cpp
 
         Information.h
         Choose.cpp
         distanceData.h
         bjtuMap.h
-        Inquiry.h
+
         introduction.h
         process.h
         subject.h
@@ -30,7 +30,7 @@ add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS}
         Information.ui
         Choose.ui
         bjtuMap.ui
-        Inquiry.ui
+
 )
 
 # 链接Qt6库

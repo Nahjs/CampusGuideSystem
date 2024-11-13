@@ -1,9 +1,36 @@
 <RCC>
     <qresource prefix="/">
-        <file>Resource/icon10_1.png</file>
-        <file>Resource/icon11_1.png</file>
-        <file>Resource/BJUT_MAP.jpg</file>
-        <file>Resource/icon4_1.png</file>
-        <file>Resource/icon12_1.png</file>
+        <file>Resource/1西操.jpg</file>
+        <file>Resource/2家属区.jpg</file>
+        <file>Resource/3东门.jpg</file>
+        <file>Resource/4思源楼.jpg</file>
+        <file>Resource/5明湖.jpg</file>
+        <file>Resource/6逸夫楼.jpg</file>
+        <file>Resource/7南门.jpg</file>
+        <file>Resource/8东区一教.jpg</file>
+        <file>Resource/9交大公交站.jpg</file>
+        <file>Resource/10学生活动中心.jpg</file>
+        <file>Resource/11图书馆.jpg</file>
+        <file>Resource/12天佑会堂.jpg</file>
+        <file>Resource/13嘉园.jpg</file>
+        <file>Resource/14校医院.jpg</file>
+        <file>Resource/15麦当劳.jpg</file>
+        <file>Resource/bjtu01.jpg</file>
+        <file>Resource/location.png</file>
+        <file>Resource/location1.png</file>
+        <file>Resource/location2.png</file>
+        <file>Resource/location3.png</file>
+        <file>Resource/location4.png</file>
+        <file>Resource/location5.png</file>
+        <file>Resource/location6.png</file>
+        <file>Resource/location7.png</file>
+        <file>Resource/location8.png</file>
+        <file>Resource/location9.png</file>
+        <file>Resource/location10.png</file>
+        <file>Resource/location11.png</file>
+        <file>Resource/location12.png</file>
+        <file>Resource/location13.png</file>
+        <file>Resource/location14.png</file>
+        <file>Resource/location15.png</file>
     </qresource>
 </RCC>

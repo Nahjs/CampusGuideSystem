@@ -1,7 +1,6 @@
 D:/CLion/CampusGuide/cmake-build-debug/CampusGuide_DP_QT_autogen/EWIEGA46WW/moc_Information.cpp: D:/CLion/CampusGuide/Information.h \
   D:/CLion/CampusGuide/cmake-build-debug/CampusGuide_DP_QT_autogen/moc_predefs.h \
   D:/CLion/CampusGuide/Choose.h \
-  D:/CLion/CampusGuide/Inquiry.h \
   D:/CLion/CampusGuide/bjtuMap.h \
   D:/CLion/CampusGuide/introduction.h \
   D:/CLion/CampusGuide/process.h \
@@ -14,7 +13,6 @@ D:/CLion/CampusGuide/cmake-build-debug/CampusGuide_DP_QT_autogen/EWIEGA46WW/moc_
   D:/QT/6.5.3/mingw_64/include/QtCore/QSize \
   D:/QT/6.5.3/mingw_64/include/QtCore/QSizeF \
   D:/QT/6.5.3/mingw_64/include/QtCore/QString \
-  D:/QT/6.5.3/mingw_64/include/QtCore/QUrl \
   D:/QT/6.5.3/mingw_64/include/QtCore/q20memory.h \
   D:/QT/6.5.3/mingw_64/include/QtCore/q20type_traits.h \
   D:/QT/6.5.3/mingw_64/include/QtCore/qalgorithms.h \
@@ -185,15 +183,12 @@ D:/CLion/CampusGuide/cmake-build-debug/CampusGuide_DP_QT_autogen/EWIEGA46WW/moc_
   D:/QT/6.5.3/mingw_64/include/QtWidgets/QButtonGroup \
   D:/QT/6.5.3/mingw_64/include/QtWidgets/QLabel \
   D:/QT/6.5.3/mingw_64/include/QtWidgets/QMessageBox \
-  D:/QT/6.5.3/mingw_64/include/QtWidgets/QPushButton \
   D:/QT/6.5.3/mingw_64/include/QtWidgets/QWidget \
-  D:/QT/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
   D:/QT/6.5.3/mingw_64/include/QtWidgets/qbuttongroup.h \
   D:/QT/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
   D:/QT/6.5.3/mingw_64/include/QtWidgets/qframe.h \
   D:/QT/6.5.3/mingw_64/include/QtWidgets/qlabel.h \
   D:/QT/6.5.3/mingw_64/include/QtWidgets/qmessagebox.h \
-  D:/QT/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
   D:/QT/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/QT/6.5.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/QT/6.5.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \

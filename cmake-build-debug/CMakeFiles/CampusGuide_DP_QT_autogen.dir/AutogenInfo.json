@@ -756,12 +756,6 @@
 			null
 		],
 		[
-			"D:/CLion/CampusGuide/Inquiry.h",
-			"MU",
-			"EWIEGA46WW/moc_Inquiry.cpp",
-			null
-		],
-		[
 			"D:/CLion/CampusGuide/bjtuMap.h",
 			"MU",
 			"EWIEGA46WW/moc_bjtuMap.cpp",
@@ -874,7 +868,6 @@
 	[
 		[ "D:/CLion/CampusGuide/Choose.cpp", "MU", null ],
 		[ "D:/CLion/CampusGuide/Information.cpp", "MU", null ],
-		[ "D:/CLion/CampusGuide/Inquiry.cpp", "MU", null ],
 		[ "D:/CLion/CampusGuide/bjtuMap.cpp", "MU", null ],
 		[ "D:/CLion/CampusGuide/main.cpp", "MU", null ]
 	],

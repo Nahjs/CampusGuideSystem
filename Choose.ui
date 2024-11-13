@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>368</width>
+    <width>575</width>
     <height>779</height>
    </rect>
   </property>
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>130</y>
+     <y>120</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -37,7 +37,7 @@
     <rect>
      <x>20</x>
      <y>550</y>
-     <width>321</width>
+     <width>351</width>
      <height>211</height>
     </rect>
    </property>
@@ -110,15 +110,15 @@
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>10</y>
-     <width>329</width>
+     <x>200</x>
+     <y>40</y>
+     <width>171</width>
      <height>501</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QCheckBox" name="checkBox_1">
+    <item row="8" column="0">
+     <widget class="QCheckBox" name="checkBox_9">
       <property name="font">
        <font>
         <family>等线</family>
@@ -126,7 +126,7 @@
        </font>
       </property>
       <property name="text">
-       <string>1 西操</string>
+       <string>9 交大公交站</string>
       </property>
      </widget>
     </item>
@@ -143,8 +143,8 @@
       </property>
      </widget>
     </item>
-    <item row="8" column="0">
-     <widget class="QCheckBox" name="checkBox_9">
+    <item row="17" column="0">
+     <widget class="QCheckBox" name="checkBox_15">
       <property name="font">
        <font>
         <family>等线</family>
@@ -152,7 +152,7 @@
        </font>
       </property>
       <property name="text">
-       <string>9 交大公交站</string>
+       <string>15 麦当劳</string>
       </property>
      </widget>
     </item>
@@ -169,8 +169,8 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QCheckBox" name="checkBox_4">
+    <item row="13" column="0">
+     <widget class="QCheckBox" name="checkBox_14">
       <property name="font">
        <font>
         <family>等线</family>
@@ -178,59 +178,7 @@
        </font>
       </property>
       <property name="text">
-       <string>4 思源楼</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QCheckBox" name="checkBox_3">
-      <property name="font">
-       <font>
-        <family>等线</family>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>3 东门</string>
-      </property>
-     </widget>
-    </item>
-    <item row="17" column="0">
-     <widget class="QCheckBox" name="checkBox_15">
-      <property name="font">
-       <font>
-        <family>等线</family>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>15 麦当劳</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QCheckBox" name="checkBox_2">
-      <property name="font">
-       <font>
-        <family>等线</family>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>2 家属区</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="0">
-     <widget class="QCheckBox" name="checkBox_10">
-      <property name="font">
-       <font>
-        <family>等线</family>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>10 学生活动中心</string>
+       <string>14 校医院</string>
       </property>
      </widget>
     </item>
@@ -247,8 +195,8 @@
       </property>
      </widget>
     </item>
-    <item row="5" column="0">
-     <widget class="QCheckBox" name="checkBox_6">
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_3">
       <property name="font">
        <font>
         <family>等线</family>
@@ -256,12 +204,12 @@
        </font>
       </property>
       <property name="text">
-       <string>6 逸夫楼</string>
+       <string>3 东门</string>
       </property>
      </widget>
     </item>
-    <item row="13" column="0">
-     <widget class="QCheckBox" name="checkBox_14">
+    <item row="9" column="0">
+     <widget class="QCheckBox" name="checkBox_10">
       <property name="font">
        <font>
         <family>等线</family>
@@ -269,7 +217,7 @@
        </font>
       </property>
       <property name="text">
-       <string>14 校医院</string>
+       <string>10 学生活动中心</string>
       </property>
      </widget>
     </item>
@@ -286,19 +234,6 @@
       </property>
      </widget>
     </item>
-    <item row="10" column="0">
-     <widget class="QCheckBox" name="checkBox_11">
-      <property name="font">
-       <font>
-        <family>等线</family>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>11 图书馆</string>
-      </property>
-     </widget>
-    </item>
     <item row="12" column="0">
      <widget class="QCheckBox" name="checkBox_13">
       <property name="font">
@@ -312,14 +247,79 @@
       </property>
      </widget>
     </item>
+    <item row="10" column="0">
+     <widget class="QCheckBox" name="checkBox_11">
+      <property name="font">
+       <font>
+        <family>等线</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>11 图书馆</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="checkBox_2">
+      <property name="font">
+       <font>
+        <family>等线</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>2 家属区</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QCheckBox" name="checkBox_6">
+      <property name="font">
+       <font>
+        <family>等线</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>6 逸夫楼</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="checkBox_4">
+      <property name="font">
+       <font>
+        <family>等线</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>4 思源楼</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCheckBox" name="checkBox_1">
+      <property name="font">
+       <font>
+        <family>等线</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>1 西操</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QTextEdit" name="textEdit">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>40</x>
      <y>10</y>
-     <width>61</width>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -340,16 +340,16 @@
     </font>
    </property>
    <property name="text">
-    <string>添加起点：</string>
+    <string>起点：</string>
    </property>
   </widget>
   <widget class="QPushButton" name="ptb">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>50</y>
-     <width>81</width>
-     <height>41</height>
+     <x>140</x>
+     <y>10</y>
+     <width>71</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -359,7 +359,7 @@
     </font>
    </property>
    <property name="text">
-    <string>确认添加</string>
+    <string>添加</string>
    </property>
   </widget>
  </widget>

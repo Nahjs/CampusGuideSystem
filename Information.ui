@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1128</width>
-    <height>779</height>
+    <width>1082</width>
+    <height>774</height>
    </rect>
   </property>
   <property name="font">
@@ -24,9 +24,9 @@
   <widget class="QToolButton" name="tb1">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>570</y>
-     <width>101</width>
+     <x>820</x>
+     <y>660</y>
+     <width>91</width>
      <height>41</height>
     </rect>
    </property>
@@ -57,8 +57,8 @@
   <widget class="QToolButton" name="tb2">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>570</y>
+     <x>690</x>
+     <y>660</y>
      <width>91</width>
      <height>41</height>
     </rect>
@@ -71,7 +71,7 @@
     </font>
    </property>
    <property name="text">
-    <string>查询</string>
+    <string>官网</string>
    </property>
    <property name="icon">
     <iconset>
@@ -90,10 +90,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>30</x>
      <y>600</y>
-     <width>481</width>
-     <height>101</height>
+     <width>491</width>
+     <height>141</height>
     </rect>
    </property>
    <property name="font">
@@ -104,14 +104,14 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; vertical-align:sub;&quot;&gt;欢迎使用交大校园导游系统&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; vertical-align:sub;&quot;&gt;* 如果你想要进行路径查询，请点击“路径查询”按钮&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; vertical-align:sub;&quot;&gt;* 如果你想要了解校园中各地点的信息，请点击“信息查询”按钮&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; vertical-align:sub;&quot;&gt;欢迎使用交大校园导游系统&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; vertical-align:sub;&quot;&gt;* 如果你想要进行路径查询，请点击“导航”按钮&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; vertical-align:sub;&quot;&gt;* 如果你想要了解各地点的信息，请点击“ &lt;/span&gt;&lt;img src=&quot;:/Resource/location.png&quot;/&gt;&lt;span style=&quot; font-size:18pt; vertical-align:sub;&quot;&gt;”标记的位置&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; vertical-align:sub;&quot;&gt;* 如果你还想了解更多信息，请点击“官网”按钮&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="addMapButton">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>570</y>
+     <x>570</x>
+     <y>660</y>
      <width>91</width>
      <height>41</height>
     </rect>
@@ -2346,6 +2346,99 @@
     </size>
    </property>
   </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>340</y>
+     <width>321</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>11</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'黑体'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; 平畴辽阔兮奠邦基，大陆关河万里。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; 农产富饶兮庶物繁，贸迁赖吾曹综理。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; 乐同轨之相交之兮，驰骤遍中原大地，&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; 河山险阻关塞庄严，固吾圄、男儿事。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; 欢愉当此际，青梅竹马，数年华远大相期。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; 美哉我平院，山林隐城市，有珊瑚绿树交织。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; 美哉，交大，管国家流通之机。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; 美哉，交大，看纵横宇内飞驰。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; 这是著名词学家梁启勋（梁启超之弟）为北京交通大学的前身--国立交通大学所作的校歌&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_picture">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>20</y>
+     <width>200</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>30</y>
+     <width>191</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>C:/Users/lenovo/Desktop/校徽.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>240</y>
+     <width>191</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>C:/Users/lenovo/Desktop/校名.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>label_2</zorder>
   <zorder>tb1</zorder>
   <zorder>tb2</zorder>
@@ -2438,6 +2531,10 @@
   <zorder>spot13</zorder>
   <zorder>spot14</zorder>
   <zorder>spot15</zorder>
+  <zorder>textEdit</zorder>
+  <zorder>label_picture</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

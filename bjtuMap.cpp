@@ -201,8 +201,6 @@ void bjtuMap::outputInformation(){
     ui->label_route_4->setText(routeS4);
 }
 
-
-/*我的代码现在需要把画线段的下标按以下步骤来交换1换6，2换10，3换30，4换28，5换17，6换24，7换63，8换60，9换41，10换27，11换42，12换25，13换12，14换58，注意有先后顺序*/
 //绘制路线
 void bjtuMap::setRouteLine(){
     for(int i = 0; i < selectedPlaceNum; i++){
@@ -1819,7 +1817,6 @@ void bjtuMap::setRouteLine(){
             }
         }
 }
-
 
 void bjtuMap::paintEvent(QPaintEvent*event){
     QPainter painter(this);
