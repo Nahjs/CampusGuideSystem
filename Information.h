@@ -40,7 +40,6 @@ private slots:
 private:
     Ui::Information *ui;
     Choose *choose;
-   // Inquiry *inquiry;
     bjtuMap *map;
     int flag_choose = 0; //标记信息录入界面是否被选中
     int flag_inquiry = 0;   //标记信息查询界面是否被选中

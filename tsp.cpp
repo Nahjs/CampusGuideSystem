@@ -6,16 +6,6 @@
 using namespace std;
 
 TSP::TSP(int map[allPlaceNum][allPlaceNum]) {
-    /*cout << "请输入你选择的城市序号，以0结束:" << endl;
-    int k=0;
-    int x;
-    cin >> x;
-    while (x != 0) {
-        selectedPlace[k] = x-1;      //存储的是序号对应成功时的下标
-        k++;
-        cin >> x;
-    }
-    selectedPlaceNum = k;*/
 
     int i, j;                                       //初始化所选择景点的距离矩阵
     matrix = (int**)new int* [selectedPlaceNum];

@@ -27,8 +27,6 @@ public:
     QLabel *label_route_3;
     QLabel *label_route_4;
     QLabel *label_2;
-    QPushButton *pushButton_email;
-    QPushButton *pushButton_screen;
     QPushButton *pushButton_return;
 
     void setupUi(QWidget *bjtuMap)
@@ -38,7 +36,7 @@ public:
         bjtuMap->resize(1098, 682);
         groupBox = new QGroupBox(bjtuMap);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(750, 80, 251, 191));
+        groupBox->setGeometry(QRect(750, 80, 251, 181));
         label_route_1 = new QLabel(groupBox);
         label_route_1->setObjectName("label_route_1");
         label_route_1->setGeometry(QRect(10, 20, 221, 20));
@@ -66,21 +64,12 @@ public:
         font1.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font1.setPointSize(14);
         label_2->setFont(font1);
-        pushButton_email = new QPushButton(bjtuMap);
-        pushButton_email->setObjectName("pushButton_email");
-        pushButton_email->setGeometry(QRect(80, 10, 71, 31));
+        pushButton_return = new QPushButton(bjtuMap);
+        pushButton_return->setObjectName("pushButton_return");
+        pushButton_return->setGeometry(QRect(710, 290, 81, 41));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font2.setPointSize(12);
-        pushButton_email->setFont(font2);
-        pushButton_screen = new QPushButton(bjtuMap);
-        pushButton_screen->setObjectName("pushButton_screen");
-        pushButton_screen->setGeometry(QRect(0, 10, 71, 31));
-        pushButton_screen->setFont(font2);
-        pushButton_screen->setStyleSheet(QString::fromUtf8(""));
-        pushButton_return = new QPushButton(bjtuMap);
-        pushButton_return->setObjectName("pushButton_return");
-        pushButton_return->setGeometry(QRect(710, 290, 101, 51));
         pushButton_return->setFont(font2);
 
         retranslateUi(bjtuMap);
@@ -92,13 +81,11 @@ public:
     {
         bjtuMap->setWindowTitle(QCoreApplication::translate("bjtuMap", "Form", nullptr));
         groupBox->setTitle(QString());
-        label_route_1->setText(QCoreApplication::translate("bjtuMap", "<html><head/><body><p><span style=\" color:#ffffc5;\">TextLabel</span></p></body></html>", nullptr));
-        label_route_2->setText(QCoreApplication::translate("bjtuMap", "<html><head/><body><p><span style=\" color:#ffffc5;\">TextLabel</span></p></body></html>", nullptr));
-        label_route_3->setText(QCoreApplication::translate("bjtuMap", "<html><head/><body><p><span style=\" color:#ffffc5;\">TextLabel</span></p></body></html>", nullptr));
-        label_route_4->setText(QCoreApplication::translate("bjtuMap", "<html><head/><body><p><span style=\" color:#ffffc5;\">TextLabel</span></p></body></html>", nullptr));
-        label_2->setText(QCoreApplication::translate("bjtuMap", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffc5;\">\350\267\257\347\272\277\344\270\272\357\274\232</span></p></body></html>", nullptr));
-        pushButton_email->setText(QCoreApplication::translate("bjtuMap", "\345\217\221\351\200\201\351\202\256\344\273\266", nullptr));
-        pushButton_screen->setText(QCoreApplication::translate("bjtuMap", "\346\210\252\345\233\276", nullptr));
+        label_route_1->setText(QCoreApplication::translate("bjtuMap", "<html><head/><body><p><span style=\" color:#000000;\">TextLabel</span></p></body></html>", nullptr));
+        label_route_2->setText(QCoreApplication::translate("bjtuMap", "<html><head/><body><p><span style=\" color:#000000;\">TextLabel</span></p></body></html>", nullptr));
+        label_route_3->setText(QCoreApplication::translate("bjtuMap", "<html><head/><body><p><span style=\" color:#000000;\">TextLabel</span></p></body></html>", nullptr));
+        label_route_4->setText(QCoreApplication::translate("bjtuMap", "<html><head/><body><p><span style=\" color:#000000;\">TextLabel</span></p></body></html>", nullptr));
+        label_2->setText(QCoreApplication::translate("bjtuMap", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#000000;\">\350\267\257\347\272\277\344\270\272\357\274\232</span></p></body></html>", nullptr));
         pushButton_return->setText(QCoreApplication::translate("bjtuMap", "\350\277\224\345\233\236", nullptr));
     } // retranslateUi
 

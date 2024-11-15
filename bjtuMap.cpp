@@ -24,9 +24,6 @@ void bjtuMap::Init(){
 
     InitPoint();
     InitPic();
-
-    ui->pushButton_email->hide();
-    ui->pushButton_screen->hide();
     printPlaceOrder();
 }
 
@@ -840,8 +837,8 @@ void bjtuMap::setRouteLine(){
                 flag_point[18][20] = 1;
                 flag_point[20][21]=1;
                 flag_point[21][23]=1;
-                flag_point[23][24]=1;
-                flag_point[24][57]=1;
+                flag_point[23][6]=1;
+                flag_point[6][57]=1;
                 flag_point[57][14]=1;
             }
 
@@ -1863,10 +1860,12 @@ void bjtuMap::paintEvent(QPaintEvent*event){
 }
 
 void bjtuMap::printPlaceOrder(){
-
+    // Clear previous labels
+    for (int i = 0; i < allPlaceNum; i++) {
+        label[i]->clear();
+    }
     int nowplace;     //记录的是标号，不是下标
-   // qDebug()<<endl;
-   // qDebug()<<"placeNum: "<<selectedPlaceNum<<endl;
+
     for(int i = 0; i < selectedPlaceNum; i++){
         nowplace = walkRoute[i];
         label[nowplace-1]->setPixmap(pic[i]);

@@ -125,35 +125,35 @@ public:
         if (Information->objectName().isEmpty())
             Information->setObjectName("Information");
         Information->setWindowModality(Qt::NonModal);
-        Information->resize(1082, 774);
+        Information->resize(1107, 774);
         QFont font;
         font.setBold(true);
         Information->setFont(font);
         tb1 = new QToolButton(Information);
         tb1->setObjectName("tb1");
-        tb1->setGeometry(QRect(820, 660, 91, 41));
+        tb1->setGeometry(QRect(830, 630, 121, 51));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font1.setPointSize(12);
         font1.setBold(false);
         tb1->setFont(font1);
         QIcon icon;
-        icon.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/Resource/icon10_1.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/\345\257\274\350\210\252.png"), QSize(), QIcon::Normal, QIcon::Off);
         tb1->setIcon(icon);
         tb1->setIconSize(QSize(50, 50));
         tb1->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
         tb2 = new QToolButton(Information);
         tb2->setObjectName("tb2");
-        tb2->setGeometry(QRect(690, 660, 91, 41));
+        tb2->setGeometry(QRect(620, 630, 121, 51));
         tb2->setFont(font1);
         QIcon icon1;
-        icon1.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/Resource/icon11_1.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/\345\256\230\347\275\221.png"), QSize(), QIcon::Normal, QIcon::Off);
         tb2->setIcon(icon1);
         tb2->setIconSize(QSize(50, 50));
         tb2->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
         label = new QLabel(Information);
         label->setObjectName("label");
-        label->setGeometry(QRect(30, 600, 491, 141));
+        label->setGeometry(QRect(30, 590, 491, 141));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font2.setPointSize(16);
@@ -161,12 +161,12 @@ public:
         label->setFont(font2);
         addMapButton = new QPushButton(Information);
         addMapButton->setObjectName("addMapButton");
-        addMapButton->setGeometry(QRect(570, 660, 91, 41));
+        addMapButton->setGeometry(QRect(650, 200, 101, 41));
         addMapButton->setFont(font1);
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/Resource/icon4_1.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/\345\234\260\345\233\276.png"), QSize(), QIcon::Normal, QIcon::Off);
         addMapButton->setIcon(icon2);
-        addMapButton->setIconSize(QSize(30, 30));
+        addMapButton->setIconSize(QSize(50, 50));
         label_2 = new QLabel(Information);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(-60, 0, 761, 571));
@@ -174,63 +174,63 @@ public:
         label_2->setScaledContents(true);
         spot9 = new QPushButton(Information);
         spot9->setObjectName("spot9");
-        spot9->setGeometry(QRect(300, 380, 51, 61));
+        spot9->setGeometry(QRect(310, 410, 31, 31));
         spot9->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         QIcon icon3;
         icon3.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\272\242.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot9->setIcon(icon3);
-        spot9->setIconSize(QSize(45, 45));
+        spot9->setIconSize(QSize(30, 30));
         spot5 = new QPushButton(Information);
         spot5->setObjectName("spot5");
-        spot5->setGeometry(QRect(340, 140, 41, 41));
+        spot5->setGeometry(QRect(340, 130, 41, 61));
         spot5->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot5->setIcon(icon3);
-        spot5->setIconSize(QSize(45, 45));
+        spot5->setIconSize(QSize(50, 50));
         spot8 = new QPushButton(Information);
         spot8->setObjectName("spot8");
-        spot8->setGeometry(QRect(470, 400, 51, 61));
+        spot8->setGeometry(QRect(480, 420, 21, 31));
         spot8->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot8->setIcon(icon3);
-        spot8->setIconSize(QSize(45, 45));
+        spot8->setIconSize(QSize(30, 30));
         spot2 = new QPushButton(Information);
         spot2->setObjectName("spot2");
-        spot2->setGeometry(QRect(340, 30, 41, 51));
+        spot2->setGeometry(QRect(340, 40, 31, 41));
         spot2->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot2->setIcon(icon3);
-        spot2->setIconSize(QSize(45, 45));
+        spot2->setIconSize(QSize(30, 30));
         spot10 = new QPushButton(Information);
         spot10->setObjectName("spot10");
         spot10->setGeometry(QRect(60, 150, 41, 61));
         spot10->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot10->setIcon(icon3);
-        spot10->setIconSize(QSize(45, 45));
+        spot10->setIconSize(QSize(50, 50));
         spot6 = new QPushButton(Information);
         spot6->setObjectName("spot6");
-        spot6->setGeometry(QRect(460, 170, 51, 51));
+        spot6->setGeometry(QRect(480, 170, 31, 51));
         spot6->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot6->setIcon(icon3);
-        spot6->setIconSize(QSize(45, 45));
+        spot6->setIconSize(QSize(40, 40));
         spot3 = new QPushButton(Information);
         spot3->setObjectName("spot3");
-        spot3->setGeometry(QRect(560, 40, 31, 51));
+        spot3->setGeometry(QRect(560, 60, 21, 31));
         spot3->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot3->setIcon(icon3);
-        spot3->setIconSize(QSize(45, 45));
+        spot3->setIconSize(QSize(30, 30));
         spot1 = new QPushButton(Information);
         spot1->setObjectName("spot1");
         spot1->setGeometry(QRect(120, 80, 51, 51));
         spot1->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot1->setIcon(icon3);
-        spot1->setIconSize(QSize(45, 45));
+        spot1->setIconSize(QSize(50, 50));
         spot7 = new QPushButton(Information);
         spot7->setObjectName("spot7");
         spot7->setGeometry(QRect(240, 260, 41, 51));
         spot7->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot7->setIcon(icon3);
-        spot7->setIconSize(QSize(45, 45));
+        spot7->setIconSize(QSize(50, 50));
         spot4 = new QPushButton(Information);
         spot4->setObjectName("spot4");
-        spot4->setGeometry(QRect(230, 130, 41, 51));
+        spot4->setGeometry(QRect(230, 130, 41, 71));
         spot4->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot4->setIcon(icon3);
         spot4->setIconSize(QSize(50, 50));
@@ -671,51 +671,53 @@ public:
         spot11->setGeometry(QRect(410, 130, 41, 61));
         spot11->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot11->setIcon(icon3);
-        spot11->setIconSize(QSize(45, 45));
+        spot11->setIconSize(QSize(50, 50));
         spot12 = new QPushButton(Information);
         spot12->setObjectName("spot12");
         spot12->setGeometry(QRect(180, 200, 41, 61));
         spot12->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot12->setIcon(icon3);
-        spot12->setIconSize(QSize(45, 45));
+        spot12->setIconSize(QSize(50, 50));
         spot13 = new QPushButton(Information);
         spot13->setObjectName("spot13");
-        spot13->setGeometry(QRect(300, 260, 41, 61));
+        spot13->setGeometry(QRect(310, 290, 21, 31));
         spot13->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot13->setIcon(icon3);
-        spot13->setIconSize(QSize(45, 45));
+        spot13->setIconSize(QSize(30, 30));
         spot14 = new QPushButton(Information);
         spot14->setObjectName("spot14");
-        spot14->setGeometry(QRect(550, 80, 41, 61));
+        spot14->setGeometry(QRect(560, 90, 21, 31));
         spot14->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot14->setIcon(icon3);
-        spot14->setIconSize(QSize(45, 45));
+        spot14->setIconSize(QSize(30, 30));
         spot15 = new QPushButton(Information);
         spot15->setObjectName("spot15");
-        spot15->setGeometry(QRect(260, 340, 31, 41));
+        spot15->setGeometry(QRect(260, 330, 31, 41));
         spot15->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
         spot15->setIcon(icon3);
-        spot15->setIconSize(QSize(45, 45));
+        spot15->setIconSize(QSize(40, 40));
         textEdit = new QTextEdit(Information);
         textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(730, 340, 321, 231));
+        textEdit->setGeometry(QRect(750, 290, 341, 281));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font3.setPointSize(11);
         font3.setBold(false);
+        font3.setItalic(false);
         textEdit->setFont(font3);
+        textEdit->setStyleSheet(QString::fromUtf8("font: 11pt \"\351\273\221\344\275\223\";"));
         label_picture = new QLabel(Information);
         label_picture->setObjectName("label_picture");
-        label_picture->setGeometry(QRect(790, 20, 200, 300));
+        label_picture->setGeometry(QRect(830, 10, 174, 261));
         label_picture->setScaledContents(true);
         label_3 = new QLabel(Information);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(800, 30, 191, 191));
+        label_3->setGeometry(QRect(820, 30, 191, 191));
         label_3->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\346\240\241\345\276\275.jpg")));
         label_3->setScaledContents(true);
         label_4 = new QLabel(Information);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(800, 240, 191, 61));
+        label_4->setGeometry(QRect(10, 500, 191, 61));
         label_4->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\346\240\241\345\220\215.jpg")));
         label_4->setScaledContents(true);
         label_2->raise();
@@ -823,10 +825,10 @@ public:
     void retranslateUi(QWidget *Information)
     {
         Information->setWindowTitle(QCoreApplication::translate("Information", "\344\272\244\345\244\247\346\254\242\350\277\216\344\275\240\357\274\201", nullptr));
-        tb1->setText(QCoreApplication::translate("Information", "\345\257\274\350\210\252", nullptr));
-        tb2->setText(QCoreApplication::translate("Information", "\345\256\230\347\275\221", nullptr));
-        label->setText(QCoreApplication::translate("Information", "<html><head/><body><p><span style=\" font-size:18pt; vertical-align:sub;\">\346\254\242\350\277\216\344\275\277\347\224\250\344\272\244\345\244\247\346\240\241\345\233\255\345\257\274\346\270\270\347\263\273\347\273\237</span></p><p><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344\275\240\346\203\263\350\246\201\350\277\233\350\241\214\350\267\257\345\276\204\346\237\245\350\257\242\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234\345\257\274\350\210\252\342\200\235\346\214\211\351\222\256</span></p><p><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344\275\240\346\203\263\350\246\201\344\272\206\350\247\243\345\220\204\345\234\260\347\202\271\347\232\204\344\277\241\346\201\257\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234 </span><img src=\":/Resource/location.png\"/><span style=\" font-size:18pt; vertical-align:sub;\">\342\200\235\346\240\207\350\256\260\347\232\204\344\275\215\347\275\256</span></p><p><span style=\" "
-                        "font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344\275\240\350\277\230\346\203\263\344\272\206\350\247\243\346\233\264\345\244\232\344\277\241\346\201\257\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234\345\256\230\347\275\221\342\200\235\346\214\211\351\222\256</span></p></body></html>", nullptr));
+        tb1->setText(QCoreApplication::translate("Information", " \345\257\274\350\210\252", nullptr));
+        tb2->setText(QCoreApplication::translate("Information", " \345\256\230\347\275\221", nullptr));
+        label->setText(QCoreApplication::translate("Information", "<html><head/><body><p><span style=\" font-size:18pt; vertical-align:sub;\">\346\254\242\350\277\216\344\275\277\347\224\250\344\272\244\345\244\247\346\240\241\345\233\255\345\257\274\346\270\270\347\263\273\347\273\237\357\274\201</span></p><p><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344\275\240\346\203\263\350\246\201\350\277\233\350\241\214\350\267\257\345\276\204\346\237\245\350\257\242\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234\345\257\274\350\210\252\342\200\235\346\214\211\351\222\256</span></p><p><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344\275\240\346\203\263\350\246\201\344\272\206\350\247\243\345\220\204\345\234\260\347\202\271\347\232\204\344\277\241\346\201\257\357\274\214\350\257\267\347\202\271\345\207\273\345\233\276\344\270\255\342\200\234 </span><img src=\":/Resource/location.png\"/><span style=\" font-size:18pt; vertical-align:sub;\">\342\200\235\346\240\207\350\256\260\347\232\204\344\275\215\347\275"
+                        "\256</span></p><p><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344\275\240\350\277\230\346\203\263\344\272\206\350\247\243\346\233\264\345\244\232\344\277\241\346\201\257\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234\345\256\230\347\275\221\342\200\235\346\214\211\351\222\256</span></p></body></html>", nullptr));
         addMapButton->setText(QCoreApplication::translate("Information", "\345\234\260\345\233\276", nullptr));
         label_2->setText(QString());
         spot9->setText(QString());
@@ -923,23 +925,25 @@ public:
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'\351\273\221\344\275\223'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \345\271\263\347\225\264\350\276\275\351\230\224\345\205\256\345\245\240\351\202\246\345\237\272\357\274\214\345\244\247\351\231\206\345\205\263\346\262\263\344\270\207\351\207\214\343\200\202</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \345\206\234\344\272\247\345\257\214\351\245\266\345\205\256\345"
-                        "\272\266\347\211\251\347\271\201\357\274\214\350\264\270\350\277\201\350\265\226\345\220\276\346\233\271\347\273\274\347\220\206\343\200\202</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\345\271\263\347\225\264\350\276\275\351\230\224\345\205\256\345\245\240\351\202\246\345\237\272\357\274\214\345\244\247\351\231\206\345\205\263\346\262\263\344\270\207\351\207\214\343\200\202"
+                        "</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\345\206\234\344\272\247\345\257\214\351\245\266\345\205\256\345\272\266\345\212\241\347\271\201\357\274\214\346\207\213\350\277\201\350\265\226\345\220\276\346\233\271\347\273\274\347\220\206\343\200\202</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \344\271\220\345\220\214\350\275\250\344\271\213\347\233\270\344\272\244\344\271\213\345\205\256\357\274\214\351\251\260\351\252\244\351\201\215\344\270\255\345\216\237\345\244\247\345\234\260\357\274\214</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \346\262\263\345\261\261\351\231\251\351\230\273\345\205\263\345\241\236\345\272\204\344\270\245\357\274\214\345\233\272\345\220\276\345\234\204\343\200\201\347\224\267\345\204\277\344\272\213\343\200\202</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-t"
-                        "op:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \346\254\242\346\204\211\345\275\223\346\255\244\351\231\205\357\274\214\351\235\222\346\242\205\347\253\271\351\251\254\357\274\214\346\225\260\345\271\264\345\215\216\350\277\234\345\244\247\347\233\270\346\234\237\343\200\202</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \347\276\216\345\223\211\346\210\221\345\271\263\351\231\242\357\274\214\345\261\261\346\236\227\351\232\220\345\237\216\345\270\202\357\274\214\346\234\211\347\217\212\347\221\232\347\273\277\346\240\221\344\272\244\347\273\207\343\200\202</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff"
+                        ";\">\344\271\220\345\220\214\350\275\250\344\271\213\347\233\270\344\272\244\347\273\207\345\205\256\357\274\214\351\251\260\351\252\244\351\201\215\344\270\255\345\216\237\345\244\247\345\234\260\343\200\202</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\346\262\263\345\261\261\351\231\251\351\230\273\357\274\214\345\205\263\345\241\236\345\272\204\344\270\245\357\274\214\345\233\272\345\220\276\345\234\211\357\274\214\347\224\267\345\204\277\344\272\213\343\200\202</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin"
-                        "-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \347\276\216\345\223\211\357\274\214\344\272\244\345\244\247\357\274\214\347\256\241\345\233\275\345\256\266\346\265\201\351\200\232\344\271\213\346\234\272\343\200\202</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \347\276\216\345\223\211\357\274\214\344\272\244\345\244\247\357\274\214\347\234\213\347\272\265\346\250\252\345\256\207\345\206\205\351\243\236\351\251\260\343\200\202</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+                        "indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\346\254\242\345\250\261\345\275\223\346\255\244\351\231\205\357\274\214\351\235\222\346\242\205\347\253\271\351\251\254\357\274\214\346\225\260\345\271\264\345\215\216\350\277\234\345\244\247\347\233\270\346\234\237\343\200\202</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\347\276\216\345\223\211\346\210\221\345\271\263\351\231\242\357\274\214\345\261\261\346\236\227\351\232\220\345\237\216\345\270\202\357\274\214\346\234\211\347\217\212\347\221\232\347\216\211\346\240\221\344\272\244\346\236\235\343\200\202<"
+                        "/span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \350\277\231\346\230\257\350\221\227\345\220\215\350\257\215\345\255\246\345\256\266\346\242\201\345\220\257\345\213\213\357\274\210\346\242\201\345\220\257\350\266"
-                        "\205\344\271\213\345\274\237\357\274\211\344\270\272\345\214\227\344\272\254\344\272\244\351\200\232\345\244\247\345\255\246\347\232\204\345\211\215\350\272\253--\345\233\275\347\253\213\344\272\244\351\200\232\345\244\247\345\255\246\346\211\200\344\275\234\347\232\204\346\240\241\346\255\214</p></body></html>", nullptr));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\347\276\216\345\223\211\344\272\244\345\244\247\357\274\214\347\256\241\345\233\275\345\256\266\346\265\201\351\200\232\344\271\213\346\234\272\357\274\233</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">  \347\276\216\345\223\211\344\272\244\345\244"
+                        "\247\357\274\214\347\234\213\347\272\265\346\250\252\345\256\207\345\206\205\351\243\236\351\251\260\343\200\202</span><span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#3366cc; background-color:#ffffff; vertical-align:bottom;\">\302\240</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#3366cc; vertical-align:bottom;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \350\221\227\345\220\215\350\257\215\345\255\246\345\256\266\346\242\201\345\220\257\345\213\213\357\274\210\346\242\201\345\220\257\350\266\205\344\271\213\345\274\237\357\274\211\344\270\272\345\214\227\344"
+                        "\272\254\344\272\244\351\200\232\345\244\247\345\255\246\345\211\215\350\272\253--\345\233\275\347\253\213\344\272\244\351\200\232\345\244\247\345\255\246\346\211\200\344\275\234\347\232\204\346\240\241\346\255\214</p></body></html>", nullptr));
         label_picture->setText(QString());
         label_3->setText(QString());
         label_4->setText(QString());

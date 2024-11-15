@@ -15,7 +15,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/addr2line.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/addr2line.exe"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -31,7 +31,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/ar.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/ar.exe"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -115,7 +115,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/QT/Tools/CMake_64/bin/cmake.exe"
+			"value" : "D:/Qt/Tools/CMake_64/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/QT/Tools/CMake_64/bin/cpack.exe"
+			"value" : "D:/Qt/Tools/CMake_64/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -139,7 +139,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/QT/Tools/CMake_64/bin/ctest.exe"
+			"value" : "D:/Qt/Tools/CMake_64/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/c++.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/c++.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -171,7 +171,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/gcc-ar.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -187,7 +187,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/gcc-ranlib.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -299,7 +299,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/gcc.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/gcc.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -315,7 +315,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/gcc-ar.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -331,7 +331,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/gcc-ranlib.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -443,7 +443,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/dlltool.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/dlltool.exe"
 		},
 		{
 			"name" : "CMAKE_EDIT_COMMAND",
@@ -455,7 +455,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/QT/Tools/CMake_64/bin/cmake-gui.exe"
+			"value" : "D:/Qt/Tools/CMake_64/bin/cmake-gui.exe"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -955,7 +955,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/ld.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/ld.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -1063,7 +1063,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/nm.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/nm.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -1091,7 +1091,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/objcopy.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/objcopy.exe"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -1107,7 +1107,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/objdump.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/objdump.exe"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -1171,7 +1171,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/ranlib.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -1187,7 +1187,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/windres.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/windres.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER_WORKS",
@@ -1295,7 +1295,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/readelf.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/readelf.exe"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1307,7 +1307,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/QT/Tools/CMake_64/share/cmake-3.29"
+			"value" : "D:/Qt/Tools/CMake_64/share/cmake-3.29"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1515,7 +1515,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/Tools/mingw1120_64/bin/strip.exe"
+			"value" : "D:/Qt/Tools/mingw1120_64/bin/strip.exe"
 		},
 		{
 			"name" : "CMAKE_TAPI",
@@ -6731,7 +6731,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6CoreTools"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6CoreTools"
 		},
 		{
 			"name" : "Qt6Core_DIR",
@@ -6743,7 +6743,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6Core"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core"
 		},
 		{
 			"name" : "Qt6EntryPointPrivate_DIR",
@@ -6755,7 +6755,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6EntryPointPrivate"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6EntryPointPrivate"
 		},
 		{
 			"name" : "Qt6GuiTools_DIR",
@@ -6767,7 +6767,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6GuiTools"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6GuiTools"
 		},
 		{
 			"name" : "Qt6Gui_DIR",
@@ -6779,7 +6779,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6Gui"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui"
 		},
 		{
 			"name" : "Qt6Network_DIR",
@@ -6791,7 +6791,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6Network"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Network"
 		},
 		{
 			"name" : "Qt6OpenGL_DIR",
@@ -6803,7 +6803,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6OpenGL"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6OpenGL"
 		},
 		{
 			"name" : "Qt6QmlCompilerPlusPrivate_DIR",
@@ -6827,7 +6827,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6QmlIntegration"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6QmlIntegration"
 		},
 		{
 			"name" : "Qt6QmlModels_DIR",
@@ -6839,7 +6839,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6QmlModels"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6QmlModels"
 		},
 		{
 			"name" : "Qt6QmlTools_DIR",
@@ -6851,7 +6851,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6QmlTools"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6QmlTools"
 		},
 		{
 			"name" : "Qt6Qml_DIR",
@@ -6863,7 +6863,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6Qml"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Qml"
 		},
 		{
 			"name" : "Qt6Quick_DIR",
@@ -6875,7 +6875,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6Quick"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Quick"
 		},
 		{
 			"name" : "Qt6WidgetsTools_DIR",
@@ -6887,7 +6887,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6WidgetsTools"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6WidgetsTools"
 		},
 		{
 			"name" : "Qt6Widgets_DIR",
@@ -6899,7 +6899,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6Widgets"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets"
 		},
 		{
 			"name" : "Qt6ZlibPrivate_DIR",
@@ -6911,7 +6911,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6ZlibPrivate"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6ZlibPrivate"
 		},
 		{
 			"name" : "Qt6_DIR",
@@ -6923,7 +6923,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6"
 		},
 		{
 			"name" : "Vulkan_GLSLANG_VALIDATOR_EXECUTABLE",
@@ -6999,7 +6999,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/QT/6.5.3/mingw_64/bin/windeployqt.exe"
+			"value" : "D:/Qt/6.5.3/mingw_64/bin/windeployqt.exe"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
@@ -7035,7 +7035,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/QT/6.5.3/mingw_64/lib/cmake/Qt6Qml"
+			"value" : "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Qml"
 		}
 	],
 	"kind" : "cache",

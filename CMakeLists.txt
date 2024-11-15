@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.29)
 
 # 设置项目名称
 project(CampusGuide_DP_QT)
@@ -6,23 +6,21 @@ project(CampusGuide_DP_QT)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
-# 查找Qt6模块
-find_package(Qt6 COMPONENTS Core Gui Widgets Quick REQUIRED)
 
+# 查找Qt6模块
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Quick)
 
 # 添加可执行文件
-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS}
+add_executable(${PROJECT_NAME}
         Information.cpp
         Choose.cpp
         bjtuMap.cpp
-
         main.cpp
 
         Information.h
         Choose.cpp
         distanceData.h
         bjtuMap.h
-
         introduction.h
         process.h
         subject.h
@@ -30,7 +28,6 @@ add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS}
         Information.ui
         Choose.ui
         bjtuMap.ui
-
 )
 
 # 链接Qt6库

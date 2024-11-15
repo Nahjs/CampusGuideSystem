@@ -54,10 +54,10 @@ public:
     {
         if (Choose->objectName().isEmpty())
             Choose->setObjectName("Choose");
-        Choose->resize(575, 779);
+        Choose->resize(420, 779);
         pbt2 = new QPushButton(Choose);
         pbt2->setObjectName("pbt2");
-        pbt2->setGeometry(QRect(0, 120, 121, 41));
+        pbt2->setGeometry(QRect(30, 130, 101, 41));
         QFont font;
         font.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font.setPointSize(11);
@@ -83,7 +83,7 @@ public:
         label_route->setWordWrap(true);
         ptb_clear = new QPushButton(Choose);
         ptb_clear->setObjectName("ptb_clear");
-        ptb_clear->setGeometry(QRect(0, 220, 121, 41));
+        ptb_clear->setGeometry(QRect(30, 270, 101, 41));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font3.setPointSize(11);
@@ -190,18 +190,21 @@ public:
 
         textEdit = new QTextEdit(Choose);
         textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(40, 10, 81, 31));
+        textEdit->setGeometry(QRect(40, 10, 91, 31));
         label = new QLabel(Choose);
         label->setObjectName("label");
-        label->setGeometry(QRect(0, 10, 61, 31));
+        label->setGeometry(QRect(0, 20, 31, 21));
         QFont font5;
         font5.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font5.setPointSize(10);
         label->setFont(font5);
         ptb = new QPushButton(Choose);
         ptb->setObjectName("ptb");
-        ptb->setGeometry(QRect(140, 10, 71, 31));
-        ptb->setFont(font);
+        ptb->setGeometry(QRect(140, 20, 41, 21));
+        QFont font6;
+        font6.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
+        font6.setPointSize(9);
+        ptb->setFont(font6);
 
         retranslateUi(Choose);
 

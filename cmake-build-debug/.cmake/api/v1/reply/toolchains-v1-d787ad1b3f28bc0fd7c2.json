@@ -10,16 +10,16 @@
 				{
 					"includeDirectories" : 
 					[
-						"D:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include",
-						"D:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed",
-						"D:/QT/Tools/mingw1120_64/x86_64-w64-mingw32/include"
+						"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include",
+						"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed",
+						"D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include"
 					],
 					"linkDirectories" : 
 					[
-						"D:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0",
-						"D:/QT/Tools/mingw1120_64/lib/gcc",
-						"D:/QT/Tools/mingw1120_64/x86_64-w64-mingw32/lib",
-						"D:/QT/Tools/mingw1120_64/lib"
+						"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0",
+						"D:/Qt/Tools/mingw1120_64/lib/gcc",
+						"D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib",
+						"D:/Qt/Tools/mingw1120_64/lib"
 					],
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : 
@@ -42,7 +42,7 @@
 						"kernel32"
 					]
 				},
-				"path" : "D:/QT/Tools/mingw1120_64/bin/gcc.exe",
+				"path" : "D:/Qt/Tools/mingw1120_64/bin/gcc.exe",
 				"version" : "11.2.0"
 			},
 			"language" : "C",
@@ -60,19 +60,19 @@
 				{
 					"includeDirectories" : 
 					[
-						"D:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++",
-						"D:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32",
-						"D:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward",
-						"D:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include",
-						"D:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed",
-						"D:/QT/Tools/mingw1120_64/x86_64-w64-mingw32/include"
+						"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++",
+						"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32",
+						"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward",
+						"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include",
+						"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed",
+						"D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include"
 					],
 					"linkDirectories" : 
 					[
-						"D:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0",
-						"D:/QT/Tools/mingw1120_64/lib/gcc",
-						"D:/QT/Tools/mingw1120_64/x86_64-w64-mingw32/lib",
-						"D:/QT/Tools/mingw1120_64/lib"
+						"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0",
+						"D:/Qt/Tools/mingw1120_64/lib/gcc",
+						"D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib",
+						"D:/Qt/Tools/mingw1120_64/lib"
 					],
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : 
@@ -98,7 +98,7 @@
 						"kernel32"
 					]
 				},
-				"path" : "D:/QT/Tools/mingw1120_64/bin/c++.exe",
+				"path" : "D:/Qt/Tools/mingw1120_64/bin/c++.exe",
 				"version" : "11.2.0"
 			},
 			"language" : "CXX",
@@ -124,7 +124,7 @@
 			"compiler" : 
 			{
 				"implicit" : {},
-				"path" : "D:/QT/Tools/mingw1120_64/bin/windres.exe"
+				"path" : "D:/Qt/Tools/mingw1120_64/bin/windres.exe"
 			},
 			"language" : "RC",
 			"sourceFileExtensions" : 
