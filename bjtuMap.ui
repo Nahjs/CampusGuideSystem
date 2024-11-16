@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1098</width>
-    <height>682</height>
+    <width>1138</width>
+    <height>742</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>750</x>
-     <y>80</y>
-     <width>251</width>
-     <height>181</height>
+     <x>130</x>
+     <y>600</y>
+     <width>521</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="title">
@@ -29,8 +29,8 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
-      <width>221</width>
+      <y>10</y>
+      <width>501</width>
       <height>20</height>
      </rect>
     </property>
@@ -49,8 +49,8 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>60</y>
-      <width>221</width>
+      <y>40</y>
+      <width>501</width>
       <height>20</height>
      </rect>
     </property>
@@ -69,8 +69,8 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>100</y>
-      <width>221</width>
+      <y>70</y>
+      <width>501</width>
       <height>20</height>
      </rect>
     </property>
@@ -89,8 +89,8 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>140</y>
-      <width>221</width>
+      <y>100</y>
+      <width>501</width>
       <height>20</height>
      </rect>
     </property>
@@ -109,10 +109,10 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>50</y>
-     <width>71</width>
-     <height>21</height>
+     <x>40</x>
+     <y>570</y>
+     <width>141</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -122,15 +122,15 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#000000;&quot;&gt;路线为：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;为您推荐的路线为：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_return">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>290</y>
-     <width>81</width>
+     <x>650</x>
+     <y>10</y>
+     <width>101</width>
      <height>41</height>
     </rect>
    </property>
@@ -142,6 +142,35 @@
    </property>
    <property name="text">
     <string>返回</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/返回.png</normaloff>C:/Users/lenovo/Desktop/res/返回.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>45</width>
+     <height>45</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>440</y>
+     <width>211</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>C:/Users/lenovo/Desktop/res/校名.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
  </widget>

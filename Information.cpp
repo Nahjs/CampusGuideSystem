@@ -30,6 +30,7 @@ void Information::Init(){
   for(int i=0;i<spotPoints.size();i++) {
       spotPoints[i]->hide();
   }
+    ui->label_6->hide();
     ui->addMapButton->hide();
     QPalette palette;
     palette.setColor(QPalette::Window, Qt::white);
@@ -73,7 +74,7 @@ void Information::ToChoose(bool){
     }
 */
     choose->show();
-    choose->move(760,0);
+    choose->move(735,0);
     ui->addMapButton->show();
     ui->label->hide();
     ui->tb1->hide();
@@ -81,11 +82,14 @@ void Information::ToChoose(bool){
     ui->label_picture->hide();
     ui->textEdit->hide();
     ui->label_3->hide();
+    ui->label_4->show();
+    ui->label_5->hide();
+    ui->label_6->show();
 }
 
 
 void Information::ToPath(bool){
-  //  this->hide();
+
     map->show();
 }
 
@@ -101,7 +105,8 @@ void Information::BjtuMapReturnToThis(){
     map->hide();
     this->show();
     choose->show();
-    choose->move(760,0);
+    choose->move(735,0);
+    ui->label_4->show();
    // ui->ptb_clear
 }
 
@@ -213,80 +218,81 @@ Intro[10].str = "\t11. 图书馆\n\n"
 }
 
 void Information::ShowIntroduction(){
+    ui->label_4->show();
     if(place == 1){
         ui->textEdit->setText(Intro[0].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\1西操.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\1西操.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 2){
         ui->textEdit->setText(Intro[1].str);
         //ui->textEdit->append(Intro[1].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\2家属区.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\2家属区.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 3){
         ui->textEdit->setText(Intro[2].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\3东门.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\3东门.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 4){
         ui->textEdit->setText(Intro[3].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\4思源楼.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\4思源楼.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 5){
         ui->textEdit->setText(Intro[4].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\5明湖.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\5明湖.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 6){
         ui->textEdit->setText(Intro[5].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\6逸夫楼.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\6逸夫楼.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 7){
         ui->textEdit->setText(Intro[6].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\7南门.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\7南门.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 8){
         ui->textEdit->setText(Intro[7].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\8东区一教.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\8东区一教.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 9){
         ui->textEdit->setText(Intro[8].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\9交大公交站.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\9交大公交站.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 10){
         ui->textEdit->setText(Intro[9].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\10学生活动中心.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\10学生活动中心.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 11){
         ui->textEdit->setText(Intro[10].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\11图书馆.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\11图书馆.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 12){
         ui->textEdit->setText(Intro[11].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\12天佑会堂.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\12天佑会堂.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 13){
     ui->textEdit->setText(Intro[12].str);
-    QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\13嘉园.jpg");
+    QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\13嘉园.jpg");
     ui->label_picture->setPixmap(pic);
     }
     if(place == 14){
         ui->textEdit->setText(Intro[13].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\14校医院.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\14校医院.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 15){
         ui->textEdit->setText(Intro[14].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\Resource\\15麦当劳.jpg");
+        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\15麦当劳.jpg");
         ui->label_picture->setPixmap(pic);
     }
 }

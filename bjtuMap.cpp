@@ -163,33 +163,38 @@ void bjtuMap::InitPic(){
 }
 
 void bjtuMap::outputInformation(){
+    QString placeNames[allPlaceNum]={"西操","家属区","东门","思源楼","明湖","逸夫楼","南门","东教一楼","交大公交站",
+                                  "学生活动中心","图书馆","天佑会堂","嘉园","校医院","麦当劳"};
+
     //输出路线信息
     QString routeS1{""};
     QString routeS2{""};
     QString routeS3{""};
     QString routeS4{""};
 
+
     for(int i = 0; i < selectedPlaceNum; i++){
+        QString placeInfo = QString::number(walkRoute[i]) + " (" + placeNames[walkRoute[i] - 1] + ") -> ";
         if(i < 4){
-           routeS1 = routeS1 + QString::number(walkRoute[i])+" -> ";
+            routeS1 += placeInfo;
         }else if(i < 8){
-           routeS2 = routeS2 + QString::number(walkRoute[i])+" -> ";
+            routeS2 += placeInfo;
         }else if(i < 12){
-           routeS3 = routeS3 + QString::number(walkRoute[i])+" -> ";
+            routeS3 += placeInfo;
         }else{
-           routeS4 = routeS4 + QString::number(walkRoute[i])+" -> ";
+            routeS4 += placeInfo;
         }
     }
-
-    //添加起点
+    // Add starting point
+    QString startPoint = QString::number(walkRoute[0]) + " (" + placeNames[walkRoute[0] - 1] + ")";
     if(selectedPlaceNum < 4){
-       routeS1 = routeS1 + QString::number(walkRoute[0]);
+        routeS1 += startPoint;
     }else if(selectedPlaceNum < 8){
-       routeS2 = routeS2 + QString::number(walkRoute[0]);
+        routeS2 += startPoint;
     }else if(selectedPlaceNum < 12){
-       routeS3 = routeS3 + QString::number(walkRoute[0]);
+        routeS3 += startPoint;
     }else{
-       routeS4 = routeS4 + QString::number(walkRoute[0]);
+        routeS4 += startPoint;
     }
 
     ui->label_route_1->setText(routeS1);
@@ -633,7 +638,8 @@ void bjtuMap::setRouteLine(){
             }
 
             if((walkRoute[i]==5)&&(walkRoute[i+1]==1)){            //明湖到西操 349m
-                flag_point[4][30] = 1;
+                flag_point[4][36] = 1;
+                flag_point[36][30] = 1;
                 flag_point[30][27] = 1;
                 flag_point[27][24] = 1;
                 flag_point[24][0] = 1;
@@ -686,8 +692,8 @@ void bjtuMap::setRouteLine(){
                 flag_point[37][32]=1;
                 flag_point[32][45]=1;
                 flag_point[45][43]=1;
-                flag_point[43][24]=1;
-                flag_point[24][57]=1;
+                flag_point[43][6]=1;
+                flag_point[6][57]=1;
                 flag_point[57][59]=1;
                 flag_point[59][8]=1;
             }
@@ -791,8 +797,8 @@ void bjtuMap::setRouteLine(){
                 flag_point[18][20] = 1;
                 flag_point[20][21]=1;
                 flag_point[21][23]=1;
-                flag_point[23][24]=1;
-                flag_point[24][57]=1;
+                flag_point[23][6]=1;
+                flag_point[6][57]=1;
                 flag_point[57][59]=1;
                 flag_point[59][8]=1;
             }
@@ -982,8 +988,8 @@ void bjtuMap::setRouteLine(){
                 flag_point[64][65] = 1;
                 flag_point[65][66] = 1;
                 flag_point[66][57] = 1;
-                flag_point[57][24] = 1;
-                flag_point[24][43] = 1;
+                flag_point[57][6] = 1;
+                flag_point[6][43] = 1;
                 flag_point[43][45] = 1;
                 flag_point[45][32] = 1;
                 flag_point[32][37] = 1;
@@ -992,11 +998,11 @@ void bjtuMap::setRouteLine(){
             if(( walkRoute[i]== 8) && (walkRoute[i+1] == 6)){       //东区1教到逸夫1.3km
             flag_point[7][62] = 1;
             flag_point[62][61] = 1;
-            flag_point[61][60] = 1;
-            flag_point[60][59] = 1;
+            flag_point[61][8] = 1;
+            flag_point[8][59] = 1;
             flag_point[59][57] = 1;
-            flag_point[57][24] = 1;
-            flag_point[24][23] = 1;
+            flag_point[57][6] = 1;
+            flag_point[6][23] = 1;
             flag_point[23][21] = 1;
             flag_point[21][20] = 1;
             flag_point[20][18] = 1;
@@ -1031,8 +1037,8 @@ void bjtuMap::setRouteLine(){
             if(( walkRoute[i]== 8) && (walkRoute[i+1] == 11)){      //东区1教到图书馆1.3km
                 flag_point[7][62]=1;
                 flag_point[62][61]=1;
-                flag_point[61][60]=1;
-                flag_point[60][59]=1;
+                flag_point[61][8]=1;
+                flag_point[8][59]=1;
                 flag_point[59][57]=1;
                 flag_point[57][43]=1;
                 flag_point[43][45]=1;
@@ -1043,8 +1049,8 @@ void bjtuMap::setRouteLine(){
             if(( walkRoute[i]== 8) && (walkRoute[i+1] == 12)){      //东区1教到天佑会堂1.0km
                 flag_point[7][62]=1;
                 flag_point[62][61]=1;
-                flag_point[61][60]=1;
-                flag_point[60][59]=1;
+                flag_point[61][8]=1;
+                flag_point[8][59]=1;
                 flag_point[59][57]=1;
                 flag_point[57][43]=1;
                 flag_point[43][11]=1;
@@ -1070,8 +1076,8 @@ void bjtuMap::setRouteLine(){
             }
             if(( walkRoute[i]== 8) && (walkRoute[i+1] == 15)){      //东区1教到麦当劳684m
                 flag_point[7][62]=1;
-                flag_point[62][61]=1;
-                flag_point[60][59]=1;
+                flag_point[62][8]=1;
+                flag_point[8][59]=1;
                 flag_point[59][14]=1;
             }
 
@@ -1821,10 +1827,8 @@ void bjtuMap::paintEvent(QPaintEvent*event){
     QPen pen1;
     pen1.setStyle(Qt::DotLine);
     pen1.setColor(Qt::red);
-    pen1.setWidth(5);
+    pen1.setWidth(4);
     painter.setPen(pen1);
-    //painter.drawLine(QPoint(0,0),QPoint(this->width(),this->height()));
-    //painter.drawPoint(435,673);
     InitPoint();
     setRouteLine();
     outputInformation();
@@ -1844,12 +1848,11 @@ void bjtuMap::paintEvent(QPaintEvent*event){
            if(( flag_point[i][j] == 1) && (flag_point[j][i] != 1)){
                 painter.setPen(pen1);
                 painter.drawLine(point[i],point[j]);
-               // qDebug()<<"11111";
             }
             if(( flag_point[i][j] == 1) && (flag_point[j][i] == 1)){
                 QPen pen2;
                 pen2.setColor(Qt::red);
-                pen2.setWidth(5);
+                pen2.setWidth(4);
                 painter.setPen(pen2);
                 painter.drawLine(point[i],point[j]);
                 //qDebug()<<flag_point[j][i];

@@ -119,37 +119,39 @@ public:
     QLabel *label_picture;
     QLabel *label_3;
     QLabel *label_4;
+    QLabel *label_5;
+    QLabel *label_6;
 
     void setupUi(QWidget *Information)
     {
         if (Information->objectName().isEmpty())
             Information->setObjectName("Information");
         Information->setWindowModality(Qt::NonModal);
-        Information->resize(1107, 774);
+        Information->resize(1129, 774);
         QFont font;
         font.setBold(true);
         Information->setFont(font);
         tb1 = new QToolButton(Information);
         tb1->setObjectName("tb1");
-        tb1->setGeometry(QRect(830, 630, 121, 51));
+        tb1->setGeometry(QRect(620, 630, 121, 51));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font1.setPointSize(12);
         font1.setBold(false);
         tb1->setFont(font1);
         QIcon icon;
-        icon.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/\345\257\274\350\210\252.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/\345\234\260\345\233\276.png"), QSize(), QIcon::Normal, QIcon::Off);
         tb1->setIcon(icon);
-        tb1->setIconSize(QSize(50, 50));
+        tb1->setIconSize(QSize(60, 60));
         tb1->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
         tb2 = new QToolButton(Information);
         tb2->setObjectName("tb2");
-        tb2->setGeometry(QRect(620, 630, 121, 51));
+        tb2->setGeometry(QRect(830, 630, 121, 51));
         tb2->setFont(font1);
         QIcon icon1;
-        icon1.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/\345\256\230\347\275\221.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/\345\256\230\347\275\221.png"), QSize(), QIcon::Normal, QIcon::Off);
         tb2->setIcon(icon1);
-        tb2->setIconSize(QSize(50, 50));
+        tb2->setIconSize(QSize(35, 35));
         tb2->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
         label = new QLabel(Information);
         label->setObjectName("label");
@@ -161,16 +163,16 @@ public:
         label->setFont(font2);
         addMapButton = new QPushButton(Information);
         addMapButton->setObjectName("addMapButton");
-        addMapButton->setGeometry(QRect(650, 200, 101, 41));
+        addMapButton->setGeometry(QRect(650, 400, 101, 41));
         addMapButton->setFont(font1);
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/\345\234\260\345\233\276.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/\345\257\274\350\210\252.png"), QSize(), QIcon::Normal, QIcon::Off);
         addMapButton->setIcon(icon2);
-        addMapButton->setIconSize(QSize(50, 50));
+        addMapButton->setIconSize(QSize(35, 35));
         label_2 = new QLabel(Information);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(-60, 0, 761, 571));
-        label_2->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/bjtu01.jpg")));
+        label_2->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/res/bjtu01.jpg")));
         label_2->setScaledContents(true);
         spot9 = new QPushButton(Information);
         spot9->setObjectName("spot9");
@@ -713,17 +715,30 @@ public:
         label_3 = new QLabel(Information);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(820, 30, 191, 191));
-        label_3->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\346\240\241\345\276\275.jpg")));
+        label_3->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/res/\346\240\241\345\276\275.jpg")));
         label_3->setScaledContents(true);
         label_4 = new QLabel(Information);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(10, 500, 191, 61));
-        label_4->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\346\240\241\345\220\215.jpg")));
+        label_4->setGeometry(QRect(20, 480, 211, 61));
+        label_4->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/res/\346\240\241\345\220\215.jpg")));
         label_4->setScaledContents(true);
+        label_5 = new QLabel(Information);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(368, 625, 20, 31));
+        label_5->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\272\242.png")));
+        label_5->setScaledContents(true);
+        label_6 = new QLabel(Information);
+        label_6->setObjectName("label_6");
+        label_6->setGeometry(QRect(80, 580, 581, 171));
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("\346\245\267\344\275\223")});
+        font4.setPointSize(11);
+        font4.setBold(false);
+        label_6->setFont(font4);
+        label->raise();
         label_2->raise();
         tb1->raise();
         tb2->raise();
-        label->raise();
         addMapButton->raise();
         spot9->raise();
         spot5->raise();
@@ -816,6 +831,8 @@ public:
         label_picture->raise();
         label_3->raise();
         label_4->raise();
+        label_5->raise();
+        label_6->raise();
 
         retranslateUi(Information);
 
@@ -827,8 +844,19 @@ public:
         Information->setWindowTitle(QCoreApplication::translate("Information", "\344\272\244\345\244\247\346\254\242\350\277\216\344\275\240\357\274\201", nullptr));
         tb1->setText(QCoreApplication::translate("Information", " \345\257\274\350\210\252", nullptr));
         tb2->setText(QCoreApplication::translate("Information", " \345\256\230\347\275\221", nullptr));
-        label->setText(QCoreApplication::translate("Information", "<html><head/><body><p><span style=\" font-size:18pt; vertical-align:sub;\">\346\254\242\350\277\216\344\275\277\347\224\250\344\272\244\345\244\247\346\240\241\345\233\255\345\257\274\346\270\270\347\263\273\347\273\237\357\274\201</span></p><p><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344\275\240\346\203\263\350\246\201\350\277\233\350\241\214\350\267\257\345\276\204\346\237\245\350\257\242\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234\345\257\274\350\210\252\342\200\235\346\214\211\351\222\256</span></p><p><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344\275\240\346\203\263\350\246\201\344\272\206\350\247\243\345\220\204\345\234\260\347\202\271\347\232\204\344\277\241\346\201\257\357\274\214\350\257\267\347\202\271\345\207\273\345\233\276\344\270\255\342\200\234 </span><img src=\":/Resource/location.png\"/><span style=\" font-size:18pt; vertical-align:sub;\">\342\200\235\346\240\207\350\256\260\347\232\204\344\275\215\347\275"
-                        "\256</span></p><p><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344\275\240\350\277\230\346\203\263\344\272\206\350\247\243\346\233\264\345\244\232\344\277\241\346\201\257\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234\345\256\230\347\275\221\342\200\235\346\214\211\351\222\256</span></p></body></html>", nullptr));
+        label->setText(QCoreApplication::translate("Information", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'\351\273\221\344\275\223'; font-size:16pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; vertical-align:sub;\">\346\254\242\350\277\216\344\275\277\347\224\250\344\272\244\345\244\247\346\240\241\345\233\255\345\257\274\346\270\270\347\263\273\347\273\237\357\274\201</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; vertic"
+                        "al-align:sub;\">* \345\246\202\346\236\234\344\275\240\346\203\263\350\246\201\344\272\206\350\247\243\345\220\204\345\234\260\347\202\271\347\232\204\344\277\241\346\201\257\357\274\214\350\257\267\347\202\271\345\207\273\345\233\276\344\270\255\342\200\234   \342\200\235\346\240\207\350\256\260\347\232\204\344\275\215\347\275\256\357\274\233</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344\275\240\346\203\263\350\246\201\350\277\233\350\241\214\350\267\257\345\276\204\346\237\245\350\257\242\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234\345\257\274\350\210\252\342\200\235\346\214\211\351\222\256\357\274\233</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344"
+                        "\275\240\350\277\230\346\203\263\344\272\206\350\247\243\346\233\264\345\244\232\344\277\241\346\201\257\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234\345\256\230\347\275\221\342\200\235\346\214\211\351\222\256</span></p></body></html>", nullptr));
         addMapButton->setText(QCoreApplication::translate("Information", "\345\234\260\345\233\276", nullptr));
         label_2->setText(QString());
         spot9->setText(QString());
@@ -947,6 +975,9 @@ public:
         label_picture->setText(QString());
         label_3->setText(QString());
         label_4->setText(QString());
+        label_5->setText(QString());
+        label_6->setText(QCoreApplication::translate("Information", "<html><head/><body><p>\342\221\240 \345\277\205\346\270\270\346\231\257\347\202\271\357\274\232\346\230\216\346\271\226\343\200\220\344\272\244\345\244\247\346\234\200\347\276\216\357\274\214\347\237\263\347\242\221\346\211\223\345\215\241\343\200\221</p><p>\342\221\241 \345\277\205\345\260\235\347\276\216\351\243\237\357\274\232\346\230\216\346\271\226\347\203\244\351\270\255\343\200\220\344\272\244\345\244\247\347\211\271\350\211\262\357\274\214\344\270\215\345\256\271\351\224\231\350\277\207\357\274\201\343\200\221</p><p>\342\221\242 \345\234\260\346\240\207\346\211\223\345\215\241\357\274\232\346\200\235\346\272\220\346\245\274\343\200\220\351\245\256\346\260\264\346\200\235\346\272\220\357\274\214\347\210\261\345\233\275\350\215\243\346\240\241\343\200\221\343\200\201\345\214\227\344\272\244\345\244\247\345\215\227\351\227\250\343\200\220\344\272\232\346\264\262\346\234\200\351\253\230\346\240\241\351\227\250\343\200\221</p><p>\342\221\243 \346\225\254\344\273\260\344\271\213\345\234\260\357\274\232\345\244"
+                        "\251\344\275\221\344\274\232\345\240\202\343\200\220\345\216\206\345\217\262\344\270\216\344\274\240\346\211\277\343\200\221</p><p>\342\221\244 \345\244\247\345\255\246\347\224\237\346\264\273\344\275\223\351\252\214\357\274\232\345\255\246\346\264\273\345\260\217\345\211\247\345\234\272\343\200\220\346\204\237\345\217\227\345\220\210\345\224\261\345\233\242\346\216\222\347\273\203\357\274\214\346\242\246\345\233\236\345\244\247\345\255\246\346\227\266\345\205\211\343\200\221</p><p>\342\221\245 \350\277\220\345\212\250\345\201\245\350\272\253\357\274\232\350\245\277\346\223\215\347\273\274\345\220\210\344\275\223\350\202\262\351\246\206\343\200\220\347\257\256\347\220\203\343\200\201\347\275\221\347\220\203\343\200\201\346\270\270\346\263\263\343\200\201\345\201\245\350\272\253\357\274\214\350\256\276\346\226\275\345\256\214\345\244\207\357\274\214\345\256\275\346\225\236\345\244\247\346\260\224\343\200\221</p><p><br/></p><p><br/></p></body></html>", nullptr));
     } // retranslateUi
 
 };
