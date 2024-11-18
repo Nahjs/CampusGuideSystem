@@ -2360,7 +2360,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <property name="geometry">
     <rect>
      <x>750</x>
-     <y>290</y>
+     <y>330</y>
      <width>341</width>
      <height>281</height>
     </rect>
@@ -2402,10 +2402,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QLabel" name="label_picture">
    <property name="geometry">
     <rect>
-     <x>830</x>
+     <x>810</x>
      <y>10</y>
-     <width>174</width>
-     <height>261</height>
+     <width>200</width>
+     <height>300</height>
     </rect>
    </property>
    <property name="text">
@@ -2419,7 +2419,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <property name="geometry">
     <rect>
      <x>820</x>
-     <y>30</y>
+     <y>60</y>
      <width>191</width>
      <height>191</height>
     </rect>

@@ -17,12 +17,12 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "CampusGuide_DP_QT_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"id" : "BJTU_Guide_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "CampusGuide_DP_QT_autogen::@6890427a1f51a3e7e1df",
+	"id" : "BJTU_Guide_autogen::@6890427a1f51a3e7e1df",
 	"isGeneratorProvided" : true,
-	"name" : "CampusGuide_DP_QT_autogen",
+	"name" : "BJTU_Guide_autogen",
 	"paths" : 
 	{
 		"build" : ".",
@@ -51,19 +51,19 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/CampusGuide_DP_QT_autogen",
+			"path" : "cmake-build-debug/CMakeFiles/BJTU_Guide_autogen",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/CampusGuide_DP_QT_autogen.rule",
+			"path" : "cmake-build-debug/CMakeFiles/BJTU_Guide_autogen.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CampusGuide_DP_QT_autogen/timestamp.rule",
+			"path" : "cmake-build-debug/BJTU_Guide_autogen/timestamp.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

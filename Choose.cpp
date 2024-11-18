@@ -108,13 +108,13 @@ void Choose::GetRoute(){
         route.pop();
         walkRoute[d] = selectedPlace[x]+1;
         d++;
-        sRoute = sRoute + QString::number(selectedPlace[x]+1)+" -> ";        
-        fp << selectedPlace[x] + 1 << " -> ";
+        sRoute = sRoute + QString::number(selectedPlace[x] + 1) + " (" + placeName[selectedPlace[x]] + ") -> ";
+        fp << selectedPlace[x] + 1 << " (" << placeName[selectedPlace[x]].toStdString() << ") -> ";
     }
-    walkRoute[d] = selectedPlace[0]+1;
-    sRoute = sRoute + QString::number(selectedPlace[0]+1);
+    walkRoute[d] = selectedPlace[0] + 1;
+    sRoute = sRoute + QString::number(selectedPlace[0] + 1) + " (" + placeName[selectedPlace[0]] + ")";
     ui->label_route->setText(sRoute);
-    fp << selectedPlace[0] + 1 << endl;
+    fp << selectedPlace[0] + 1 << " (" << placeName[selectedPlace[0]].toStdString() << ")" << std::endl;
     fp.close();
 }
 

@@ -1829,10 +1829,24 @@ void bjtuMap::paintEvent(QPaintEvent*event){
     pen1.setColor(Qt::red);
     pen1.setWidth(4);
     painter.setPen(pen1);
+
+    // Clear previous route information
+    for (int i = 0; i < allPoint; i++) {
+        for (int j = 0; j < allPoint; j++) {
+            flag_point[i][j] = 0;
+        }
+    }
+
+    // Clear previous labels
+    for (int i = 0; i < allPlaceNum; i++) {
+        label[i]->clear();
+    }
+
     InitPoint();
     setRouteLine();
     outputInformation();
     printPlaceOrder();
+
     for(int i = 0; i < allPoint; i++)
         for(int j = 0; j < allPoint; j++){
             /*if((i<=j)&&(flag_point[i][j] == 1)){

@@ -1,5 +1,5 @@
-D:/CLion/CampusGuide/cmake-build-debug/CMakeFiles/CampusGuide_DP_QT.dir
+D:/CLion/CampusGuide/cmake-build-debug/CMakeFiles/BJTU_Guide.dir
 D:/CLion/CampusGuide/cmake-build-debug/CMakeFiles/edit_cache.dir
 D:/CLion/CampusGuide/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/CLion/CampusGuide/cmake-build-debug/CMakeFiles/CampusGuide_DP_QT_autogen_timestamp_deps.dir
-D:/CLion/CampusGuide/cmake-build-debug/CMakeFiles/CampusGuide_DP_QT_autogen.dir
+D:/CLion/CampusGuide/cmake-build-debug/CMakeFiles/BJTU_Guide_autogen_timestamp_deps.dir
+D:/CLion/CampusGuide/cmake-build-debug/CMakeFiles/BJTU_Guide_autogen.dir

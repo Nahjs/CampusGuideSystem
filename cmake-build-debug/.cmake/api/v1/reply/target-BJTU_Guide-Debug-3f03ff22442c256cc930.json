@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "CampusGuide_DP_QT.exe"
+			"path" : "BJTU_Guide.exe"
 		},
 		{
-			"path" : "CampusGuide_DP_QT.pdb"
+			"path" : "BJTU_Guide.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -375,7 +375,7 @@
 				{
 					"backtrace" : 0,
 					"isSystem" : true,
-					"path" : "D:/CLion/CampusGuide/cmake-build-debug/CampusGuide_DP_QT_autogen/include"
+					"path" : "D:/CLion/CampusGuide/cmake-build-debug/BJTU_Guide_autogen/include"
 				},
 				{
 					"backtrace" : 2,
@@ -447,14 +447,14 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "CampusGuide_DP_QT_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"id" : "BJTU_Guide_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
-			"id" : "CampusGuide_DP_QT_autogen::@6890427a1f51a3e7e1df"
+			"id" : "BJTU_Guide_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "CampusGuide_DP_QT::@6890427a1f51a3e7e1df",
+	"id" : "BJTU_Guide::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -554,8 +554,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "CampusGuide_DP_QT",
-	"nameOnDisk" : "CampusGuide_DP_QT.exe",
+	"name" : "BJTU_Guide",
+	"nameOnDisk" : "BJTU_Guide.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -613,7 +613,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CampusGuide_DP_QT_autogen/mocs_compilation.cpp",
+			"path" : "cmake-build-debug/BJTU_Guide_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -688,31 +688,31 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CampusGuide_DP_QT_autogen/include/ui_Information.h",
+			"path" : "cmake-build-debug/BJTU_Guide_autogen/include/ui_Information.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CampusGuide_DP_QT_autogen/include/ui_Choose.h",
+			"path" : "cmake-build-debug/BJTU_Guide_autogen/include/ui_Choose.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CampusGuide_DP_QT_autogen/include/ui_bjtuMap.h",
+			"path" : "cmake-build-debug/BJTU_Guide_autogen/include/ui_bjtuMap.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CampusGuide_DP_QT_autogen/timestamp",
+			"path" : "cmake-build-debug/BJTU_Guide_autogen/timestamp",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CampusGuide_DP_QT_autogen/timestamp.rule",
+			"path" : "cmake-build-debug/BJTU_Guide_autogen/timestamp.rule",
 			"sourceGroupIndex" : 3
 		}
 	],

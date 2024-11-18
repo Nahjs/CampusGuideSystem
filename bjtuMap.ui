@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1138</width>
-    <height>742</height>
+    <width>637</width>
+    <height>545</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>80</x>
      <y>600</y>
      <width>521</width>
      <height>131</height>
@@ -128,9 +128,9 @@
   <widget class="QPushButton" name="pushButton_return">
    <property name="geometry">
     <rect>
-     <x>650</x>
-     <y>10</y>
-     <width>101</width>
+     <x>570</x>
+     <y>460</y>
+     <width>41</width>
      <height>41</height>
     </rect>
    </property>
@@ -141,24 +141,24 @@
     </font>
    </property>
    <property name="text">
-    <string>返回</string>
+    <string/>
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/res/返回.png</normaloff>C:/Users/lenovo/Desktop/res/返回.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/刷新.png</normaloff>C:/Users/lenovo/Desktop/res/刷新.png</iconset>
    </property>
    <property name="iconSize">
     <size>
-     <width>45</width>
-     <height>45</height>
+     <width>30</width>
+     <height>30</height>
     </size>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>440</y>
+     <x>20</x>
+     <y>480</y>
      <width>211</width>
      <height>61</height>
     </rect>

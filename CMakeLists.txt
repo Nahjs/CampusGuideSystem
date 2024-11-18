@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.29)
 
 # 设置项目名称
-project(CampusGuide_DP_QT)
+project(BJTU_Guide)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
