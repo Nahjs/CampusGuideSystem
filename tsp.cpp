@@ -4,7 +4,7 @@
 #include "process.h"
 #include <QDebug>
 using namespace std;
-
+/*
 TSP::TSP(int map[allPlaceNum][allPlaceNum]) {
 
     int i, j;                                       //初始化所选择景点的距离矩阵
@@ -88,8 +88,6 @@ void TSP::getRoute() {
    // double each_time = 0;
     for (int k = 0; k < selectedPlaceNum ; k++) {
         route.push(dp[i][j].pre);//从终点开始回溯，将路径节点依次加入 route 队列中。
-        //each_time = matrix[dp[i][j].pre][dp[i][j].now] / (velocity*1.0);
-      //  time.push(each_time);
         temp_i = dp[i][j].now;
         temp_j = dp[i][j].next;
         i = temp_i;
@@ -107,25 +105,115 @@ void TSP::getRoute() {
     fp << selectedPlace[0] + 1 << endl;
     cout << endl;
     fp.close();
-/*
-    cout << "景点两两之间的用时为(单位为分钟)：" << endl;
-    while (!time.empty()) {
-        double t = time.front();
-        time.pop();
-        cout << t << "  ";
-    }
-    cout << endl;*/
 }
 
 
+*/
 
 
 
+TSP::TSP(int map[allPlaceNum][allPlaceNum]) {
+    int i, j; // 初始化所选择景点的距离矩阵
+    matrix = new int*[selectedPlaceNum];
+    for (i = 0; i < selectedPlaceNum; i++)
+        matrix[i] = new int[selectedPlaceNum];
+    for(i = 0; i < selectedPlaceNum; i++)
+        // 将 map 中对应位置的距离复制到 matrix 中
+        for (j = 0; j < selectedPlaceNum; j++) {
+            matrix[i][j] = map[selectedPlace[i]][selectedPlace[j]];
+        }
 
+    // 初始化 DFS 的一些数据结构
+    visited = new bool[selectedPlaceNum]; // 标记每个城市是否被访问过
+    bestDistance = INT_MAX; // 最短路径的距离
+    bestRoute.clear(); // 最短路径的路线
 
+    // 初始化状态压缩矩阵
+    dp = new Process*[selectedPlaceNum];
+    for (int i = 0; i < selectedPlaceNum; i++) {
+        dp[i] = new Process[1 << (selectedPlaceNum - 1)];
+    }
 
+    // 打开文件
+    fp.open("D:\\CLion\\CampusGuide\\route.txt", ios::out);
+}
 
+void TSP::printSelectedPlace() {
+    cout << "您选择的景点距离矩阵如下：" << endl;
+    for (int i = 0; i < selectedPlaceNum; i++) {
+        for (int j = 0; j < selectedPlaceNum; j++) {
+            cout << matrix[i][j] << "  ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+}
 
+// 深度优先搜索 (DFS) 函数
+void TSP::DFS(int currentCity, int visitedCount, int currentDistance, vector<int>& currentRoute) {
+    if (visitedCount == selectedPlaceNum) {
+        // 如果所有城市都访问过了，返回到起始城市
+        currentDistance += matrix[currentCity][0]; // 回到起点的距离
 
+        // 写入文件
+        fp << "Path: ";
+        for (int city : currentRoute) {
+            fp << selectedPlace[city] + 1 << " -> ";
+        }
+        fp << selectedPlace[0] + 1 << " Distance: " << currentDistance << endl;
 
+        if (currentDistance < bestDistance) {
+            bestDistance = currentDistance;
+            bestRoute = currentRoute; // 更新最佳路径
+            bestRoute.push_back(0); // 将起点也加入路径
+        }
+        return;
+    }
 
+    for (int nextCity = 0; nextCity < selectedPlaceNum; nextCity++) {
+        if (!visited[nextCity]) {
+            // 如果下一个城市没有被访问过
+            visited[nextCity] = true; // 标记为已访问
+            currentRoute.push_back(nextCity); // 加入当前路径
+            DFS(nextCity, visitedCount + 1, currentDistance + matrix[currentCity][nextCity], currentRoute);
+            currentRoute.pop_back(); // 回溯，移除当前城市
+            visited[nextCity] = false; // 恢复为未访问状态
+        }
+    }
+}
+
+void TSP::getShortestDistance() {
+    // 初始化为未访问状态
+    fill(visited, visited + selectedPlaceNum, false);
+    vector<int> currentRoute;
+    visited[0] = true; // 从城市 0 开始
+    currentRoute.push_back(0);
+
+    // 开始深度优先搜索
+    DFS(0, 1, 0, currentRoute);
+
+    fp << "最短路径为 " << bestDistance << endl;
+}
+
+void TSP::getRoute() {
+    fp << "具体路径为：" << endl;
+
+    // 输出路径
+    for (int i = 0; i < bestRoute.size(); i++) {
+        fp << selectedPlace[bestRoute[i]] + 1 << " -> ";
+    }
+    fp << selectedPlace[bestRoute[0]] + 1 << endl; // 最后回到起点
+
+    fp.close();
+}
+
+void TSP::getAllRoutes() {
+    // 初始化为未访问状态
+    fill(visited, visited + selectedPlaceNum, false);
+    vector<int> currentRoute;
+    visited[0] = true; // 从城市 0 开始
+    currentRoute.push_back(0);
+
+    // 开始深度优先搜索以获取所有路径
+    DFS(0, 1, 0, currentRoute);
+}

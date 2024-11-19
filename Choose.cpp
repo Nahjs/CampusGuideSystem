@@ -2,6 +2,7 @@
 #include "ui_Choose.h"
 #include "process.h"
 #include "distanceData.h"
+#include <QCheckBox>
 
 #include <QString>
 #include <QDebug>
@@ -20,7 +21,7 @@ Choose::~Choose()
 }
 void Choose::Init(){
     connect(ui->ptb,SIGNAL(clicked(bool)),this,SLOT(doProcessAddStartPlace(bool)));
-    connect(ui->pbt2,SIGNAL(clicked(bool)),this,SLOT(doProcessAddOtherPlaceAndStartTime(bool)));
+    connect(ui->pbt2,SIGNAL(clicked(bool)),this,SLOT(doProcessAddOtherPlace(bool)));
     connect(ui->ptb_clear,SIGNAL(clicked(bool)),this,SLOT(doProcessClean(bool)));
     connect(ui->pbt2,SIGNAL(clicked(bool)),this,SLOT(doProcessFindRoute(bool)));
     connect(this,SIGNAL(inputFile()),this,SLOT(doProcessInputFile()));
@@ -41,7 +42,7 @@ void Choose::InitMatrix(int map[15][15]){    //初始化所选择景点的距离
         dp[i] = new Process[1 << (selectedPlaceNum - 1)];
     }
 }
-
+/*
 void Choose::GetShortestDistance(){
     int i, j, k;//用于遍历行、列和中间节点
 
@@ -117,6 +118,56 @@ void Choose::GetRoute(){
     fp << selectedPlace[0] + 1 << " (" << placeName[selectedPlace[0]].toStdString() << ")" << std::endl;
     fp.close();
 }
+*/
+void Choose::DFS(int currentPlace, int visitedCount, int currentDistance, std::vector<int>& currentRoute) {
+    if (visitedCount == selectedPlaceNum) {
+        if (currentDistance + matrix[currentPlace][0] < minDistance) {
+            minDistance = currentDistance + matrix[currentPlace][0];
+            minRoute = currentRoute;
+        }
+        return;
+    }
+
+    for (int nextPlace = 0; nextPlace < selectedPlaceNum; nextPlace++) {
+        if (!visited[nextPlace]) {
+            visited[nextPlace] = true;
+            currentRoute.push_back(nextPlace);
+            DFS(nextPlace, visitedCount + 1, currentDistance + matrix[currentPlace][nextPlace], currentRoute);
+            currentRoute.pop_back();
+            visited[nextPlace] = false;
+        }
+    }
+}
+
+void Choose::GetShortestDistance() {
+    minDistance = INT_MAX;
+    std::vector<int> currentRoute;
+    std::fill(std::begin(visited), std::end(visited), false);
+    visited[0] = true;
+    currentRoute.push_back(0);
+
+    DFS(0, 1, 0, currentRoute);
+    shortestDistance = minDistance;
+}
+
+void Choose::GetRoute() {
+    fp.open("route.txt", ios::out | ios::in);
+
+    int d = 0;
+    QString sRoute{""};
+
+    for (int i = 0; i < minRoute.size(); i++) {
+        walkRoute[d] = selectedPlace[minRoute[i]] + 1;
+        d++;
+        sRoute = sRoute + QString::number(selectedPlace[minRoute[i]] + 1) + " (" +QString::fromStdString( placeName[selectedPlace[minRoute[i]]].toStdString() )+ ") -> ";
+        fp << selectedPlace[minRoute[i]] + 1 << " (" << placeName[selectedPlace[minRoute[i]]].toStdString() << ") -> ";
+    }
+
+    sRoute = sRoute + QString::number(selectedPlace[minRoute[0]] + 1) + " (" +QString::fromStdString( placeName[selectedPlace[minRoute[0]]].toStdString() )+ ")";
+    ui->label_route->setText(sRoute);
+    fp << selectedPlace[minRoute[0]] + 1 << " (" << placeName[selectedPlace[minRoute[0]]].toStdString() << ")" << std::endl;
+    fp.close();
+}
 
 void Choose::clean(){
     ui->checkBox_1->setCheckState(Qt::Unchecked);
@@ -152,9 +203,25 @@ void Choose::doProcessAddStartPlace(bool){
     int inputNum = s.toInt();
         selectedPlace[selectedPlaceNum] = inputNum-1;
         selectedPlaceNum++;
+    QString routeText ="成功添加起点："+ s+" "+placeName[inputNum - 1] ;
+    ui->label_3->setText(routeText);
+
+    // Enable all checkboxes
+    for (int i = 1; i <= 15; ++i) {
+        QCheckBox* checkBox = findChild<QCheckBox*>("checkBox_" + QString::number(i));
+        if (checkBox) {
+            checkBox->setEnabled(true);
+        }
     }
 
-void Choose::doProcessAddOtherPlaceAndStartTime(bool){
+    // Disable the corresponding checkbox
+    QCheckBox* checkBox = findChild<QCheckBox*>("checkBox_" + QString::number(inputNum));
+    if (checkBox) {
+        checkBox->setEnabled(false);
+    }
+}
+
+void Choose::doProcessAddOtherPlace(bool){
     //输入后续点
     if(ui->checkBox_1->isChecked()){
         selectedPlace[selectedPlaceNum] = 0;     //0为该地点对应的下标
@@ -216,6 +283,7 @@ void Choose::doProcessAddOtherPlaceAndStartTime(bool){
         selectedPlace[selectedPlaceNum] = 14;
         selectedPlaceNum++;
     }
+
 }
 
 void Choose::doProcessFindRoute(bool){     //初始化所选择景点的距离矩阵，及压缩矩阵，发送信号，进行路径选择

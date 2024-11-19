@@ -1849,16 +1849,6 @@ void bjtuMap::paintEvent(QPaintEvent*event){
 
     for(int i = 0; i < allPoint; i++)
         for(int j = 0; j < allPoint; j++){
-            /*if((i<=j)&&(flag_point[i][j] == 1)){
-                painter.drawLine(point[i],point[j]);
-            }*/
-           /* painter.drawLine(point[9],point[40]);
-            painter.drawLine(point[40],point[53]);
-            painter.drawLine(point[53],point[27]);
-            painter.drawLine(point[27],point[30]);
-            painter.drawLine(point[30],point[28]);
-            painter.drawLine(point[28],point[41]);
-            painter.drawLine(point[41],point[2]);*/
            if(( flag_point[i][j] == 1) && (flag_point[j][i] != 1)){
                 painter.setPen(pen1);
                 painter.drawLine(point[i],point[j]);
@@ -1873,7 +1863,6 @@ void bjtuMap::paintEvent(QPaintEvent*event){
             }
             //painter.setPen(pen);
         }
-
 }
 
 void bjtuMap::printPlaceOrder(){
@@ -1920,4 +1909,3 @@ void bjtuMap::doProcessSaveWalkRouteToMap(int a,int b,int c,int d,int e,int f,in
 void bjtuMap::doProcessReturnToInquiry(bool){
     emit ReturnToInquiry();
 }
-

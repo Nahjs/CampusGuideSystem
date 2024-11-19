@@ -55,6 +55,7 @@ public:
     QCheckBox *checkBox_11;
     QCheckBox *checkBox_15;
     QLabel *label_2;
+    QLabel *label_3;
 
     void setupUi(QWidget *Choose)
     {
@@ -237,6 +238,9 @@ public:
         QFont font7;
         font7.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         label_2->setFont(font7);
+        label_3 = new QLabel(Choose);
+        label_3->setObjectName("label_3");
+        label_3->setGeometry(QRect(30, 460, 181, 31));
 
         retranslateUi(Choose);
 
@@ -269,6 +273,7 @@ public:
         checkBox_11->setText(QCoreApplication::translate("Choose", "11 \345\233\276\344\271\246\351\246\206", nullptr));
         checkBox_15->setText(QCoreApplication::translate("Choose", "15 \351\272\246\345\275\223\345\212\263", nullptr));
         label_2->setText(QCoreApplication::translate("Choose", "\357\274\210\344\270\215\346\267\273\345\212\240\345\210\231\351\273\230\350\256\244\346\211\200\351\200\211\346\231\257\347\202\271\344\270\255\345\272\217\345\217\267\346\234\200\345\260\217\347\232\204\344\270\272\350\265\267\347\202\271\357\274\211", nullptr));
+        label_3->setText(QString());
     } // retranslateUi
 
 };

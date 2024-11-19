@@ -9,6 +9,7 @@
 #include <queue>
 #include <fstream>
 #include <iostream>
+#include <vector>
 #define allPlaceNum 20
 using namespace::std;
 
@@ -33,8 +34,12 @@ public:
 
     fstream fp;
 
-signals:
+    // DFS 相关的成员变量
+    int minDistance{INT_MAX};      // 最短路径
+    bool visited[allPlaceNum];     // 用于标记景点是否已访问过
+    std::vector<int> minRoute;     // 最短路径序列
 
+signals:
     void AddMap();
     void SignalDataToMap(int walkRoute[allPlaceNum]);
    void signalDataToInform(int);
@@ -43,7 +48,7 @@ signals:
 
 private slots:
     void doProcessAddStartPlace(bool);       //接受“添加”按钮的槽,读取LineText,增加起始地点
-    void doProcessAddOtherPlaceAndStartTime(bool);
+    void doProcessAddOtherPlace(bool);
 
     void doProcessFindRoute(bool);       //初始化所选择景点的距离矩阵，及压缩矩阵，发送信号，进行路径选择
     void doProcessAddMap(bool);              //显示地图的槽
@@ -56,10 +61,12 @@ private:
     int** matrix;              //所选地点之间距离  用二维矩阵存储
     Process** dp;              //状态压缩矩阵
     int shortestDistance{0};   //所走路径最短距离
-    //QButtonGroup *btnGroupPlace;    //存储选择地点的QButtonGroup
 
     void Init();
     void InitMatrix(int map[15][15]);
+
+    void DFS(int currentPlace, int visitedCount, int currentDistance, std::vector<int> &currentRoute);
+
     void GetShortestDistance();              //选择最短路径
     void GetRoute();                      //求具体路径
     void Output();

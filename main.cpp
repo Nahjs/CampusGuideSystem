@@ -1,8 +1,6 @@
 #include "Information.h"
 #include <QApplication>
 #include <QGuiApplication>
-#include <QScreen>
-#include "tsp.h"
 
 int main(int argc, char *argv[])
 {

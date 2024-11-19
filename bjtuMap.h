@@ -52,12 +52,11 @@ private:
    void InitPoint();
    void InitPic();
 
-    void swapFlagPoint(int i, int swap_to);
+   // void swapFlagPoint(int i, int swap_to);
 
    void setRouteLine();      //通过设置flag标志位，设置点之间的线段
    void outputInformation();   //用于页面显示路径等信息
    void printPlaceOrder();
-
 };
 
 #endif // BJUTMAP_H

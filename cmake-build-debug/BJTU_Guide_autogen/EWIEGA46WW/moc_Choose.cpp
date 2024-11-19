@@ -48,7 +48,7 @@ static constexpr auto qt_meta_stringdata_CLASSChooseENDCLASS = QtMocHelpers::str
     "SignalWalkRouteToInform",
     "inputFile",
     "doProcessAddStartPlace",
-    "doProcessAddOtherPlaceAndStartTime",
+    "doProcessAddOtherPlace",
     "doProcessFindRoute",
     "doProcessAddMap",
     "doProcessClean",
@@ -67,7 +67,7 @@ struct qt_meta_stringdata_CLASSChooseENDCLASS_t {
     char stringdata7[24];
     char stringdata8[10];
     char stringdata9[23];
-    char stringdata10[35];
+    char stringdata10[23];
     char stringdata11[19];
     char stringdata12[16];
     char stringdata13[15];
@@ -87,11 +87,11 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSChooseENDCLASS_t qt_meta_string
         QT_MOC_LITERAL(68, 23),  // "SignalWalkRouteToInform"
         QT_MOC_LITERAL(92, 9),  // "inputFile"
         QT_MOC_LITERAL(102, 22),  // "doProcessAddStartPlace"
-        QT_MOC_LITERAL(125, 34),  // "doProcessAddOtherPlaceAndStar..."
-        QT_MOC_LITERAL(160, 18),  // "doProcessFindRoute"
-        QT_MOC_LITERAL(179, 15),  // "doProcessAddMap"
-        QT_MOC_LITERAL(195, 14),  // "doProcessClean"
-        QT_MOC_LITERAL(210, 18)   // "doProcessInputFile"
+        QT_MOC_LITERAL(125, 22),  // "doProcessAddOtherPlace"
+        QT_MOC_LITERAL(148, 18),  // "doProcessFindRoute"
+        QT_MOC_LITERAL(167, 15),  // "doProcessAddMap"
+        QT_MOC_LITERAL(183, 14),  // "doProcessClean"
+        QT_MOC_LITERAL(198, 18)   // "doProcessInputFile"
     },
     "Choose",
     "AddMap",
@@ -103,7 +103,7 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSChooseENDCLASS_t qt_meta_string
     "SignalWalkRouteToInform",
     "inputFile",
     "doProcessAddStartPlace",
-    "doProcessAddOtherPlaceAndStartTime",
+    "doProcessAddOtherPlace",
     "doProcessFindRoute",
     "doProcessAddMap",
     "doProcessClean",
@@ -203,7 +203,7 @@ Q_CONSTINIT const QMetaObject Choose::staticMetaObject = { {
         // method 'doProcessAddStartPlace'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        // method 'doProcessAddOtherPlaceAndStartTime'
+        // method 'doProcessAddOtherPlace'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'doProcessFindRoute'
@@ -233,7 +233,7 @@ void Choose::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 3: _t->SignalWalkRouteToInform((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[7])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[8])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[9])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[10])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[11])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[12])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[13])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[14])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[15])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[16])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[17])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[18])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[19])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[20]))); break;
         case 4: _t->inputFile(); break;
         case 5: _t->doProcessAddStartPlace((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 6: _t->doProcessAddOtherPlaceAndStartTime((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 6: _t->doProcessAddOtherPlace((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 7: _t->doProcessFindRoute((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 8: _t->doProcessAddMap((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 9: _t->doProcessClean((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;

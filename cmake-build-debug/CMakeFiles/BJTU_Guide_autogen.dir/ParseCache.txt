@@ -1251,9 +1251,9 @@ D:/CLion/CampusGuide/bjtuMap.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
 D:/CLion/CampusGuide/distanceData.h
-D:/CLion/CampusGuide/introduction.h
 D:/CLion/CampusGuide/Choose.cpp
  uic:ui_Choose.h
+D:/CLion/CampusGuide/introduction.h
 D:/CLion/CampusGuide/process.h
 D:/CLion/CampusGuide/subject.h
 D:/CLion/CampusGuide/Information.cpp
