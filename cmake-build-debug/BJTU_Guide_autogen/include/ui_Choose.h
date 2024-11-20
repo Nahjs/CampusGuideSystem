@@ -75,7 +75,7 @@ public:
         pbt2->setIconSize(QSize(45, 45));
         groupBox_output = new QGroupBox(Choose);
         groupBox_output->setObjectName("groupBox_output");
-        groupBox_output->setGeometry(QRect(20, 490, 351, 231));
+        groupBox_output->setGeometry(QRect(20, 490, 351, 261));
         label_6 = new QLabel(groupBox_output);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(10, 10, 81, 31));
@@ -85,7 +85,7 @@ public:
         label_6->setFont(font1);
         label_route = new QLabel(groupBox_output);
         label_route->setObjectName("label_route");
-        label_route->setGeometry(QRect(30, 50, 291, 171));
+        label_route->setGeometry(QRect(20, 40, 311, 201));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font2.setPointSize(11);
