@@ -170,45 +170,49 @@ void Information::onDFSButtonClicked() {
 }
 
 void Information::onShortestPathButtonClicked() {
-    // 获取起点和终点
-    bool ok;
-    int startIndex = ui->startLineEdit->text().toInt(&ok);
+        // 获取起点编号
+        bool ok;
+        int startIndex = ui->startLineEdit->text().toInt(&ok);
 
-    // 检查起点输入是否合法
-    if (!ok || startIndex <= 0 || startIndex > 12) {
-        QMessageBox::warning(this, "错误", "请输入有效的起点编号 (0-14)！");
-        return;
-    }
-
-    // 获取终点名称
-    QString selectedPlace = ui->endComboBox->currentText();
-    int endIndex = -1;
-
-    // 遍历 places 数组，找到对应编号
-    for (int i = 0; i < 15; ++i) {
-        if (places[i] == selectedPlace) {
-            endIndex = i+1;
-            break;
+        // 检查起点输入是否合法
+        if (!ok || startIndex <= 0 || startIndex > 12) {
+            QMessageBox::warning(this, "错误", "请输入有效的起点编号 (1-12)！");
+            return;
         }
-    }
 
-    // 检查终点编号是否合法
-    if (endIndex == -1 || endIndex == startIndex) {
-        QMessageBox::warning(this, "错误", "请选择有效的终点，且终点不能与起点相同！");
-        return;
-    }
-    /*
-    //调试信息
-    qDebug() << "startIndex: " << startIndex;
-    qDebug() << "endIndex: " << endIndex;
-*/
-    // 调用 Dijkstra 算法
-    QVector<int> shortestPath = dijkstra(startIndex-1, endIndex-1);
+        // 获取终点名称
+        QString selectedPlace = ui->endComboBox->currentText();
+        int endIndex = -1;
 
-    // 将路径保存，触发绘图
-    this->path = shortestPath; // 保存最短路径
+        // 遍历 places 数组，找到对应编号
+        for (int i = 0; i < 12; ++i) {
+            if (places[i] == selectedPlace) {
+                endIndex = i;
+                break;
+            }
+        }
 
-    update(); // 触发重绘
+        // 调用 Dijkstra 算法
+        QPair<int, QVector<int>> result = dijkstra(startIndex - 1, endIndex);
+
+        // 获取最短路径和总距离
+        int shortestDistance = result.first;
+        QVector<int> shortestPath = result.second;
+
+        // 将路径保存，触发绘图
+        this->path = shortestPath; // 保存最短路径
+        update(); // 触发重绘
+
+        // 显示最短路径和路径长度
+        QString pathInfo = QString("最短距离：%1m\n详细路线：").arg(shortestDistance);
+        for (int i = 0; i < shortestPath.size(); ++i) {
+            pathInfo += QString::number(shortestPath[i] + 1);  // 使用 1-based 索引
+            if (i < shortestPath.size() - 1) {
+                pathInfo += " -> ";  // 地点之间用 "->" 连接
+            }
+        }
+        // 显示路径信息
+        ui->pathInfoLabel->setText(pathInfo);
 }
 
 void Information::onMSTButtonClicked() {
@@ -242,6 +246,7 @@ void Information::DFS(int start, QVector<int> &visited, QVector<int> &path, QVec
     visited[start] = 0;  // 标记当前点为未访问
     path.removeLast();   // 移除当前点，回溯到上一个点
 }
+
 // 计算路径的总长度
 int Information::calculatePathLength(const QVector<int>& path) {
     int totalLength = 0;
@@ -253,6 +258,7 @@ int Information::calculatePathLength(const QVector<int>& path) {
     }
     return totalLength;
 }
+
 // 显示路径及其总长度到界面
 void Information::displayPathsAndLength(const QVector<QVector<int>>& allPaths) {
     // 清除之前的显示内容
@@ -279,6 +285,7 @@ void Information::displayPathsAndLength(const QVector<QVector<int>>& allPaths) {
         ui->dfsRoute->addItem(item);
     }
 }
+
 void Information::onPathItemClicked(QListWidgetItem *item) {
     // 获取用户点击的路径文本
     QString selectedPath = item->text();
@@ -322,6 +329,7 @@ void Information::onPathItemClicked(QListWidgetItem *item) {
     // 触发重绘，更新图形
     update();  // 调用 `paintEvent` 重新绘制图形
 }
+
 // 自定义解析路径字符串的函数
 QVector<int> Information::parsePathString(const QString& pathStr) {
     QVector<int> path;
@@ -342,7 +350,7 @@ QVector<int> Information::parsePathString(const QString& pathStr) {
 }
 
 //Dijkstra 算法求从起点到其他景点的最短路径
-QVector<int> Information::dijkstra(int start, int end) {
+QPair<int, QVector<int>> Information::dijkstra(int start, int end) {
     QVector<int> dist(12, INT_MAX); // 距离数组
     QVector<int> prev(12, -1); // 前驱数组
     QVector<bool> visited(12, false); // 已访问标记
@@ -373,14 +381,12 @@ QVector<int> Information::dijkstra(int start, int end) {
 
     // 回溯路径
     QVector<int> path;
+    int totalDistance = dist[end]; // 获取最短路径的距离
     for (int v = end; v != -1; v = prev[v]) {
         path.prepend(v);
     }
-  /*  // 打印最终结果
-    qDebug() << "Final dist:" << dist;
-    qDebug() << "Final prev:" << prev;
-    qDebug() << "Path from" << start << "to" << end << ":" << path;*/
-    return path;
+
+    return qMakePair(totalDistance, path); // 返回路径和总距离
 }
 
 //使用 Prim 算法构造最小生成树
@@ -423,21 +429,76 @@ QVector<QPair<int, int>> Information::primMST() {
 //绘制路径
 void Information::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
-    // 背景
+    painter.setRenderHint(QPainter::Antialiasing);  // 启用抗锯齿绘制
+
+    // 清空绘制区域，可以选择性清除特定部分
+    painter.eraseRect(0, 0, width(), height());  // 清除整个区域
+
+    // 绘制背景图
     painter.drawPixmap(-60, 0, 761, 571, QPixmap("D:\\CLion\\CampusGuide\\Resource\\bjtu01.jpg"));
 
-
-    QPen pen1;
+    // 绘制默认路径：例如手动指定的一些路径
+    QPen pen1, pen2;
     pen1.setStyle(Qt::DotLine);
     pen1.setColor(Qt::lightGray);
-    pen1.setWidth(2);
+    pen1.setWidth(3);
 
-
-    QPen pen2;
+    pen2.setStyle(Qt::DotLine);
     pen2.setColor(Qt::red);
-    pen2.setWidth(4);
+    pen2.setWidth(2);
 
-    // 绘制最短路径
+
+    // 手动绘制所有路径（这些路径是你手动指定的）
+    QVector<QPair<int, int>> manualPaths = {
+        {0, 1},  // 西操到家属区
+        {0, 9},  // 西操到学生活动中心
+        {0, 3},  // 西操到思源楼
+        {3, 4},  // 思源楼到明湖
+        {3, 11}, // 思源楼到天佑会堂
+        {0, 4},  // 西操到明湖
+        {4, 10}, // 明湖到逸夫楼
+        {10, 5}, // 逸夫楼到图书馆
+        {10, 1}, // 逸夫楼到家属区
+        {10, 2}, // 逸夫楼到东门
+        {5, 2},  // 图书馆到东门
+        {9, 3},  // 学生活动中心到思源楼
+        {9, 11}, // 学生活动中心到天佑会堂
+        {1, 2},  // 家属区到东门
+        {2, 7},  // 东门到东区1教
+        {7, 8},  // 东区1教到交大公交站
+        {8, 9},  // 交大公交站到学生活动中心
+        {8, 6},  // 交大公交站到南门
+        {6, 5},  // 南门到逸夫楼
+        {6, 11}, // 南门到天佑会堂
+        {6, 10}, // 南门到图书馆
+        {6, 4},  // 南门到明湖
+        {6, 3},  // 南门到思源楼
+        {6, 7}   // 南门到东区1教
+    };
+
+    // 绘制手动路径并显示路径长度
+    for (const auto& path : manualPaths) {
+        int start = path.first;
+        int end = path.second;
+
+        // 从 BJTUmap 中查询路径长度
+        int pathLength = BJTUmap[start][end];
+        QString pathLengthStr = QString::number(pathLength) + "m";  // 格式化路径长度字符串
+
+        // 绘制路径线
+        painter.setPen(pen1);
+        painter.drawLine(point[start], point[end]);
+
+        // 计算路径中点
+        QPointF middlePoint = (point[start] + point[end]) / 2;
+
+        // 在路径中点处绘制路径长度
+        painter.setPen(pen2);
+        painter.drawText(middlePoint, pathLengthStr);  // 显示路径长度
+    }
+
+
+    // 绘制最短路径(DFS)
     if (!path.isEmpty()) {
         QPen penRed(Qt::SolidLine);
         penRed.setColor(Qt::red);
@@ -448,64 +509,18 @@ void Information::paintEvent(QPaintEvent *event) {
         }
     }
 
-    // 绘制最小生成树
+    // 绘制最小生成树 (MST)
     if (!mstEdges.isEmpty()) {
-        QPen pen3(Qt::SolidLine);
-        pen3.setColor(Qt::red);
-        pen3.setWidth(4);
-        painter.setPen(pen3);
+        QPen penBlue(Qt::SolidLine);
+        penBlue.setColor( Qt::red);
+        penBlue.setWidth(3);
+        painter.setPen(penBlue);
         for (const auto &edge : mstEdges) {
             painter.drawLine(point[edge.first], point[edge.second]);
         }
     }
-
-    outputInformation(); // 输出路径信息
-    printPlaceOrder(); // 打印点的顺序
-
-    painter.setPen(pen1);
-    // 手动绘制指定路径
-    painter.drawLine(point[0], point[1]); // 西操到家属区
-    painter.drawLine(point[0], point[9]); // 西操到学生活动中心
-    painter.drawLine(point[0], point[3]); // 西操到思源楼
-    painter.drawLine(point[3], point[4]); // 思源楼到明湖
-    painter.drawLine(point[3], point[11]); // 思源楼到天佑会堂
-    painter.drawLine(point[0], point[4]); // 西操到明湖
-    painter.drawLine(point[4], point[10]); // 西操到逸夫
-    painter.drawLine(point[10], point[5]); // 图书馆到逸夫
-    painter.drawLine(point[10], point[1]); // 逸夫到南门
-    painter.drawLine(point[10], point[2]); // 图书馆到东门
-    painter.drawLine(point[5], point[2]); // 逸夫到东门
-    painter.drawLine(point[9], point[3]); // 学生活动中心到思源楼
-    painter.drawLine(point[9], point[11]); // 学生活动中心到天佑会堂
-    painter.drawLine(point[1], point[2]); // 家属区到东门
-    painter.drawLine(point[2], point[7]); // 东门到东区1教
-    painter.drawLine(point[7], point[8]); // 东区1教到交大公交站
-    painter.drawLine(point[8], point[9]); // 交大公交站到学生活动中心
-    painter.drawLine(point[8], point[6]); // 交大公交站到南门
-    painter.drawLine(point[6], point[5]); // 南门到逸夫
-    painter.drawLine(point[6], point[11]); // 南门到天佑会堂
-    painter.drawLine(point[6], point[10]); // 南门到图书馆
-    painter.drawLine(point[6], point[4]); // 南门到明湖
-    painter.drawLine(point[6], point[3]); // 南门到思源楼
-    painter.drawLine(point[6], point[7]); // 南门到东区1教
-
-
-    // 导航
-    for (int i = 0; i < 15; i++) {
-        for (int j = 0; j < 15; j++) {
-            if (flag_point[i][j] == 1 && flag_point[j][i] != 1) {
-                painter.setPen(pen2);
-                painter.drawLine(point[i], point[j]);
-            } else if (flag_point[i][j] == 1 && flag_point[j][i] == 1) {
-                QPen penRedBold;
-                penRedBold.setColor(Qt::red);
-                penRedBold.setWidth(4);
-                painter.setPen(penRedBold);
-                painter.drawLine(point[i], point[j]);
-            }
-        }
-    }
 }
+
 
 /*
 void Information::ToChoose(bool){

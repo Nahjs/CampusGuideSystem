@@ -80,7 +80,7 @@ private:
 
     QVector<int> parsePathString(const QString &pathStr);
 
-    QVector<int> dijkstra(int start, int end);
+    QPair<int, QVector<int>> dijkstra(int start, int end);
 
     QVector<QPair<int, int>> primMST();
 

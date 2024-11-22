@@ -2618,14 +2618,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QPushButton" name="dfsButton">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>150</y>
-     <width>71</width>
+     <x>890</x>
+     <y>40</y>
+     <width>61</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>dfsButton</string>
+    <string>DFS</string>
    </property>
   </widget>
   <widget class="QPushButton" name="shortestPathButton">
@@ -2644,8 +2644,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QPushButton" name="mstButton">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>200</y>
+     <x>950</x>
+     <y>130</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -2662,6 +2662,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <width>361</width>
      <height>261</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pathInfoLabel">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>200</y>
+     <width>341</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
   <zorder>spot4</zorder>
@@ -2770,6 +2783,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <zorder>point_45</zorder>
   <zorder>point_26</zorder>
   <zorder>dfsRoute</zorder>
+  <zorder>pathInfoLabel</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
