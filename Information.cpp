@@ -3,6 +3,10 @@
 #include <QDebug>
 #include <QDesktopServices>
 #include<stdlib.h>
+#include <QMessageBox>
+#include <QListWidgetItem>
+
+#include "distanceData.h"
 
 Information::Information(QWidget *parent) :
     QWidget(parent),
@@ -31,15 +35,23 @@ void Information::Init(){
       spotPoints[i]->hide();
   }
     ui->label_6->hide();
-    ui->addMapButton->hide();
+   // ui->addMapButton->hide();
     QPalette palette;
     palette.setColor(QPalette::Window, Qt::white);
     this->setPalette(palette);
 
-    choose = new Choose(this);
-    choose->hide();
-    map = new bjtuMap(this);
-    map->hide();
+    for (const QString &place : places) {
+        ui->endComboBox->addItem(place);
+    }
+
+   // choose = new Choose(this);
+    //choose->hide();
+   // map = new bjtuMap(this);
+   // map->move(1000,0);
+    //map->hide();
+
+    InitPoint();
+    InitPic();
 
     //选择景点
     connect(ui->tb1,SIGNAL(clicked(bool)),this,SLOT(ToChoose(bool)));
@@ -49,30 +61,455 @@ void Information::Init(){
    connect(ui->addMapButton,SIGNAL(clicked(bool)),this,SLOT(ToPath(bool)));
 
     //将数据从choose传到Information,再从Information传到bjtuMap
-    connect(choose,SIGNAL(signalDataToInform(int)),this,SLOT(doProcessDataToInform(int)));
-    connect(this,SIGNAL(SignalDataToMap(int)),map,SLOT(doProcessDataToMap(int)));
+  //  connect(choose,SIGNAL(signalDataToInform(int)),this,SLOT(doProcessDataToInform(int)));
+    connect(this,SIGNAL(SignalDataToMap(int)),this,SLOT(doProcessDataToMap(int)));
 
-    connect(choose,SIGNAL(SignalWalkRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
+   /* connect(choose,SIGNAL(SignalWalkRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
             this,SLOT(doProcessSaveWalkRouteToInform(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
-    connect(this,SIGNAL(SignalWalkRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
-            map,SLOT(doProcessSaveWalkRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
+  */  connect(this,SIGNAL(SignalWalkRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)),
+            this,SLOT(doProcessSaveWalkRouteToMap(int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)));
+    connect(this,SIGNAL(ReturnToInquiry()),this,SLOT(ReturnToChoose()));
 
-    connect(map,SIGNAL(ReturnToInquiry()),this,SLOT(BjtuMapReturnToThis()));
-
+    // 连接起点输入框的文本变化信号到槽函数
+    connect(ui->startLineEdit, &QLineEdit::textChanged, this, &Information::onStartPointChanged);
+    connect(ui->dfsButton, &QPushButton::clicked, this, &Information::onDFSButtonClicked);
+    connect(ui->shortestPathButton, &QPushButton::clicked, this, &Information::onShortestPathButtonClicked);
+    connect(ui->mstButton, &QPushButton::clicked, this, &Information::onMSTButtonClicked);
     InitIntroduction();
-    spotButtons = { ui->spot1, ui->spot2, ui->spot3, ui->spot4, ui->spot5, ui->spot6, ui->spot7 ,ui->spot8,ui->spot9,ui->spot10,ui->spot11,ui->spot12,ui->spot13,ui->spot14,ui->spot15};
+    spotButtons = { ui->spot1, ui->spot2, ui->spot3, ui->spot4, ui->spot5, ui->spot6, ui->spot7 ,ui->spot8,ui->spot9,ui->spot10,ui->spot11,ui->spot12};
     // 连接每个景点按钮的信号到同一个槽函数
     for (int i = 0; i < spotButtons.size(); ++i) {
         connect(spotButtons[i],SIGNAL(clicked(bool)),this,SLOT(doProcessAddPlace(bool)));
     }
+
+    connect(ui->dfsRoute, &QListWidget::itemClicked, this, &Information::onPathItemClicked);
 }
 
+void Information::onStartPointChanged(const QString &text) {
+    // 获取用户输入的起点编号
+    bool ok;
+    int startIndex = text.toInt(&ok);
+
+    // 如果输入非法，显示所有选项
+    if (!ok || startIndex < 0 || startIndex >= 15) {
+        updateEndComboBox(-1); // -1 表示显示所有点
+        return;
+    }
+
+    // 输入合法，更新终点复选框内容
+    updateEndComboBox(startIndex-1);
+}
+void Information::updateEndComboBox(int excludeIndex) {
+    // 清空终点复选框
+    ui->endComboBox->clear();
+
+    for (int i = 0; i < places.size(); i++) {
+        if (i != excludeIndex) {
+            ui->endComboBox->addItem(places[i]);
+        }
+    }
+}
+
+void Information::onDFSButtonClicked() {
+    // 获取起点编号
+    bool ok;
+    int startIndex = ui->startLineEdit->text().toInt(&ok);
+    if (!ok || startIndex <= 0 || startIndex > 12) {
+        QMessageBox::warning(this, "错误", "请输入有效的起点编号！");
+        return;
+    }
+    // 清除之前的路径显示
+    ui->dfsRoute->clear();
+
+    // 初始化路径相关变量
+    QVector<int> visited(12, 0);  // 记录访问状态
+    QVector<int> dfsPath;         // 临时保存路径
+    QVector<QVector<int>> allPaths; // 保存所有路径
+
+    // 执行DFS
+    DFS(startIndex - 1, visited, dfsPath, allPaths);
+
+    // 检查是否有路径
+    if (allPaths.isEmpty()) {
+        QMessageBox::information(this, "提示", "没有找到路径！");
+        return;
+    }
+
+    // 计算每条路径的长度
+    QVector<QPair<int, QVector<int>>> pathsWithLength;
+    for (const auto& path : allPaths) {
+        int pathLength = calculatePathLength(path); // 计算路径长度
+        pathsWithLength.append(qMakePair(pathLength, path)); // 存储路径和它的长度
+    }
+
+    // 按路径长度排序，最短路径排在前面
+    std::sort(pathsWithLength.begin(), pathsWithLength.end(), [](const QPair<int, QVector<int>>& p1, const QPair<int, QVector<int>>& p2) {
+        return p1.first < p2.first; // 按路径长度从小到大排序
+    });
+
+    // 获取最短路径
+    QVector<int> shortestPath = pathsWithLength.first().second;
+
+    // 显示所有路径及其总长度
+    displayPathsAndLength(allPaths);
+
+    // 设置最短路径
+    this->path = shortestPath;
+
+  // 更新路径信息显示
+    int shortestPathLength = calculatePathLength(shortestPath);
+    QString pathInfo = QString("路径长度：%1m  详细路线：").arg(shortestPathLength);
+    for (int i = 0; i < shortestPath.size(); ++i) {
+        pathInfo += QString::number(shortestPath[i] + 1);  // 使用 1-based 索引显示
+        if (i < shortestPath.size() - 1) {
+            pathInfo += " -> ";  // 地点之间用 "->" 连接
+        }
+    }
+    // 触发重绘，更新图形
+    update();  // 调用 `paintEvent` 重新绘制图形
+}
+
+void Information::onShortestPathButtonClicked() {
+    // 获取起点和终点
+    bool ok;
+    int startIndex = ui->startLineEdit->text().toInt(&ok);
+
+    // 检查起点输入是否合法
+    if (!ok || startIndex <= 0 || startIndex > 12) {
+        QMessageBox::warning(this, "错误", "请输入有效的起点编号 (0-14)！");
+        return;
+    }
+
+    // 获取终点名称
+    QString selectedPlace = ui->endComboBox->currentText();
+    int endIndex = -1;
+
+    // 遍历 places 数组，找到对应编号
+    for (int i = 0; i < 15; ++i) {
+        if (places[i] == selectedPlace) {
+            endIndex = i+1;
+            break;
+        }
+    }
+
+    // 检查终点编号是否合法
+    if (endIndex == -1 || endIndex == startIndex) {
+        QMessageBox::warning(this, "错误", "请选择有效的终点，且终点不能与起点相同！");
+        return;
+    }
+    /*
+    //调试信息
+    qDebug() << "startIndex: " << startIndex;
+    qDebug() << "endIndex: " << endIndex;
+*/
+    // 调用 Dijkstra 算法
+    QVector<int> shortestPath = dijkstra(startIndex-1, endIndex-1);
+
+    // 将路径保存，触发绘图
+    this->path = shortestPath; // 保存最短路径
+
+    update(); // 触发重绘
+}
+
+void Information::onMSTButtonClicked() {
+    // 调用 Prim 算法
+    QVector<QPair<int, int>> mstEdges = primMST();
+
+    // 保存生成树边集并触发绘图
+    this->mstEdges = mstEdges;
+    update(); // 触发重绘
+}
+
+//深度优先搜索（DFS）
+void Information::DFS(int start, QVector<int> &visited, QVector<int> &path, QVector<QVector<int>> &allPaths) {
+    visited[start] = 1;  // 标记当前点为已访问
+    path.append(start);   // 将当前点加入路径
+
+    // 如果当前路径的节点数量已达到所有节点数，保存路径
+    if (path.size() == 12) {
+        allPaths.append(path);  // 保存当前路径
+    } else {
+        // 继续遍历所有未访问的邻居
+        for (int i = 0; i < 12; i++) {
+            // 仅在图中有有效边（权重大于0），且目标点未被访问过时才继续搜索
+            if (BJTUmap[start][i] > 0 && !visited[i]) {
+                DFS(i, visited, path, allPaths);
+            }
+        }
+    }
+
+    // 回溯
+    visited[start] = 0;  // 标记当前点为未访问
+    path.removeLast();   // 移除当前点，回溯到上一个点
+}
+// 计算路径的总长度
+int Information::calculatePathLength(const QVector<int>& path) {
+    int totalLength = 0;
+    for (int i = 0; i < path.size() - 1; i++) {
+        int currentNode = path[i];
+        int nextNode = path[i + 1];
+        // 累加当前节点到下一个节点的边的权重
+        totalLength += BJTUmap[currentNode][nextNode];
+    }
+    return totalLength;
+}
+// 显示路径及其总长度到界面
+void Information::displayPathsAndLength(const QVector<QVector<int>>& allPaths) {
+    // 清除之前的显示内容
+    ui->dfsRoute->clear();
+
+    // 1. 对所有路径按长度进行排序（如果你希望按路径长度排序）
+    QVector<QVector<int>> sortedPaths = allPaths;
+    std::sort(sortedPaths.begin(), sortedPaths.end(), [this](const QVector<int>& path1, const QVector<int>& path2) {
+        return calculatePathLength(path1) < calculatePathLength(path2); // 按路径长度排序
+    });
+
+    // 2. 将每条路径格式化为 "地点1 -> 地点2 -> 地点3 ..." 并添加到 QListWidget
+    for (const auto& path : sortedPaths) {
+        QString pathStr;
+        pathStr += "距离：" + QString::number(calculatePathLength(path))+"m | ";  // 添加路径长度
+        for (int i = 0; i < path.size(); ++i) {
+            pathStr += QString::number(path[i] + 1);  // 1-based index
+            if (i < path.size() - 1) {
+                pathStr += " -> ";  // 地点之间用 "->" 连接
+            }
+        }
+        // 将路径作为可点击项添加到 QListWidget
+        QListWidgetItem *item = new QListWidgetItem(pathStr);
+        ui->dfsRoute->addItem(item);
+    }
+}
+void Information::onPathItemClicked(QListWidgetItem *item) {
+    // 获取用户点击的路径文本
+    QString selectedPath = item->text();
+
+    // 提取路径长度和节点路径
+    QStringList parts = selectedPath.split("|");  // 分割 "距离：" 和 "详细路线：" 部分
+    if (parts.size() < 2) {
+        qDebug() << "路径格式错误";
+        return;
+    }
+
+    // 提取路径部分 "详细路线："
+    QString pathDetail = parts[1].trimmed();  // 去掉多余的空格
+
+    // 解析节点路径，格式为 "1 -> 2 -> 3 -> ... "
+    QStringList nodesStrList = pathDetail.split(" -> ");
+
+    QVector<int> newPath;
+    for (const QString &nodeStr : nodesStrList) {
+        newPath.append(nodeStr.toInt() - 1);  // 转换为 0-based index
+    }
+
+    // 更新当前路径
+    this->path = newPath;
+
+    // 计算选中路径的长度
+    int pathLength = calculatePathLength(newPath);
+
+    // 更新显示路径的标签
+    QString pathInfo = QString("路径长度：%1m  详细路线：").arg(pathLength);
+    for (int i = 0; i < newPath.size(); ++i) {
+        pathInfo += QString::number(newPath[i] + 1);  // 1-based index
+        if (i < newPath.size() - 1) {
+            pathInfo += " -> ";  // 地点之间用 "->" 连接
+        }
+    }
+
+    // 更新UI上的路径信息（可以是 QLabel 或其他显示组件）
+  //  ui->pathInfoLabel->setText(pathInfo);
+
+    // 触发重绘，更新图形
+    update();  // 调用 `paintEvent` 重新绘制图形
+}
+// 自定义解析路径字符串的函数
+QVector<int> Information::parsePathString(const QString& pathStr) {
+    QVector<int> path;
+
+    // 去掉路径字符串中的 "Length: xxx" 部分，只保留地点节点部分
+    QStringList pathNodes = pathStr.split(" |")[0].split(" -> ");
+
+    // 将路径字符串转换为节点 ID（0-based）
+    for (const QString& node : pathNodes) {
+        bool ok;
+        int nodeId = node.trimmed().toInt(&ok) - 1;  // 将字符串转为数字并减去1转换为0-based索引
+        if (ok) {
+            path.append(nodeId);
+        }
+    }
+
+    return path;
+}
+
+//Dijkstra 算法求从起点到其他景点的最短路径
+QVector<int> Information::dijkstra(int start, int end) {
+    QVector<int> dist(12, INT_MAX); // 距离数组
+    QVector<int> prev(12, -1); // 前驱数组
+    QVector<bool> visited(12, false); // 已访问标记
+    dist[start] = 0;
+
+    for (int i = 0; i < 12; i++) {
+        // 找到未访问中距离最小的节点
+        int minDist = INT_MAX, u = -1;
+        for (int j = 0; j < 12; j++) {
+            if (!visited[j] && dist[j] < minDist) {
+                minDist = dist[j];
+                u = j;
+            }
+        }
+
+        if (u == -1) break; // 无法继续访问
+        visited[u] = true;
+
+        // 更新邻接节点的距离
+        for (int v = 0; v < 12; v++) {
+            // 如果 v 是 u 的邻接点，并且 u 到 v 的距离更短，更新 dist 和 prev
+            if (BJTUmap[u][v] > 0 && dist[u] != INT_MAX && dist[u] + BJTUmap[u][v] < dist[v]) {
+                dist[v] = dist[u] + BJTUmap[u][v];
+                prev[v] = u;
+            }
+        }
+    }
+
+    // 回溯路径
+    QVector<int> path;
+    for (int v = end; v != -1; v = prev[v]) {
+        path.prepend(v);
+    }
+  /*  // 打印最终结果
+    qDebug() << "Final dist:" << dist;
+    qDebug() << "Final prev:" << prev;
+    qDebug() << "Path from" << start << "to" << end << ":" << path;*/
+    return path;
+}
+
+//使用 Prim 算法构造最小生成树
+QVector<QPair<int, int>> Information::primMST() {
+    QVector<bool> inMST(12, false);
+    QVector<int> key(12, INT_MAX);
+    QVector<int> parent(12, -1);
+    key[0] = 0;
+
+    for (int count = 0; count < 12; count++) {
+        int u = -1, minKey = INT_MAX;
+
+        // 找到未包含在 MST 中的权值最小的节点
+        for (int i = 0; i < 12; i++) {
+            if (!inMST[i] && key[i] < minKey) {
+                minKey = key[i];
+                u = i;
+            }
+        }
+
+        inMST[u] = true;
+
+        // 更新邻接节点的权值
+        for (int v = 0; v < 12; v++) {
+            if (BJTUmap[u][v] > 0 && !inMST[v] && BJTUmap[u][v] < key[v]) {
+                key[v] = BJTUmap[u][v];
+                parent[v] = u;
+            }
+        }
+    }
+
+    // 构造 MST 边集
+    QVector<QPair<int, int>> mstEdges;
+    for (int i = 1; i < 12; i++) {
+        mstEdges.append(qMakePair(parent[i], i));
+    }
+    return mstEdges;
+}
+
+//绘制路径
+void Information::paintEvent(QPaintEvent *event) {
+    QPainter painter(this);
+    // 背景
+    painter.drawPixmap(-60, 0, 761, 571, QPixmap("D:\\CLion\\CampusGuide\\Resource\\bjtu01.jpg"));
+
+
+    QPen pen1;
+    pen1.setStyle(Qt::DotLine);
+    pen1.setColor(Qt::lightGray);
+    pen1.setWidth(2);
+
+
+    QPen pen2;
+    pen2.setColor(Qt::red);
+    pen2.setWidth(4);
+
+    // 绘制最短路径
+    if (!path.isEmpty()) {
+        QPen penRed(Qt::SolidLine);
+        penRed.setColor(Qt::red);
+        penRed.setWidth(4);
+        painter.setPen(penRed);
+        for (int i = 0; i < path.size() - 1; i++) {
+            painter.drawLine(point[path[i]], point[path[i + 1]]);
+        }
+    }
+
+    // 绘制最小生成树
+    if (!mstEdges.isEmpty()) {
+        QPen pen3(Qt::SolidLine);
+        pen3.setColor(Qt::red);
+        pen3.setWidth(4);
+        painter.setPen(pen3);
+        for (const auto &edge : mstEdges) {
+            painter.drawLine(point[edge.first], point[edge.second]);
+        }
+    }
+
+    outputInformation(); // 输出路径信息
+    printPlaceOrder(); // 打印点的顺序
+
+    painter.setPen(pen1);
+    // 手动绘制指定路径
+    painter.drawLine(point[0], point[1]); // 西操到家属区
+    painter.drawLine(point[0], point[9]); // 西操到学生活动中心
+    painter.drawLine(point[0], point[3]); // 西操到思源楼
+    painter.drawLine(point[3], point[4]); // 思源楼到明湖
+    painter.drawLine(point[3], point[11]); // 思源楼到天佑会堂
+    painter.drawLine(point[0], point[4]); // 西操到明湖
+    painter.drawLine(point[4], point[10]); // 西操到逸夫
+    painter.drawLine(point[10], point[5]); // 图书馆到逸夫
+    painter.drawLine(point[10], point[1]); // 逸夫到南门
+    painter.drawLine(point[10], point[2]); // 图书馆到东门
+    painter.drawLine(point[5], point[2]); // 逸夫到东门
+    painter.drawLine(point[9], point[3]); // 学生活动中心到思源楼
+    painter.drawLine(point[9], point[11]); // 学生活动中心到天佑会堂
+    painter.drawLine(point[1], point[2]); // 家属区到东门
+    painter.drawLine(point[2], point[7]); // 东门到东区1教
+    painter.drawLine(point[7], point[8]); // 东区1教到交大公交站
+    painter.drawLine(point[8], point[9]); // 交大公交站到学生活动中心
+    painter.drawLine(point[8], point[6]); // 交大公交站到南门
+    painter.drawLine(point[6], point[5]); // 南门到逸夫
+    painter.drawLine(point[6], point[11]); // 南门到天佑会堂
+    painter.drawLine(point[6], point[10]); // 南门到图书馆
+    painter.drawLine(point[6], point[4]); // 南门到明湖
+    painter.drawLine(point[6], point[3]); // 南门到思源楼
+    painter.drawLine(point[6], point[7]); // 南门到东区1教
+
+
+    // 导航
+    for (int i = 0; i < 15; i++) {
+        for (int j = 0; j < 15; j++) {
+            if (flag_point[i][j] == 1 && flag_point[j][i] != 1) {
+                painter.setPen(pen2);
+                painter.drawLine(point[i], point[j]);
+            } else if (flag_point[i][j] == 1 && flag_point[j][i] == 1) {
+                QPen penRedBold;
+                penRedBold.setColor(Qt::red);
+                penRedBold.setWidth(4);
+                painter.setPen(penRedBold);
+                painter.drawLine(point[i], point[j]);
+            }
+        }
+    }
+}
+
+/*
 void Information::ToChoose(bool){
     flag_choose = 1;
-   /* for(int i=0; i<spotButtons.size();i++){
-        spotButtons[i]->hide();
-    }
-*/
     choose->show();
     choose->move(735,0);
     ui->addMapButton->show();
@@ -86,13 +523,12 @@ void Information::ToChoose(bool){
     ui->label_5->hide();
     ui->label_6->show();
 }
-
-
+*/
+/*
 void Information::ToPath(bool){
-
     map->show();
 }
-
+*/
 void Information::doProcessDataToInform(int selectedPlaceNum){
     emit SignalDataToMap(selectedPlaceNum);
 }
@@ -100,16 +536,16 @@ void Information::doProcessDataToInform(int selectedPlaceNum){
 void Information::doProcessSaveWalkRouteToInform(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j,int k,int l,int m,int n,int o,int p,int q,int r,int s,int t){
     emit SignalWalkRouteToMap(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t);
 }
-
-void Information::BjtuMapReturnToThis(){
-    map->hide();
+/*
+void Information::ReturnToChoose(){
+   // map->hide();
     this->show();
     choose->show();
     choose->move(735,0);
     ui->label_4->show();
    // ui->ptb_clear
 }
-
+*/
 void Information::InitIntroduction(){
 
 Intro[0].num = 1;
@@ -314,5 +750,146 @@ void Information::doProcessOpenSchoolWeb(bool){
     QDesktopServices::openUrl(regUrl);
 }
 
+void Information::InitPoint(){
+    //初始化各点的坐标
+    point[0] = QPoint(140,120);//西操
+    point[1] = QPoint(355,70);//家属区
+    point[2] = QPoint(590,85);//东门
+    point[3] = QPoint(250,180);//思源楼
+    point[4] = QPoint(355,174);//明湖
+    point[5] = QPoint(481,210);//逸夫楼
+    point[6] = QPoint(255,300);//南门
+    point[7] = QPoint(480,444);//东区一教
+    point[8] = QPoint(320,432);//交大公交站
+    point[9] = QPoint(75,200);//学活
+    point[10] = QPoint(430,174);//图书馆
+    point[11] = QPoint(200,250);//天佑会堂
 
+    //设置flag标志位初始为0
+    for(int i = 0; i < allPoint; i++)
+        for(int j = 0; j < allPoint; j++){
+            flag_point[i][j] = 0;
+        }
+}
+
+void Information::InitPic(){
+    pic[0] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location1.png)");
+    pic[1] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location2.png)");
+    pic[2] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location3.png)");
+    pic[3] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location4.png)");
+    pic[4] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location5.png)");
+    pic[5] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location6.png)");
+    pic[6] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location7.png)");
+    pic[7] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location8.png)");
+    pic[8] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location9.png)");
+    pic[9] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location10.png)");
+    pic[10] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location11.png)");
+    pic[11] = QPixmap(R"(D:\CLion\CampusGuide\Resource\location12.png)");
+
+    QSize picSize(50,50);
+    pic[0] = pic[0].scaled(picSize, Qt::KeepAspectRatio);
+    pic[1] = pic[1].scaled(picSize, Qt::KeepAspectRatio);
+    pic[2] = pic[2].scaled(picSize, Qt::KeepAspectRatio);
+    pic[3] = pic[3].scaled(picSize, Qt::KeepAspectRatio);
+    pic[4] = pic[4].scaled(picSize, Qt::KeepAspectRatio);
+    pic[5] = pic[5].scaled(picSize, Qt::KeepAspectRatio);
+    pic[6] = pic[6].scaled(picSize, Qt::KeepAspectRatio);
+    pic[7] = pic[7].scaled(picSize, Qt::KeepAspectRatio);
+    pic[8] = pic[8].scaled(picSize, Qt::KeepAspectRatio);
+    pic[9] = pic[9].scaled(picSize, Qt::KeepAspectRatio);
+    pic[10] = pic[10].scaled(picSize, Qt::KeepAspectRatio);
+    pic[11] = pic[11].scaled(picSize, Qt::KeepAspectRatio);
+
+    for(int i = 0; i < allPlaceNum; i++){    //标签[0]对应地点1 指标号飞下标
+        label[i] = new QLabel(this);
+        label[i]->setGeometry(point[i].rx()-20,point[i].ry()-50,50,50);
+    }
+}
+
+void Information::outputInformation(){
+    QString placeNames[allPlaceNum]={"西操","家属区","东门","思源楼","明湖","逸夫楼","南门","东教一楼","交大公交站",
+                                  "学生活动中心","图书馆","天佑会堂","嘉园","校医院","麦当劳"};
+
+    //输出路线信息
+    QString routeS1{""};
+    QString routeS2{""};
+    QString routeS3{""};
+    QString routeS4{""};
+
+
+    for(int i = 0; i < selectedPlaceNum; i++){
+        QString placeInfo = QString::number(walkRoute[i]) + " (" + placeNames[walkRoute[i] - 1] + ") -> ";
+        if(i < 4){
+            routeS1 += placeInfo;
+        }else if(i < 8){
+            routeS2 += placeInfo;
+        }else if(i < 12){
+            routeS3 += placeInfo;
+        }else{
+            routeS4 += placeInfo;
+        }
+    }
+    // Add starting point
+    QString startPoint = QString::number(walkRoute[0]) + " (" + placeNames[walkRoute[0] - 1] + ")";
+    if(selectedPlaceNum < 4){
+        routeS1 += startPoint;
+    }else if(selectedPlaceNum < 8){
+        routeS2 += startPoint;
+    }else if(selectedPlaceNum < 12){
+        routeS3 += startPoint;
+    }else{
+        routeS4 += startPoint;
+    }
+
+    ui->label_route_1->setText(routeS1);
+    ui->label_route_2->setText(routeS2);
+    ui->label_route_3->setText(routeS3);
+    ui->label_route_4->setText(routeS4);
+}
+
+
+void Information::printPlaceOrder(){
+    // Clear previous labels
+    for (int i = 0; i < allPlaceNum; i++) {
+        label[i]->clear();
+    }
+    int nowplace;     //记录的是标号，不是下标
+
+    for(int i = 0; i < selectedPlaceNum; i++){
+        nowplace = walkRoute[i];
+        label[nowplace-1]->setPixmap(pic[i]);
+    }
+
+}
+
+void Information::doProcessDataToMap(int num){
+    selectedPlaceNum = num;
+}
+
+void Information::doProcessSaveWalkRouteToMap(int a,int b,int c,int d,int e,int f,int g,int h,int i,int j,int k,int l,int m,int n,int o,int p,int q,int r,int s,int t){
+    walkRoute[0] = a;
+    walkRoute[1] = b;
+    walkRoute[2] = c;
+    walkRoute[3] = d;
+    walkRoute[4] = e;
+    walkRoute[5] = f;
+    walkRoute[6] = g;
+    walkRoute[7] = h;
+    walkRoute[8] = i;
+    walkRoute[9] = j;
+    walkRoute[10] = k;
+    walkRoute[11] = l;
+    walkRoute[12] = m;
+    walkRoute[13] = n;
+    walkRoute[14] = o;
+    walkRoute[15] = p;
+    walkRoute[16] = q;
+    walkRoute[17] = r;
+    walkRoute[18] = s;
+    walkRoute[19] = t;
+}
+
+void Information::doProcessReturnToInquiry(bool){
+    emit ReturnToInquiry();
+}
 

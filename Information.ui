@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1129</width>
+    <width>1027</width>
     <height>774</height>
    </rect>
   </property>
@@ -24,8 +24,8 @@
   <widget class="QToolButton" name="tb1">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>630</y>
+     <x>460</x>
+     <y>540</y>
      <width>121</width>
      <height>51</height>
     </rect>
@@ -57,8 +57,8 @@
   <widget class="QToolButton" name="tb2">
    <property name="geometry">
     <rect>
-     <x>830</x>
-     <y>630</y>
+     <x>580</x>
+     <y>540</y>
      <width>121</width>
      <height>51</height>
     </rect>
@@ -120,8 +120,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QPushButton" name="addMapButton">
    <property name="geometry">
     <rect>
-     <x>650</x>
-     <y>400</y>
+     <x>530</x>
+     <y>500</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -147,30 +147,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </size>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>-60</x>
-     <y>0</y>
-     <width>761</width>
-     <height>571</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>C:/Users/lenovo/Desktop/res/bjtu01.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QPushButton" name="spot9">
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>410</y>
+     <y>400</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -183,7 +164,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location9.png</normaloff>C:/Users/lenovo/Desktop/res/location9.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -209,7 +190,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location5.png</normaloff>C:/Users/lenovo/Desktop/res/location5.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -221,7 +202,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QPushButton" name="spot8">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>470</x>
      <y>420</y>
      <width>21</width>
      <height>31</height>
@@ -235,7 +216,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location8.png</normaloff>C:/Users/lenovo/Desktop/res/location8.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -261,7 +242,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location2.png</normaloff>C:/Users/lenovo/Desktop/res/location2.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -273,7 +254,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QPushButton" name="spot10">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>50</x>
      <y>150</y>
      <width>41</width>
      <height>61</height>
@@ -287,7 +268,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location10.png</normaloff>C:/Users/lenovo/Desktop/res/location10.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -299,7 +280,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QPushButton" name="spot6">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>470</x>
      <y>170</y>
      <width>31</width>
      <height>51</height>
@@ -313,7 +294,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location6.png</normaloff>C:/Users/lenovo/Desktop/res/location6.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -325,7 +306,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QPushButton" name="spot3">
    <property name="geometry">
     <rect>
-     <x>560</x>
+     <x>580</x>
      <y>60</y>
      <width>21</width>
      <height>31</height>
@@ -339,7 +320,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location3.png</normaloff>C:/Users/lenovo/Desktop/res/location3.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -351,8 +332,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QPushButton" name="spot1">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>80</y>
+     <x>110</x>
+     <y>70</y>
      <width>51</width>
      <height>51</height>
     </rect>
@@ -365,7 +346,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location1.png</normaloff>C:/Users/lenovo/Desktop/res/location1.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -377,7 +358,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QPushButton" name="spot7">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>230</x>
      <y>260</y>
      <width>41</width>
      <height>51</height>
@@ -391,7 +372,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location7.png</normaloff>C:/Users/lenovo/Desktop/res/location7.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -417,7 +398,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location4.png</normaloff>C:/Users/lenovo/Desktop/res/location4.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -2243,7 +2224,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location11.png</normaloff>C:/Users/lenovo/Desktop/res/location11.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -2269,7 +2250,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/location12.png</normaloff>C:/Users/lenovo/Desktop/res/location12.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -2278,89 +2259,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="spot13">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>290</y>
-     <width>21</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>30</width>
-     <height>30</height>
-    </size>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="spot14">
-   <property name="geometry">
-    <rect>
-     <x>560</x>
-     <y>90</y>
-     <width>21</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>30</width>
-     <height>30</height>
-    </size>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="spot15">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>330</y>
-     <width>31</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>C:/Users/lenovo/Desktop/红.png</normaloff>C:/Users/lenovo/Desktop/红.png</iconset>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>40</width>
-     <height>40</height>
-    </size>
-   </property>
-  </widget>
   <widget class="QTextEdit" name="textEdit">
    <property name="geometry">
     <rect>
-     <x>750</x>
-     <y>330</y>
+     <x>1030</x>
+     <y>290</y>
      <width>341</width>
      <height>281</height>
     </rect>
@@ -2402,8 +2305,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QLabel" name="label_picture">
    <property name="geometry">
     <rect>
-     <x>810</x>
-     <y>10</y>
+     <x>1100</x>
+     <y>0</y>
      <width>200</width>
      <height>300</height>
     </rect>
@@ -2418,8 +2321,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>820</x>
-     <y>60</y>
+     <x>1110</x>
+     <y>50</y>
      <width>191</width>
      <height>191</height>
     </rect>
@@ -2492,104 +2395,381 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;① 必游景点：明湖【交大最美，石碑打卡】&lt;/p&gt;&lt;p&gt;② 必尝美食：明湖烤鸭【交大特色，不容错过！】&lt;/p&gt;&lt;p&gt;③ 地标打卡：思源楼【饮水思源，爱国荣校】、北交大南门【亚洲最高校门】&lt;/p&gt;&lt;p&gt;④ 敬仰之地：天佑会堂【历史与传承】&lt;/p&gt;&lt;p&gt;⑤ 大学生活体验：学活小剧场【感受合唱团排练，梦回大学时光】&lt;/p&gt;&lt;p&gt;⑥ 运动健身：西操综合体育馆【篮球、网球、游泳、健身，设施完备，宽敞大气】&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
-  <zorder>tb1</zorder>
-  <zorder>tb2</zorder>
-  <zorder>addMapButton</zorder>
-  <zorder>spot9</zorder>
-  <zorder>spot5</zorder>
-  <zorder>spot8</zorder>
-  <zorder>spot2</zorder>
-  <zorder>spot10</zorder>
-  <zorder>spot6</zorder>
-  <zorder>spot3</zorder>
-  <zorder>spot1</zorder>
-  <zorder>spot7</zorder>
+  <widget class="QPushButton" name="pushButton_return">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>720</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/lenovo/Desktop/res/刷新.png</normaloff>C:/Users/lenovo/Desktop/res/刷新.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>580</y>
+     <width>521</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label_route_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>501</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_route_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>501</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_route_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>501</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_route_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>501</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>960</x>
+     <y>550</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;为您推荐的路线为：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>240</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>40</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>起点编号：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>90</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>终点：</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="endComboBox">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>90</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="startLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>40</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="dfsButton">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>150</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>dfsButton</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="shortestPathButton">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>90</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>最短路径</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mstButton">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>200</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>mstButton</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="dfsRoute">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>260</y>
+     <width>361</width>
+     <height>261</height>
+    </rect>
+   </property>
+  </widget>
   <zorder>spot4</zorder>
-  <zorder>point0</zorder>
-  <zorder>point_1</zorder>
-  <zorder>point_2</zorder>
-  <zorder>point_3</zorder>
-  <zorder>point_4</zorder>
-  <zorder>point_5</zorder>
-  <zorder>point_6</zorder>
-  <zorder>point_7</zorder>
-  <zorder>point_8</zorder>
-  <zorder>point_9</zorder>
-  <zorder>point_10</zorder>
-  <zorder>point_11</zorder>
-  <zorder>point_12</zorder>
-  <zorder>point_13</zorder>
-  <zorder>point_14</zorder>
-  <zorder>point_15</zorder>
-  <zorder>point_16</zorder>
-  <zorder>point_17</zorder>
-  <zorder>point_18</zorder>
-  <zorder>point_19</zorder>
-  <zorder>point_20</zorder>
-  <zorder>point_21</zorder>
-  <zorder>point_22</zorder>
-  <zorder>point_23</zorder>
-  <zorder>point_24</zorder>
-  <zorder>point_25</zorder>
-  <zorder>point_26</zorder>
-  <zorder>point_27</zorder>
-  <zorder>point_28</zorder>
-  <zorder>point_29</zorder>
-  <zorder>point_30</zorder>
-  <zorder>point_31</zorder>
-  <zorder>point_32</zorder>
-  <zorder>point_33</zorder>
-  <zorder>point_34</zorder>
-  <zorder>point_35</zorder>
-  <zorder>point_36</zorder>
-  <zorder>point_37</zorder>
-  <zorder>point_38</zorder>
-  <zorder>point_39</zorder>
-  <zorder>point_40</zorder>
-  <zorder>point_41</zorder>
-  <zorder>point_42</zorder>
-  <zorder>point_43</zorder>
-  <zorder>point_44</zorder>
-  <zorder>point_45</zorder>
-  <zorder>point_46</zorder>
-  <zorder>point_47</zorder>
-  <zorder>point_48</zorder>
-  <zorder>point_49</zorder>
-  <zorder>point_50</zorder>
-  <zorder>point_51</zorder>
-  <zorder>point_52</zorder>
-  <zorder>point_53</zorder>
-  <zorder>point_54</zorder>
-  <zorder>point_55</zorder>
-  <zorder>point_56</zorder>
-  <zorder>point_57</zorder>
-  <zorder>point_58</zorder>
-  <zorder>point_59</zorder>
-  <zorder>point_60</zorder>
-  <zorder>point_61</zorder>
-  <zorder>point_62</zorder>
-  <zorder>point_63</zorder>
-  <zorder>point_64</zorder>
-  <zorder>point_65</zorder>
-  <zorder>point_66</zorder>
-  <zorder>point_67</zorder>
-  <zorder>point_68</zorder>
-  <zorder>point_69</zorder>
-  <zorder>point_70</zorder>
-  <zorder>point_71</zorder>
+  <zorder>spot3</zorder>
+  <zorder>label</zorder>
   <zorder>spot11</zorder>
-  <zorder>spot12</zorder>
-  <zorder>spot13</zorder>
-  <zorder>spot14</zorder>
-  <zorder>spot15</zorder>
-  <zorder>textEdit</zorder>
+  <zorder>point_64</zorder>
+  <zorder>tb1</zorder>
+  <zorder>point_36</zorder>
+  <zorder>point_23</zorder>
+  <zorder>point_28</zorder>
+  <zorder>point_32</zorder>
+  <zorder>spot10</zorder>
+  <zorder>point_5</zorder>
+  <zorder>point_10</zorder>
+  <zorder>point_12</zorder>
+  <zorder>point_35</zorder>
+  <zorder>point_68</zorder>
+  <zorder>point_41</zorder>
+  <zorder>point_14</zorder>
+  <zorder>point_55</zorder>
+  <zorder>tb2</zorder>
+  <zorder>point_63</zorder>
+  <zorder>point_21</zorder>
+  <zorder>point_25</zorder>
   <zorder>label_picture</zorder>
-  <zorder>label_3</zorder>
-  <zorder>label_4</zorder>
+  <zorder>point_65</zorder>
+  <zorder>point_44</zorder>
+  <zorder>point_27</zorder>
+  <zorder>spot12</zorder>
+  <zorder>point_6</zorder>
+  <zorder>startLineEdit</zorder>
+  <zorder>shortestPathButton</zorder>
+  <zorder>point_71</zorder>
+  <zorder>point_24</zorder>
+  <zorder>spot6</zorder>
+  <zorder>label_12</zorder>
+  <zorder>point0</zorder>
+  <zorder>point_59</zorder>
+  <zorder>spot9</zorder>
+  <zorder>point_7</zorder>
+  <zorder>point_53</zorder>
+  <zorder>point_56</zorder>
+  <zorder>point_33</zorder>
+  <zorder>point_3</zorder>
+  <zorder>point_15</zorder>
+  <zorder>point_48</zorder>
+  <zorder>point_4</zorder>
+  <zorder>point_29</zorder>
+  <zorder>label_7</zorder>
   <zorder>label_5</zorder>
+  <zorder>spot8</zorder>
+  <zorder>pushButton_return</zorder>
+  <zorder>point_16</zorder>
+  <zorder>point_42</zorder>
+  <zorder>point_37</zorder>
+  <zorder>label_4</zorder>
+  <zorder>point_51</zorder>
+  <zorder>point_54</zorder>
+  <zorder>point_8</zorder>
+  <zorder>point_22</zorder>
+  <zorder>point_49</zorder>
+  <zorder>point_38</zorder>
+  <zorder>point_2</zorder>
+  <zorder>groupBox</zorder>
+  <zorder>spot5</zorder>
+  <zorder>spot2</zorder>
+  <zorder>point_66</zorder>
+  <zorder>point_70</zorder>
+  <zorder>point_34</zorder>
+  <zorder>point_18</zorder>
+  <zorder>point_46</zorder>
+  <zorder>point_69</zorder>
+  <zorder>point_17</zorder>
+  <zorder>point_9</zorder>
+  <zorder>spot1</zorder>
+  <zorder>point_40</zorder>
+  <zorder>point_50</zorder>
+  <zorder>point_62</zorder>
+  <zorder>point_61</zorder>
+  <zorder>mstButton</zorder>
+  <zorder>label_13</zorder>
+  <zorder>point_39</zorder>
+  <zorder>point_43</zorder>
+  <zorder>textEdit</zorder>
+  <zorder>addMapButton</zorder>
+  <zorder>point_58</zorder>
+  <zorder>point_57</zorder>
+  <zorder>point_13</zorder>
+  <zorder>point_11</zorder>
+  <zorder>point_31</zorder>
+  <zorder>point_67</zorder>
   <zorder>label_6</zorder>
+  <zorder>point_30</zorder>
+  <zorder>point_52</zorder>
+  <zorder>point_19</zorder>
+  <zorder>point_1</zorder>
+  <zorder>endComboBox</zorder>
+  <zorder>dfsButton</zorder>
+  <zorder>point_60</zorder>
+  <zorder>label_3</zorder>
+  <zorder>point_47</zorder>
+  <zorder>label_8</zorder>
+  <zorder>spot7</zorder>
+  <zorder>point_20</zorder>
+  <zorder>point_45</zorder>
+  <zorder>point_26</zorder>
+  <zorder>dfsRoute</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

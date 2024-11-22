@@ -45,30 +45,38 @@ static constexpr auto qt_meta_stringdata_CLASSInformationENDCLASS = QtMocHelpers
     "SignalWalkRouteToMap",
     "SignalArriveTimeToMap",
     "SignalStayTimeRouteToMap",
-    "ToChoose",
-    "ToPath",
-    "BjtuMapReturnToThis",
+    "ReturnToInquiry",
     "doProcessAddPlace",
     "doProcessOpenSchoolWeb",
+    "doProcessDataToMap",
+    "doProcessSaveWalkRouteToMap",
+    "doProcessReturnToInquiry",
     "doProcessDataToInform",
-    "doProcessSaveWalkRouteToInform"
+    "doProcessSaveWalkRouteToInform",
+    "onDFSButtonClicked",
+    "onShortestPathButtonClicked",
+    "onMSTButtonClicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSInformationENDCLASS_t {
-    uint offsetsAndSizes[26];
+    uint offsetsAndSizes[34];
     char stringdata0[12];
     char stringdata1[16];
     char stringdata2[1];
     char stringdata3[21];
     char stringdata4[22];
     char stringdata5[25];
-    char stringdata6[9];
-    char stringdata7[7];
-    char stringdata8[20];
-    char stringdata9[18];
-    char stringdata10[23];
-    char stringdata11[22];
-    char stringdata12[31];
+    char stringdata6[16];
+    char stringdata7[18];
+    char stringdata8[23];
+    char stringdata9[19];
+    char stringdata10[28];
+    char stringdata11[25];
+    char stringdata12[22];
+    char stringdata13[31];
+    char stringdata14[19];
+    char stringdata15[28];
+    char stringdata16[19];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSInformationENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -80,13 +88,17 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSInformationENDCLASS_t qt_meta_s
         QT_MOC_LITERAL(29, 20),  // "SignalWalkRouteToMap"
         QT_MOC_LITERAL(50, 21),  // "SignalArriveTimeToMap"
         QT_MOC_LITERAL(72, 24),  // "SignalStayTimeRouteToMap"
-        QT_MOC_LITERAL(97, 8),  // "ToChoose"
-        QT_MOC_LITERAL(106, 6),  // "ToPath"
-        QT_MOC_LITERAL(113, 19),  // "BjtuMapReturnToThis"
-        QT_MOC_LITERAL(133, 17),  // "doProcessAddPlace"
-        QT_MOC_LITERAL(151, 22),  // "doProcessOpenSchoolWeb"
-        QT_MOC_LITERAL(174, 21),  // "doProcessDataToInform"
-        QT_MOC_LITERAL(196, 30)   // "doProcessSaveWalkRouteToInform"
+        QT_MOC_LITERAL(97, 15),  // "ReturnToInquiry"
+        QT_MOC_LITERAL(113, 17),  // "doProcessAddPlace"
+        QT_MOC_LITERAL(131, 22),  // "doProcessOpenSchoolWeb"
+        QT_MOC_LITERAL(154, 18),  // "doProcessDataToMap"
+        QT_MOC_LITERAL(173, 27),  // "doProcessSaveWalkRouteToMap"
+        QT_MOC_LITERAL(201, 24),  // "doProcessReturnToInquiry"
+        QT_MOC_LITERAL(226, 21),  // "doProcessDataToInform"
+        QT_MOC_LITERAL(248, 30),  // "doProcessSaveWalkRouteToInform"
+        QT_MOC_LITERAL(279, 18),  // "onDFSButtonClicked"
+        QT_MOC_LITERAL(298, 27),  // "onShortestPathButtonClicked"
+        QT_MOC_LITERAL(326, 18)   // "onMSTButtonClicked"
     },
     "Information",
     "SignalDataToMap",
@@ -94,13 +106,17 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSInformationENDCLASS_t qt_meta_s
     "SignalWalkRouteToMap",
     "SignalArriveTimeToMap",
     "SignalStayTimeRouteToMap",
-    "ToChoose",
-    "ToPath",
-    "BjtuMapReturnToThis",
+    "ReturnToInquiry",
     "doProcessAddPlace",
     "doProcessOpenSchoolWeb",
+    "doProcessDataToMap",
+    "doProcessSaveWalkRouteToMap",
+    "doProcessReturnToInquiry",
     "doProcessDataToInform",
-    "doProcessSaveWalkRouteToInform"
+    "doProcessSaveWalkRouteToInform",
+    "onDFSButtonClicked",
+    "onShortestPathButtonClicked",
+    "onMSTButtonClicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -112,42 +128,50 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSInformationENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       4,       // signalCount
+       5,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   80,    2, 0x06,    1 /* Public */,
-       3,   20,   83,    2, 0x06,    3 /* Public */,
-       4,   20,  124,    2, 0x06,   24 /* Public */,
-       5,   20,  165,    2, 0x06,   45 /* Public */,
+       1,    1,  104,    2, 0x06,    1 /* Public */,
+       3,   20,  107,    2, 0x06,    3 /* Public */,
+       4,   20,  148,    2, 0x06,   24 /* Public */,
+       5,   20,  189,    2, 0x06,   45 /* Public */,
+       6,    0,  230,    2, 0x06,   66 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       6,    1,  206,    2, 0x08,   66 /* Private */,
-       7,    1,  209,    2, 0x08,   68 /* Private */,
-       8,    0,  212,    2, 0x08,   70 /* Private */,
-       9,    1,  213,    2, 0x08,   71 /* Private */,
-      10,    1,  216,    2, 0x08,   73 /* Private */,
-      11,    1,  219,    2, 0x08,   75 /* Private */,
-      12,   20,  222,    2, 0x08,   77 /* Private */,
+       7,    1,  231,    2, 0x08,   67 /* Private */,
+       8,    1,  234,    2, 0x08,   69 /* Private */,
+       9,    1,  237,    2, 0x08,   71 /* Private */,
+      10,   20,  240,    2, 0x08,   73 /* Private */,
+      11,    1,  281,    2, 0x08,   94 /* Private */,
+      12,    1,  284,    2, 0x08,   96 /* Private */,
+      13,   20,  287,    2, 0x08,   98 /* Private */,
+      14,    0,  328,    2, 0x08,  119 /* Private */,
+      15,    0,  329,    2, 0x08,  120 /* Private */,
+      16,    0,  330,    2, 0x08,  121 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int,    2,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Bool,    2,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Bool,    2,
+    QMetaType::Void, QMetaType::Int,    2,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Int,    2,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -230,18 +254,40 @@ Q_CONSTINIT const QMetaObject Information::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'ToChoose'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        // method 'ToPath'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        // method 'BjtuMapReturnToThis'
+        // method 'ReturnToInquiry'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'doProcessAddPlace'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'doProcessOpenSchoolWeb'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'doProcessDataToMap'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'doProcessSaveWalkRouteToMap'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'doProcessReturnToInquiry'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'doProcessDataToInform'
@@ -268,7 +314,13 @@ Q_CONSTINIT const QMetaObject Information::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'onDFSButtonClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onShortestPathButtonClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onMSTButtonClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -283,13 +335,17 @@ void Information::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 1: _t->SignalWalkRouteToMap((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[7])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[8])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[9])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[10])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[11])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[12])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[13])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[14])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[15])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[16])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[17])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[18])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[19])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[20]))); break;
         case 2: _t->SignalArriveTimeToMap((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[7])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[8])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[9])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[10])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[11])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[12])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[13])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[14])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[15])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[16])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[17])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[18])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[19])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[20]))); break;
         case 3: _t->SignalStayTimeRouteToMap((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[7])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[8])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[9])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[10])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[11])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[12])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[13])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[14])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[15])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[16])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[17])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[18])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[19])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[20]))); break;
-        case 4: _t->ToChoose((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 5: _t->ToPath((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 6: _t->BjtuMapReturnToThis(); break;
-        case 7: _t->doProcessAddPlace((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 8: _t->doProcessOpenSchoolWeb((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 9: _t->doProcessDataToInform((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 10: _t->doProcessSaveWalkRouteToInform((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[7])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[8])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[9])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[10])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[11])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[12])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[13])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[14])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[15])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[16])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[17])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[18])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[19])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[20]))); break;
+        case 4: _t->ReturnToInquiry(); break;
+        case 5: _t->doProcessAddPlace((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 6: _t->doProcessOpenSchoolWeb((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 7: _t->doProcessDataToMap((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 8: _t->doProcessSaveWalkRouteToMap((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[7])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[8])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[9])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[10])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[11])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[12])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[13])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[14])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[15])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[16])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[17])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[18])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[19])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[20]))); break;
+        case 9: _t->doProcessReturnToInquiry((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 10: _t->doProcessDataToInform((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 11: _t->doProcessSaveWalkRouteToInform((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[7])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[8])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[9])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[10])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[11])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[12])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[13])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[14])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[15])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[16])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[17])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[18])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[19])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[20]))); break;
+        case 12: _t->onDFSButtonClicked(); break;
+        case 13: _t->onShortestPathButtonClicked(); break;
+        case 14: _t->onMSTButtonClicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -322,6 +378,13 @@ void Information::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
                 return;
             }
         }
+        {
+            using _t = void (Information::*)();
+            if (_t _q_method = &Information::ReturnToInquiry; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 4;
+                return;
+            }
+        }
     }
 }
 
@@ -344,13 +407,13 @@ int Information::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 15)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 11;
+        _id -= 15;
     }
     return _id;
 }
@@ -381,5 +444,11 @@ void Information::SignalStayTimeRouteToMap(int _t1, int _t2, int _t3, int _t4, i
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t7))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t8))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t9))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t10))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t11))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t12))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t13))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t14))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t15))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t16))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t17))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t18))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t19))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t20))) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
+}
+
+// SIGNAL 4
+void Information::ReturnToInquiry()
+{
+    QMetaObject::activate(this, &staticMetaObject, 4, nullptr);
 }
 QT_WARNING_POP
