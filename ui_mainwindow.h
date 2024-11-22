@@ -1,19 +1,18 @@
 /********************************************************************************
-** Form generated from reading UI file 'Information.ui'
+** Form generated from reading UI file 'mainwindow.ui'
 **
 ** Created by: Qt User Interface Compiler version 6.5.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_INFORMATION_H
-#define UI_INFORMATION_H
+#ifndef UI_MAINWINDOW_H
+#define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
-#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
@@ -24,7 +23,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Information
+class Ui_mainwindow
 {
 public:
     QToolButton *tb1;
@@ -117,18 +116,10 @@ public:
     QPushButton *spot12;
     QTextEdit *textEdit;
     QLabel *label_picture;
-    QLabel *label_3;
     QLabel *label_4;
     QLabel *label_5;
     QLabel *label_6;
     QPushButton *pushButton_return;
-    QGroupBox *groupBox;
-    QLabel *label_route_1;
-    QLabel *label_route_2;
-    QLabel *label_route_3;
-    QLabel *label_route_4;
-    QLabel *label_7;
-    QLabel *label_8;
     QLabel *label_12;
     QLabel *label_13;
     QComboBox *endComboBox;
@@ -139,18 +130,18 @@ public:
     QListWidget *dfsRoute;
     QLabel *pathInfoLabel;
 
-    void setupUi(QWidget *Information)
+    void setupUi(QWidget *mainwindow)
     {
-        if (Information->objectName().isEmpty())
-            Information->setObjectName("Information");
-        Information->setWindowModality(Qt::NonModal);
-        Information->resize(1027, 774);
+        if (mainwindow->objectName().isEmpty())
+            mainwindow->setObjectName("mainwindow");
+        mainwindow->setWindowModality(Qt::NonModal);
+        mainwindow->resize(1091, 774);
         QFont font;
         font.setBold(true);
-        Information->setFont(font);
-        tb1 = new QToolButton(Information);
+        mainwindow->setFont(font);
+        tb1 = new QToolButton(mainwindow);
         tb1->setObjectName("tb1");
-        tb1->setGeometry(QRect(460, 540, 121, 51));
+        tb1->setGeometry(QRect(1100, 420, 91, 41));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font1.setPointSize(12);
@@ -161,32 +152,32 @@ public:
         tb1->setIcon(icon);
         tb1->setIconSize(QSize(60, 60));
         tb1->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-        tb2 = new QToolButton(Information);
+        tb2 = new QToolButton(mainwindow);
         tb2->setObjectName("tb2");
-        tb2->setGeometry(QRect(580, 540, 121, 51));
+        tb2->setGeometry(QRect(1200, 420, 91, 41));
         tb2->setFont(font1);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/\345\256\230\347\275\221.png"), QSize(), QIcon::Normal, QIcon::Off);
         tb2->setIcon(icon1);
         tb2->setIconSize(QSize(35, 35));
         tb2->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-        label = new QLabel(Information);
+        label = new QLabel(mainwindow);
         label->setObjectName("label");
-        label->setGeometry(QRect(30, 590, 491, 141));
+        label->setGeometry(QRect(1100, 50, 491, 141));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font2.setPointSize(16);
         font2.setBold(false);
         label->setFont(font2);
-        addMapButton = new QPushButton(Information);
+        addMapButton = new QPushButton(mainwindow);
         addMapButton->setObjectName("addMapButton");
-        addMapButton->setGeometry(QRect(530, 500, 101, 41));
+        addMapButton->setGeometry(QRect(1100, 370, 91, 41));
         addMapButton->setFont(font1);
         QIcon icon2;
         icon2.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/\345\257\274\350\210\252.png"), QSize(), QIcon::Normal, QIcon::Off);
         addMapButton->setIcon(icon2);
         addMapButton->setIconSize(QSize(35, 35));
-        spot9 = new QPushButton(Information);
+        spot9 = new QPushButton(mainwindow);
         spot9->setObjectName("spot9");
         spot9->setGeometry(QRect(310, 400, 31, 31));
         spot9->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -194,7 +185,7 @@ public:
         icon3.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location9.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot9->setIcon(icon3);
         spot9->setIconSize(QSize(30, 30));
-        spot5 = new QPushButton(Information);
+        spot5 = new QPushButton(mainwindow);
         spot5->setObjectName("spot5");
         spot5->setGeometry(QRect(340, 130, 41, 61));
         spot5->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -202,7 +193,7 @@ public:
         icon4.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location5.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot5->setIcon(icon4);
         spot5->setIconSize(QSize(50, 50));
-        spot8 = new QPushButton(Information);
+        spot8 = new QPushButton(mainwindow);
         spot8->setObjectName("spot8");
         spot8->setGeometry(QRect(470, 420, 21, 31));
         spot8->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -210,7 +201,7 @@ public:
         icon5.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location8.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot8->setIcon(icon5);
         spot8->setIconSize(QSize(30, 30));
-        spot2 = new QPushButton(Information);
+        spot2 = new QPushButton(mainwindow);
         spot2->setObjectName("spot2");
         spot2->setGeometry(QRect(340, 40, 31, 41));
         spot2->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -218,7 +209,7 @@ public:
         icon6.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location2.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot2->setIcon(icon6);
         spot2->setIconSize(QSize(30, 30));
-        spot10 = new QPushButton(Information);
+        spot10 = new QPushButton(mainwindow);
         spot10->setObjectName("spot10");
         spot10->setGeometry(QRect(50, 150, 41, 61));
         spot10->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -226,7 +217,7 @@ public:
         icon7.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location10.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot10->setIcon(icon7);
         spot10->setIconSize(QSize(50, 50));
-        spot6 = new QPushButton(Information);
+        spot6 = new QPushButton(mainwindow);
         spot6->setObjectName("spot6");
         spot6->setGeometry(QRect(470, 170, 31, 51));
         spot6->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -234,7 +225,7 @@ public:
         icon8.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location6.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot6->setIcon(icon8);
         spot6->setIconSize(QSize(40, 40));
-        spot3 = new QPushButton(Information);
+        spot3 = new QPushButton(mainwindow);
         spot3->setObjectName("spot3");
         spot3->setGeometry(QRect(580, 60, 21, 31));
         spot3->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -242,7 +233,7 @@ public:
         icon9.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location3.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot3->setIcon(icon9);
         spot3->setIconSize(QSize(30, 30));
-        spot1 = new QPushButton(Information);
+        spot1 = new QPushButton(mainwindow);
         spot1->setObjectName("spot1");
         spot1->setGeometry(QRect(110, 70, 51, 51));
         spot1->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -250,7 +241,7 @@ public:
         icon10.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location1.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot1->setIcon(icon10);
         spot1->setIconSize(QSize(50, 50));
-        spot7 = new QPushButton(Information);
+        spot7 = new QPushButton(mainwindow);
         spot7->setObjectName("spot7");
         spot7->setGeometry(QRect(230, 260, 41, 51));
         spot7->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -258,7 +249,7 @@ public:
         icon11.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location7.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot7->setIcon(icon11);
         spot7->setIconSize(QSize(50, 50));
-        spot4 = new QPushButton(Information);
+        spot4 = new QPushButton(mainwindow);
         spot4->setObjectName("spot4");
         spot4->setGeometry(QRect(230, 130, 41, 71));
         spot4->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -266,439 +257,439 @@ public:
         icon12.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location4.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot4->setIcon(icon12);
         spot4->setIconSize(QSize(50, 50));
-        point0 = new QLabel(Information);
+        point0 = new QLabel(mainwindow);
         point0->setObjectName("point0");
         point0->setGeometry(QRect(140, 120, 8, 8));
         point0->setMaximumSize(QSize(8, 8));
         point0->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point0->setScaledContents(true);
-        point_1 = new QLabel(Information);
+        point_1 = new QLabel(mainwindow);
         point_1->setObjectName("point_1");
         point_1->setGeometry(QRect(355, 70, 8, 8));
         point_1->setMaximumSize(QSize(8, 8));
         point_1->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_1->setScaledContents(true);
-        point_2 = new QLabel(Information);
+        point_2 = new QLabel(mainwindow);
         point_2->setObjectName("point_2");
         point_2->setGeometry(QRect(590, 85, 8, 8));
         point_2->setMaximumSize(QSize(8, 8));
         point_2->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_2->setScaledContents(true);
-        point_3 = new QLabel(Information);
+        point_3 = new QLabel(mainwindow);
         point_3->setObjectName("point_3");
         point_3->setGeometry(QRect(250, 180, 8, 8));
         point_3->setMaximumSize(QSize(8, 8));
         point_3->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_3->setScaledContents(true);
-        point_4 = new QLabel(Information);
+        point_4 = new QLabel(mainwindow);
         point_4->setObjectName("point_4");
         point_4->setGeometry(QRect(355, 174, 8, 8));
         point_4->setMaximumSize(QSize(8, 8));
         point_4->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_4->setScaledContents(true);
-        point_5 = new QLabel(Information);
+        point_5 = new QLabel(mainwindow);
         point_5->setObjectName("point_5");
         point_5->setGeometry(QRect(490, 210, 8, 8));
         point_5->setMaximumSize(QSize(8, 8));
         point_5->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_5->setScaledContents(true);
-        point_6 = new QLabel(Information);
+        point_6 = new QLabel(mainwindow);
         point_6->setObjectName("point_6");
         point_6->setGeometry(QRect(255, 300, 8, 8));
         point_6->setMaximumSize(QSize(8, 8));
         point_6->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_6->setScaledContents(true);
-        point_7 = new QLabel(Information);
+        point_7 = new QLabel(mainwindow);
         point_7->setObjectName("point_7");
         point_7->setGeometry(QRect(490, 440, 8, 8));
         point_7->setMaximumSize(QSize(8, 8));
         point_7->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_7->setScaledContents(true);
-        point_8 = new QLabel(Information);
+        point_8 = new QLabel(mainwindow);
         point_8->setObjectName("point_8");
         point_8->setGeometry(QRect(320, 440, 8, 8));
         point_8->setMaximumSize(QSize(8, 8));
         point_8->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_8->setScaledContents(true);
-        point_9 = new QLabel(Information);
+        point_9 = new QLabel(mainwindow);
         point_9->setObjectName("point_9");
         point_9->setGeometry(QRect(80, 200, 8, 8));
         point_9->setMaximumSize(QSize(8, 8));
         point_9->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_9->setScaledContents(true);
-        point_10 = new QLabel(Information);
+        point_10 = new QLabel(mainwindow);
         point_10->setObjectName("point_10");
         point_10->setGeometry(QRect(420, 170, 8, 8));
         point_10->setMaximumSize(QSize(8, 8));
         point_10->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_10->setScaledContents(true);
-        point_11 = new QLabel(Information);
+        point_11 = new QLabel(mainwindow);
         point_11->setObjectName("point_11");
         point_11->setGeometry(QRect(200, 250, 8, 8));
         point_11->setMaximumSize(QSize(8, 8));
         point_11->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_11->setScaledContents(true);
-        point_12 = new QLabel(Information);
+        point_12 = new QLabel(mainwindow);
         point_12->setObjectName("point_12");
         point_12->setGeometry(QRect(310, 310, 8, 8));
         point_12->setMaximumSize(QSize(8, 8));
         point_12->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_12->setScaledContents(true);
-        point_13 = new QLabel(Information);
+        point_13 = new QLabel(mainwindow);
         point_13->setObjectName("point_13");
         point_13->setGeometry(QRect(570, 110, 8, 8));
         point_13->setMaximumSize(QSize(8, 8));
         point_13->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_13->setScaledContents(true);
-        point_14 = new QLabel(Information);
+        point_14 = new QLabel(mainwindow);
         point_14->setObjectName("point_14");
         point_14->setGeometry(QRect(270, 370, 8, 8));
         point_14->setMaximumSize(QSize(8, 8));
         point_14->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_14->setScaledContents(true);
-        point_15 = new QLabel(Information);
+        point_15 = new QLabel(mainwindow);
         point_15->setObjectName("point_15");
         point_15->setGeometry(QRect(465, 200, 8, 8));
         point_15->setMaximumSize(QSize(8, 8));
         point_15->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_15->setScaledContents(true);
-        point_16 = new QLabel(Information);
+        point_16 = new QLabel(mainwindow);
         point_16->setObjectName("point_16");
         point_16->setGeometry(QRect(555, 200, 8, 8));
         point_16->setMaximumSize(QSize(8, 8));
         point_16->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_16->setScaledContents(true);
-        point_17 = new QLabel(Information);
+        point_17 = new QLabel(mainwindow);
         point_17->setObjectName("point_17");
         point_17->setGeometry(QRect(385, 90, 8, 8));
         point_17->setMaximumSize(QSize(8, 8));
         point_17->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_17->setScaledContents(true);
-        point_18 = new QLabel(Information);
+        point_18 = new QLabel(mainwindow);
         point_18->setObjectName("point_18");
         point_18->setGeometry(QRect(465, 255, 8, 8));
         point_18->setMaximumSize(QSize(8, 8));
         point_18->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_18->setScaledContents(true);
-        point_19 = new QLabel(Information);
+        point_19 = new QLabel(mainwindow);
         point_19->setObjectName("point_19");
         point_19->setGeometry(QRect(555, 255, 8, 8));
         point_19->setMaximumSize(QSize(8, 8));
         point_19->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_19->setScaledContents(true);
-        point_20 = new QLabel(Information);
+        point_20 = new QLabel(mainwindow);
         point_20->setObjectName("point_20");
         point_20->setGeometry(QRect(440, 255, 8, 8));
         point_20->setMaximumSize(QSize(8, 8));
         point_20->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_20->setScaledContents(true);
-        point_21 = new QLabel(Information);
+        point_21 = new QLabel(mainwindow);
         point_21->setObjectName("point_21");
         point_21->setGeometry(QRect(440, 280, 8, 8));
         point_21->setMaximumSize(QSize(8, 8));
         point_21->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_21->setScaledContents(true);
-        point_22 = new QLabel(Information);
+        point_22 = new QLabel(mainwindow);
         point_22->setObjectName("point_22");
         point_22->setGeometry(QRect(326, 280, 8, 8));
         point_22->setMaximumSize(QSize(8, 8));
         point_22->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_22->setScaledContents(true);
-        point_23 = new QLabel(Information);
+        point_23 = new QLabel(mainwindow);
         point_23->setObjectName("point_23");
         point_23->setGeometry(QRect(255, 280, 8, 8));
         point_23->setMaximumSize(QSize(8, 8));
         point_23->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_23->setScaledContents(true);
-        point_24 = new QLabel(Information);
+        point_24 = new QLabel(mainwindow);
         point_24->setObjectName("point_24");
         point_24->setGeometry(QRect(220, 90, 8, 8));
         point_24->setMaximumSize(QSize(8, 8));
         point_24->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_24->setScaledContents(true);
-        point_25 = new QLabel(Information);
+        point_25 = new QLabel(mainwindow);
         point_25->setObjectName("point_25");
         point_25->setGeometry(QRect(355, 90, 8, 8));
         point_25->setMaximumSize(QSize(8, 8));
         point_25->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_25->setScaledContents(true);
-        point_26 = new QLabel(Information);
+        point_26 = new QLabel(mainwindow);
         point_26->setObjectName("point_26");
         point_26->setGeometry(QRect(385, 200, 8, 8));
         point_26->setMaximumSize(QSize(8, 8));
         point_26->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_26->setScaledContents(true);
-        point_27 = new QLabel(Information);
+        point_27 = new QLabel(mainwindow);
         point_27->setObjectName("point_27");
         point_27->setGeometry(QRect(170, 150, 8, 8));
         point_27->setMaximumSize(QSize(8, 8));
         point_27->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_27->setScaledContents(true);
-        point_28 = new QLabel(Information);
+        point_28 = new QLabel(mainwindow);
         point_28->setObjectName("point_28");
         point_28->setGeometry(QRect(460, 90, 8, 8));
         point_28->setMaximumSize(QSize(8, 8));
         point_28->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_28->setScaledContents(true);
-        point_29 = new QLabel(Information);
+        point_29 = new QLabel(mainwindow);
         point_29->setObjectName("point_29");
         point_29->setGeometry(QRect(250, 200, 8, 8));
         point_29->setMaximumSize(QSize(8, 8));
         point_29->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_29->setScaledContents(true);
-        point_30 = new QLabel(Information);
+        point_30 = new QLabel(mainwindow);
         point_30->setObjectName("point_30");
         point_30->setGeometry(QRect(220, 140, 8, 8));
         point_30->setMaximumSize(QSize(8, 8));
         point_30->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_30->setScaledContents(true);
-        point_31 = new QLabel(Information);
+        point_31 = new QLabel(mainwindow);
         point_31->setObjectName("point_31");
         point_31->setGeometry(QRect(220, 200, 8, 8));
         point_31->setMaximumSize(QSize(8, 8));
         point_31->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_31->setScaledContents(true);
-        point_32 = new QLabel(Information);
+        point_32 = new QLabel(mainwindow);
         point_32->setObjectName("point_32");
         point_32->setGeometry(QRect(277, 200, 8, 8));
         point_32->setMaximumSize(QSize(8, 8));
         point_32->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_32->setScaledContents(true);
-        point_33 = new QLabel(Information);
+        point_33 = new QLabel(mainwindow);
         point_33->setObjectName("point_33");
         point_33->setGeometry(QRect(277, 140, 8, 8));
         point_33->setMaximumSize(QSize(8, 8));
         point_33->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_33->setScaledContents(true);
-        point_34 = new QLabel(Information);
+        point_34 = new QLabel(mainwindow);
         point_34->setObjectName("point_34");
         point_34->setGeometry(QRect(385, 140, 8, 8));
         point_34->setMaximumSize(QSize(8, 8));
         point_34->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_34->setScaledContents(true);
-        point_35 = new QLabel(Information);
+        point_35 = new QLabel(mainwindow);
         point_35->setObjectName("point_35");
         point_35->setGeometry(QRect(409, 118, 8, 8));
         point_35->setMaximumSize(QSize(8, 8));
         point_35->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_35->setScaledContents(true);
-        point_36 = new QLabel(Information);
+        point_36 = new QLabel(mainwindow);
         point_36->setObjectName("point_36");
         point_36->setGeometry(QRect(335, 140, 8, 8));
         point_36->setMaximumSize(QSize(8, 8));
         point_36->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_36->setScaledContents(true);
-        point_37 = new QLabel(Information);
+        point_37 = new QLabel(mainwindow);
         point_37->setObjectName("point_37");
         point_37->setGeometry(QRect(335, 200, 8, 8));
         point_37->setMaximumSize(QSize(8, 8));
         point_37->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_37->setScaledContents(true);
-        point_38 = new QLabel(Information);
+        point_38 = new QLabel(mainwindow);
         point_38->setObjectName("point_38");
         point_38->setGeometry(QRect(170, 200, 8, 8));
         point_38->setMaximumSize(QSize(8, 8));
         point_38->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_38->setScaledContents(true);
-        point_39 = new QLabel(Information);
+        point_39 = new QLabel(mainwindow);
         point_39->setObjectName("point_39");
         point_39->setGeometry(QRect(170, 210, 8, 8));
         point_39->setMaximumSize(QSize(8, 8));
         point_39->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_39->setScaledContents(true);
-        point_40 = new QLabel(Information);
+        point_40 = new QLabel(mainwindow);
         point_40->setObjectName("point_40");
         point_40->setGeometry(QRect(120, 210, 8, 8));
         point_40->setMaximumSize(QSize(8, 8));
         point_40->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_40->setScaledContents(true);
-        point_41 = new QLabel(Information);
+        point_41 = new QLabel(mainwindow);
         point_41->setObjectName("point_41");
         point_41->setGeometry(QRect(140, 150, 8, 8));
         point_41->setMaximumSize(QSize(8, 8));
         point_41->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_41->setScaledContents(true);
-        point_42 = new QLabel(Information);
+        point_42 = new QLabel(mainwindow);
         point_42->setObjectName("point_42");
         point_42->setGeometry(QRect(555, 145, 8, 8));
         point_42->setMaximumSize(QSize(8, 8));
         point_42->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_42->setScaledContents(true);
-        point_43 = new QLabel(Information);
+        point_43 = new QLabel(mainwindow);
         point_43->setObjectName("point_43");
         point_43->setGeometry(QRect(250, 250, 8, 8));
         point_43->setMaximumSize(QSize(8, 8));
         point_43->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_43->setScaledContents(true);
-        point_44 = new QLabel(Information);
+        point_44 = new QLabel(mainwindow);
         point_44->setObjectName("point_44");
         point_44->setGeometry(QRect(220, 250, 8, 8));
         point_44->setMaximumSize(QSize(8, 8));
         point_44->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_44->setScaledContents(true);
-        point_45 = new QLabel(Information);
+        point_45 = new QLabel(mainwindow);
         point_45->setObjectName("point_45");
         point_45->setGeometry(QRect(277, 250, 8, 8));
         point_45->setMaximumSize(QSize(8, 8));
         point_45->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_45->setScaledContents(true);
-        point_46 = new QLabel(Information);
+        point_46 = new QLabel(mainwindow);
         point_46->setObjectName("point_46");
         point_46->setGeometry(QRect(380, 250, 8, 8));
         point_46->setMaximumSize(QSize(8, 8));
         point_46->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_46->setScaledContents(true);
-        point_47 = new QLabel(Information);
+        point_47 = new QLabel(mainwindow);
         point_47->setObjectName("point_47");
         point_47->setGeometry(QRect(380, 280, 8, 8));
         point_47->setMaximumSize(QSize(8, 8));
         point_47->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_47->setScaledContents(true);
-        point_48 = new QLabel(Information);
+        point_48 = new QLabel(mainwindow);
         point_48->setObjectName("point_48");
         point_48->setGeometry(QRect(220, 290, 8, 8));
         point_48->setMaximumSize(QSize(8, 8));
         point_48->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_48->setScaledContents(true);
-        point_49 = new QLabel(Information);
+        point_49 = new QLabel(mainwindow);
         point_49->setObjectName("point_49");
         point_49->setGeometry(QRect(170, 290, 8, 8));
         point_49->setMaximumSize(QSize(8, 8));
         point_49->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_49->setScaledContents(true);
-        point_50 = new QLabel(Information);
+        point_50 = new QLabel(mainwindow);
         point_50->setObjectName("point_50");
         point_50->setGeometry(QRect(170, 265, 8, 8));
         point_50->setMaximumSize(QSize(8, 8));
         point_50->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_50->setScaledContents(true);
-        point_51 = new QLabel(Information);
+        point_51 = new QLabel(mainwindow);
         point_51->setObjectName("point_51");
         point_51->setGeometry(QRect(220, 265, 8, 8));
         point_51->setMaximumSize(QSize(8, 8));
         point_51->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_51->setScaledContents(true);
-        point_52 = new QLabel(Information);
+        point_52 = new QLabel(mainwindow);
         point_52->setObjectName("point_52");
         point_52->setGeometry(QRect(197, 220, 8, 8));
         point_52->setMaximumSize(QSize(8, 8));
         point_52->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_52->setScaledContents(true);
-        point_53 = new QLabel(Information);
+        point_53 = new QLabel(mainwindow);
         point_53->setObjectName("point_53");
         point_53->setGeometry(QRect(120, 150, 8, 8));
         point_53->setMaximumSize(QSize(8, 8));
         point_53->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_53->setScaledContents(true);
-        point_54 = new QLabel(Information);
+        point_54 = new QLabel(mainwindow);
         point_54->setObjectName("point_54");
         point_54->setGeometry(QRect(20, 150, 8, 8));
         point_54->setMaximumSize(QSize(8, 8));
         point_54->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_54->setScaledContents(true);
-        point_55 = new QLabel(Information);
+        point_55 = new QLabel(mainwindow);
         point_55->setObjectName("point_55");
         point_55->setGeometry(QRect(20, 210, 8, 8));
         point_55->setMaximumSize(QSize(8, 8));
         point_55->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_55->setScaledContents(true);
-        point_56 = new QLabel(Information);
+        point_56 = new QLabel(mainwindow);
         point_56->setObjectName("point_56");
         point_56->setGeometry(QRect(140, 335, 8, 8));
         point_56->setMaximumSize(QSize(8, 8));
         point_56->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_56->setScaledContents(true);
-        point_57 = new QLabel(Information);
+        point_57 = new QLabel(mainwindow);
         point_57->setObjectName("point_57");
         point_57->setGeometry(QRect(255, 327, 8, 8));
         point_57->setMaximumSize(QSize(8, 8));
         point_57->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_57->setScaledContents(true);
-        point_58 = new QLabel(Information);
+        point_58 = new QLabel(mainwindow);
         point_58->setObjectName("point_58");
         point_58->setGeometry(QRect(555, 110, 8, 8));
         point_58->setMaximumSize(QSize(8, 8));
         point_58->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_58->setScaledContents(true);
-        point_59 = new QLabel(Information);
+        point_59 = new QLabel(mainwindow);
         point_59->setObjectName("point_59");
         point_59->setGeometry(QRect(264, 410, 8, 8));
         point_59->setMaximumSize(QSize(8, 8));
         point_59->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_59->setScaledContents(true);
-        point_60 = new QLabel(Information);
+        point_60 = new QLabel(mainwindow);
         point_60->setObjectName("point_60");
         point_60->setGeometry(QRect(465, 145, 8, 8));
         point_60->setMaximumSize(QSize(8, 8));
         point_60->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_60->setScaledContents(true);
-        point_61 = new QLabel(Information);
+        point_61 = new QLabel(mainwindow);
         point_61->setObjectName("point_61");
         point_61->setGeometry(QRect(420, 470, 8, 8));
         point_61->setMaximumSize(QSize(8, 8));
         point_61->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_61->setScaledContents(true);
-        point_62 = new QLabel(Information);
+        point_62 = new QLabel(mainwindow);
         point_62->setObjectName("point_62");
         point_62->setGeometry(QRect(510, 490, 8, 8));
         point_62->setMaximumSize(QSize(8, 8));
         point_62->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_62->setScaledContents(true);
-        point_63 = new QLabel(Information);
+        point_63 = new QLabel(mainwindow);
         point_63->setObjectName("point_63");
         point_63->setGeometry(QRect(550, 90, 8, 8));
         point_63->setMaximumSize(QSize(8, 8));
         point_63->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_63->setScaledContents(true);
-        point_64 = new QLabel(Information);
+        point_64 = new QLabel(mainwindow);
         point_64->setObjectName("point_64");
         point_64->setGeometry(QRect(480, 360, 8, 8));
         point_64->setMaximumSize(QSize(8, 8));
         point_64->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_64->setScaledContents(true);
-        point_65 = new QLabel(Information);
+        point_65 = new QLabel(mainwindow);
         point_65->setObjectName("point_65");
         point_65->setGeometry(QRect(410, 360, 8, 8));
         point_65->setMaximumSize(QSize(8, 8));
         point_65->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_65->setScaledContents(true);
-        point_66 = new QLabel(Information);
+        point_66 = new QLabel(mainwindow);
         point_66->setObjectName("point_66");
         point_66->setGeometry(QRect(404, 320, 8, 8));
         point_66->setMaximumSize(QSize(8, 8));
         point_66->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_66->setScaledContents(true);
-        point_67 = new QLabel(Information);
+        point_67 = new QLabel(mainwindow);
         point_67->setObjectName("point_67");
         point_67->setGeometry(QRect(170, 240, 8, 8));
         point_67->setMaximumSize(QSize(8, 8));
         point_67->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_67->setScaledContents(true);
-        point_68 = new QLabel(Information);
+        point_68 = new QLabel(mainwindow);
         point_68->setObjectName("point_68");
         point_68->setGeometry(QRect(220, 240, 8, 8));
         point_68->setMaximumSize(QSize(8, 8));
         point_68->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_68->setScaledContents(true);
-        point_69 = new QLabel(Information);
+        point_69 = new QLabel(mainwindow);
         point_69->setObjectName("point_69");
         point_69->setGeometry(QRect(446, 157, 8, 8));
         point_69->setMaximumSize(QSize(8, 8));
         point_69->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_69->setScaledContents(true);
-        point_70 = new QLabel(Information);
+        point_70 = new QLabel(mainwindow);
         point_70->setObjectName("point_70");
         point_70->setGeometry(QRect(585, 310, 8, 8));
         point_70->setMaximumSize(QSize(8, 8));
         point_70->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_70->setScaledContents(true);
-        point_71 = new QLabel(Information);
+        point_71 = new QLabel(mainwindow);
         point_71->setObjectName("point_71");
         point_71->setGeometry(QRect(585, 145, 8, 8));
         point_71->setMaximumSize(QSize(8, 8));
         point_71->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\202\271.png")));
         point_71->setScaledContents(true);
-        spot11 = new QPushButton(Information);
+        spot11 = new QPushButton(mainwindow);
         spot11->setObjectName("spot11");
         spot11->setGeometry(QRect(410, 130, 41, 61));
         spot11->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -706,7 +697,7 @@ public:
         icon13.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location11.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot11->setIcon(icon13);
         spot11->setIconSize(QSize(50, 50));
-        spot12 = new QPushButton(Information);
+        spot12 = new QPushButton(mainwindow);
         spot12->setObjectName("spot12");
         spot12->setGeometry(QRect(180, 200, 41, 61));
         spot12->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0, 0);"));
@@ -714,46 +705,41 @@ public:
         icon14.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/location12.png"), QSize(), QIcon::Normal, QIcon::Off);
         spot12->setIcon(icon14);
         spot12->setIconSize(QSize(50, 50));
-        textEdit = new QTextEdit(Information);
+        textEdit = new QTextEdit(mainwindow);
         textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(1030, 290, 341, 281));
+        textEdit->setGeometry(QRect(40, 520, 261, 241));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
-        font3.setPointSize(11);
+        font3.setPointSize(9);
         font3.setBold(false);
         font3.setItalic(false);
         textEdit->setFont(font3);
-        textEdit->setStyleSheet(QString::fromUtf8("font: 11pt \"\351\273\221\344\275\223\";"));
-        label_picture = new QLabel(Information);
+        textEdit->setStyleSheet(QString::fromUtf8("font: 9pt \"\351\273\221\344\275\223\";"));
+        label_picture = new QLabel(mainwindow);
         label_picture->setObjectName("label_picture");
-        label_picture->setGeometry(QRect(1100, 0, 200, 300));
+        label_picture->setGeometry(QRect(340, 540, 151, 201));
         label_picture->setScaledContents(true);
-        label_3 = new QLabel(Information);
-        label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(1110, 50, 191, 191));
-        label_3->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/res/\346\240\241\345\276\275.jpg")));
-        label_3->setScaledContents(true);
-        label_4 = new QLabel(Information);
+        label_4 = new QLabel(mainwindow);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(20, 480, 211, 61));
+        label_4->setGeometry(QRect(30, 430, 181, 51));
         label_4->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/res/\346\240\241\345\220\215.jpg")));
         label_4->setScaledContents(true);
-        label_5 = new QLabel(Information);
+        label_5 = new QLabel(mainwindow);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(368, 625, 20, 31));
+        label_5->setGeometry(QRect(1378, 115, 20, 31));
         label_5->setPixmap(QPixmap(QString::fromUtf8("C:/Users/lenovo/Desktop/\347\272\242.png")));
         label_5->setScaledContents(true);
-        label_6 = new QLabel(Information);
+        label_6 = new QLabel(mainwindow);
         label_6->setObjectName("label_6");
-        label_6->setGeometry(QRect(80, 580, 581, 171));
+        label_6->setGeometry(QRect(540, 590, 551, 161));
         QFont font4;
         font4.setFamilies({QString::fromUtf8("\346\245\267\344\275\223")});
         font4.setPointSize(11);
         font4.setBold(false);
         label_6->setFont(font4);
-        pushButton_return = new QPushButton(Information);
+        pushButton_return = new QPushButton(mainwindow);
         pushButton_return->setObjectName("pushButton_return");
-        pushButton_return->setGeometry(QRect(990, 720, 41, 41));
+        pushButton_return->setGeometry(QRect(1240, 370, 41, 41));
         QFont font5;
         font5.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
         font5.setPointSize(12);
@@ -763,74 +749,39 @@ public:
         icon15.addFile(QString::fromUtf8("C:/Users/lenovo/Desktop/res/\345\210\267\346\226\260.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_return->setIcon(icon15);
         pushButton_return->setIconSize(QSize(30, 30));
-        groupBox = new QGroupBox(Information);
-        groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(1000, 580, 521, 131));
-        label_route_1 = new QLabel(groupBox);
-        label_route_1->setObjectName("label_route_1");
-        label_route_1->setGeometry(QRect(10, 10, 501, 20));
+        label_12 = new QLabel(mainwindow);
+        label_12->setObjectName("label_12");
+        label_12->setGeometry(QRect(690, 60, 61, 31));
         QFont font6;
         font6.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
-        font6.setPointSize(12);
+        font6.setPointSize(10);
         font6.setBold(true);
-        font6.setUnderline(true);
-        label_route_1->setFont(font6);
-        label_route_2 = new QLabel(groupBox);
-        label_route_2->setObjectName("label_route_2");
-        label_route_2->setGeometry(QRect(10, 40, 501, 20));
-        label_route_2->setFont(font6);
-        label_route_3 = new QLabel(groupBox);
-        label_route_3->setObjectName("label_route_3");
-        label_route_3->setGeometry(QRect(10, 70, 501, 20));
-        label_route_3->setFont(font6);
-        label_route_4 = new QLabel(groupBox);
-        label_route_4->setObjectName("label_route_4");
-        label_route_4->setGeometry(QRect(10, 100, 501, 20));
-        label_route_4->setFont(font6);
-        label_7 = new QLabel(Information);
-        label_7->setObjectName("label_7");
-        label_7->setGeometry(QRect(960, 550, 141, 31));
-        QFont font7;
-        font7.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
-        font7.setPointSize(14);
-        font7.setBold(true);
-        label_7->setFont(font7);
-        label_8 = new QLabel(Information);
-        label_8->setObjectName("label_8");
-        label_8->setGeometry(QRect(670, 240, 181, 31));
-        label_12 = new QLabel(Information);
-        label_12->setObjectName("label_12");
-        label_12->setGeometry(QRect(690, 40, 61, 31));
-        QFont font8;
-        font8.setFamilies({QString::fromUtf8("\351\273\221\344\275\223")});
-        font8.setPointSize(10);
-        font8.setBold(true);
-        label_12->setFont(font8);
-        label_13 = new QLabel(Information);
+        label_12->setFont(font6);
+        label_13 = new QLabel(mainwindow);
         label_13->setObjectName("label_13");
-        label_13->setGeometry(QRect(700, 90, 31, 31));
-        label_13->setFont(font8);
-        endComboBox = new QComboBox(Information);
+        label_13->setGeometry(QRect(690, 140, 61, 31));
+        label_13->setFont(font6);
+        endComboBox = new QComboBox(mainwindow);
         endComboBox->setObjectName("endComboBox");
-        endComboBox->setGeometry(QRect(770, 90, 101, 31));
-        startLineEdit = new QLineEdit(Information);
+        endComboBox->setGeometry(QRect(760, 140, 91, 31));
+        startLineEdit = new QLineEdit(mainwindow);
         startLineEdit->setObjectName("startLineEdit");
-        startLineEdit->setGeometry(QRect(770, 40, 101, 31));
-        dfsButton = new QPushButton(Information);
+        startLineEdit->setGeometry(QRect(760, 60, 91, 31));
+        dfsButton = new QPushButton(mainwindow);
         dfsButton->setObjectName("dfsButton");
-        dfsButton->setGeometry(QRect(890, 40, 61, 31));
-        shortestPathButton = new QPushButton(Information);
+        dfsButton->setGeometry(QRect(880, 60, 61, 31));
+        shortestPathButton = new QPushButton(mainwindow);
         shortestPathButton->setObjectName("shortestPathButton");
-        shortestPathButton->setGeometry(QRect(890, 90, 61, 31));
-        mstButton = new QPushButton(Information);
+        shortestPathButton->setGeometry(QRect(860, 140, 61, 31));
+        mstButton = new QPushButton(mainwindow);
         mstButton->setObjectName("mstButton");
-        mstButton->setGeometry(QRect(950, 130, 71, 31));
-        dfsRoute = new QListWidget(Information);
+        mstButton->setGeometry(QRect(1000, 180, 71, 31));
+        dfsRoute = new QListWidget(mainwindow);
         dfsRoute->setObjectName("dfsRoute");
-        dfsRoute->setGeometry(QRect(660, 260, 361, 261));
-        pathInfoLabel = new QLabel(Information);
+        dfsRoute->setGeometry(QRect(670, 310, 361, 241));
+        pathInfoLabel = new QLabel(mainwindow);
         pathInfoLabel->setObjectName("pathInfoLabel");
-        pathInfoLabel->setGeometry(QRect(670, 200, 341, 41));
+        pathInfoLabel->setGeometry(QRect(700, 230, 301, 61));
         spot4->raise();
         spot3->raise();
         label->raise();
@@ -878,7 +829,6 @@ public:
         point_48->raise();
         point_4->raise();
         point_29->raise();
-        label_7->raise();
         label_5->raise();
         spot8->raise();
         pushButton_return->raise();
@@ -893,7 +843,6 @@ public:
         point_49->raise();
         point_38->raise();
         point_2->raise();
-        groupBox->raise();
         spot5->raise();
         spot2->raise();
         point_66->raise();
@@ -929,9 +878,7 @@ public:
         endComboBox->raise();
         dfsButton->raise();
         point_60->raise();
-        label_3->raise();
         point_47->raise();
-        label_8->raise();
         spot7->raise();
         point_20->raise();
         point_45->raise();
@@ -939,17 +886,17 @@ public:
         dfsRoute->raise();
         pathInfoLabel->raise();
 
-        retranslateUi(Information);
+        retranslateUi(mainwindow);
 
-        QMetaObject::connectSlotsByName(Information);
+        QMetaObject::connectSlotsByName(mainwindow);
     } // setupUi
 
-    void retranslateUi(QWidget *Information)
+    void retranslateUi(QWidget *mainwindow)
     {
-        Information->setWindowTitle(QCoreApplication::translate("Information", "\344\272\244\345\244\247\346\254\242\350\277\216\344\275\240\357\274\201", nullptr));
-        tb1->setText(QCoreApplication::translate("Information", " \345\257\274\350\210\252", nullptr));
-        tb2->setText(QCoreApplication::translate("Information", " \345\256\230\347\275\221", nullptr));
-        label->setText(QCoreApplication::translate("Information", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        mainwindow->setWindowTitle(QCoreApplication::translate("mainwindow", "\344\272\244\345\244\247\346\254\242\350\277\216\344\275\240\357\274\201", nullptr));
+        tb1->setText(QCoreApplication::translate("mainwindow", " \345\257\274\350\210\252", nullptr));
+        tb2->setText(QCoreApplication::translate("mainwindow", " \345\256\230\347\275\221", nullptr));
+        label->setText(QCoreApplication::translate("mainwindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
@@ -962,7 +909,7 @@ public:
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344\275\240\346\203\263\350\246\201\350\277\233\350\241\214\350\267\257\345\276\204\346\237\245\350\257\242\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234\345\257\274\350\210\252\342\200\235\346\214\211\351\222\256\357\274\233</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; vertical-align:sub;\">* \345\246\202\346\236\234\344"
                         "\275\240\350\277\230\346\203\263\344\272\206\350\247\243\346\233\264\345\244\232\344\277\241\346\201\257\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234\345\256\230\347\275\221\342\200\235\346\214\211\351\222\256</span></p></body></html>", nullptr));
-        addMapButton->setText(QCoreApplication::translate("Information", "\345\234\260\345\233\276", nullptr));
+        addMapButton->setText(QCoreApplication::translate("mainwindow", "\345\234\260\345\233\276", nullptr));
         spot9->setText(QString());
         spot5->setText(QString());
         spot8->setText(QString());
@@ -1047,60 +994,52 @@ public:
         point_71->setText(QString());
         spot11->setText(QString());
         spot12->setText(QString());
-        textEdit->setHtml(QCoreApplication::translate("Information", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        textEdit->setHtml(QCoreApplication::translate("mainwindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'\351\273\221\344\275\223'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\345\271\263\347\225\264\350\276\275\351\230\224\345\205\256\345\245\240\351\202\246\345\237\272\357\274\214\345\244\247\351\231\206\345\205\263\346\262\263\344\270\207\351\207\214\343\200\202"
-                        "</span></p>\n"
+"</style></head><body style=\" font-family:'\351\273\221\344\275\223'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\345\271\263\347\225\264\350\276\275\351\230\224\345\205\256\345\245\240\351\202\246\345\237\272\357\274\214\345\244\247\351\231\206\345\205\263\346\262\263\344\270\207\351\207\214\343\200\202<"
+                        "/span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\345\206\234\344\272\247\345\257\214\351\245\266\345\205\256\345\272\266\345\212\241\347\271\201\357\274\214\346\207\213\350\277\201\350\265\226\345\220\276\346\233\271\347\273\274\347\220\206\343\200\202</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff"
-                        ";\">\344\271\220\345\220\214\350\275\250\344\271\213\347\233\270\344\272\244\347\273\207\345\205\256\357\274\214\351\251\260\351\252\244\351\201\215\344\270\255\345\216\237\345\244\247\345\234\260\343\200\202</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;"
+                        "\">\344\271\220\345\220\214\350\275\250\344\271\213\347\233\270\344\272\244\347\273\207\345\205\256\357\274\214\351\251\260\351\252\244\351\201\215\344\270\255\345\216\237\345\244\247\345\234\260\343\200\202</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\346\262\263\345\261\261\351\231\251\351\230\273\357\274\214\345\205\263\345\241\236\345\272\204\344\270\245\357\274\214\345\233\272\345\220\276\345\234\211\357\274\214\347\224\267\345\204\277\344\272\213\343\200\202</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
-                        "indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\346\254\242\345\250\261\345\275\223\346\255\244\351\231\205\357\274\214\351\235\222\346\242\205\347\253\271\351\251\254\357\274\214\346\225\260\345\271\264\345\215\216\350\277\234\345\244\247\347\233\270\346\234\237\343\200\202</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\347\276\216\345\223\211\346\210\221\345\271\263\351\231\242\357\274\214\345\261\261\346\236\227\351\232\220\345\237\216\345\270\202\357\274\214\346\234\211\347\217\212\347\221\232\347\216\211\346\240\221\344\272\244\346\236\235\343\200\202<"
-                        "/span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-i"
+                        "ndent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\346\254\242\345\250\261\345\275\223\346\255\244\351\231\205\357\274\214\351\235\222\346\242\205\347\253\271\351\251\254\357\274\214\346\225\260\345\271\264\345\215\216\350\277\234\345\244\247\347\233\270\346\234\237\343\200\202</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\347\276\216\345\223\211\346\210\221\345\271\263\351\231\242\357\274\214\345\261\261\346\236\227\351\232\220\345\237\216\345\270\202\357\274\214\346\234\211\347\217\212\347\221\232\347\216\211\346\240\221\344\272\244\346\236\235\343\200\202</"
+                        "span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">\347\276\216\345\223\211\344\272\244\345\244\247\357\274\214\347\256\241\345\233\275\345\256\266\346\265\201\351\200\232\344\271\213\346\234\272\357\274\233</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">  \347\276\216\345\223\211\344\272\244\345\244"
-                        "\247\357\274\214\347\234\213\347\272\265\346\250\252\345\256\207\345\206\205\351\243\236\351\251\260\343\200\202</span><span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#3366cc; background-color:#ffffff; vertical-align:bottom;\">\302\240</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#333333; background-color:#ffffff;\">  \347\276\216\345\223\211\344\272\244\345\244\247"
+                        "\357\274\214\347\234\213\347\272\265\346\250\252\345\256\207\345\206\205\351\243\236\351\251\260\343\200\202</span><span style=\" font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#3366cc; background-color:#ffffff; vertical-align:bottom;\">\302\240</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Helvetica Neue','Helvetica','Arial','PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei','sans-serif'; color:#3366cc; vertical-align:bottom;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \350\221\227\345\220\215\350\257\215\345\255\246\345\256\266\346\242\201\345\220\257\345\213\213\357\274\210\346\242\201\345\220\257\350\266\205\344\271\213\345\274\237\357\274\211\344\270\272\345\214\227\344"
-                        "\272\254\344\272\244\351\200\232\345\244\247\345\255\246\345\211\215\350\272\253--\345\233\275\347\253\213\344\272\244\351\200\232\345\244\247\345\255\246\346\211\200\344\275\234\347\232\204\346\240\241\346\255\214</p></body></html>", nullptr));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> \350\221\227\345\220\215\350\257\215\345\255\246\345\256\266\346\242\201\345\220\257\345\213\213\357\274\210\346\242\201\345\220\257\350\266\205\344\271\213\345\274\237\357\274\211\344\270\272\345\214\227\344\272"
+                        "\254\344\272\244\351\200\232\345\244\247\345\255\246\345\211\215\350\272\253--\345\233\275\347\253\213\344\272\244\351\200\232\345\244\247\345\255\246\346\211\200\344\275\234\347\232\204\346\240\241\346\255\214</p></body></html>", nullptr));
         label_picture->setText(QString());
-        label_3->setText(QString());
         label_4->setText(QString());
         label_5->setText(QString());
-        label_6->setText(QCoreApplication::translate("Information", "<html><head/><body><p>\342\221\240 \345\277\205\346\270\270\346\231\257\347\202\271\357\274\232\346\230\216\346\271\226\343\200\220\344\272\244\345\244\247\346\234\200\347\276\216\357\274\214\347\237\263\347\242\221\346\211\223\345\215\241\343\200\221</p><p>\342\221\241 \345\277\205\345\260\235\347\276\216\351\243\237\357\274\232\346\230\216\346\271\226\347\203\244\351\270\255\343\200\220\344\272\244\345\244\247\347\211\271\350\211\262\357\274\214\344\270\215\345\256\271\351\224\231\350\277\207\357\274\201\343\200\221</p><p>\342\221\242 \345\234\260\346\240\207\346\211\223\345\215\241\357\274\232\346\200\235\346\272\220\346\245\274\343\200\220\351\245\256\346\260\264\346\200\235\346\272\220\357\274\214\347\210\261\345\233\275\350\215\243\346\240\241\343\200\221\343\200\201\345\214\227\344\272\244\345\244\247\345\215\227\351\227\250\343\200\220\344\272\232\346\264\262\346\234\200\351\253\230\346\240\241\351\227\250\343\200\221</p><p>\342\221\243 \346\225\254\344\273\260\344\271\213\345\234\260\357\274\232\345\244"
+        label_6->setText(QCoreApplication::translate("mainwindow", "<html><head/><body><p>\342\221\240 \345\277\205\346\270\270\346\231\257\347\202\271\357\274\232\346\230\216\346\271\226\343\200\220\344\272\244\345\244\247\346\234\200\347\276\216\357\274\214\347\237\263\347\242\221\346\211\223\345\215\241\343\200\221</p><p>\342\221\241 \345\277\205\345\260\235\347\276\216\351\243\237\357\274\232\346\230\216\346\271\226\347\203\244\351\270\255\343\200\220\344\272\244\345\244\247\347\211\271\350\211\262\357\274\214\344\270\215\345\256\271\351\224\231\350\277\207\357\274\201\343\200\221</p><p>\342\221\242 \345\234\260\346\240\207\346\211\223\345\215\241\357\274\232\346\200\235\346\272\220\346\245\274\343\200\220\351\245\256\346\260\264\346\200\235\346\272\220\357\274\214\347\210\261\345\233\275\350\215\243\346\240\241\343\200\221\343\200\201\345\214\227\344\272\244\345\244\247\345\215\227\351\227\250\343\200\220\344\272\232\346\264\262\346\234\200\351\253\230\346\240\241\351\227\250\343\200\221</p><p>\342\221\243 \346\225\254\344\273\260\344\271\213\345\234\260\357\274\232\345\244"
                         "\251\344\275\221\344\274\232\345\240\202\343\200\220\345\216\206\345\217\262\344\270\216\344\274\240\346\211\277\343\200\221</p><p>\342\221\244 \345\244\247\345\255\246\347\224\237\346\264\273\344\275\223\351\252\214\357\274\232\345\255\246\346\264\273\345\260\217\345\211\247\345\234\272\343\200\220\346\204\237\345\217\227\345\220\210\345\224\261\345\233\242\346\216\222\347\273\203\357\274\214\346\242\246\345\233\236\345\244\247\345\255\246\346\227\266\345\205\211\343\200\221</p><p>\342\221\245 \350\277\220\345\212\250\345\201\245\350\272\253\357\274\232\350\245\277\346\223\215\347\273\274\345\220\210\344\275\223\350\202\262\351\246\206\343\200\220\347\257\256\347\220\203\343\200\201\347\275\221\347\220\203\343\200\201\346\270\270\346\263\263\343\200\201\345\201\245\350\272\253\357\274\214\350\256\276\346\226\275\345\256\214\345\244\207\357\274\214\345\256\275\346\225\236\345\244\247\346\260\224\343\200\221</p><p><br/></p><p><br/></p></body></html>", nullptr));
         pushButton_return->setText(QString());
-        groupBox->setTitle(QString());
-        label_route_1->setText(QCoreApplication::translate("Information", "<html><head/><body><p><span style=\" color:#000000;\">TextLabel</span></p></body></html>", nullptr));
-        label_route_2->setText(QCoreApplication::translate("Information", "<html><head/><body><p><span style=\" color:#000000;\">TextLabel</span></p></body></html>", nullptr));
-        label_route_3->setText(QCoreApplication::translate("Information", "<html><head/><body><p><span style=\" color:#000000;\">TextLabel</span></p></body></html>", nullptr));
-        label_route_4->setText(QCoreApplication::translate("Information", "<html><head/><body><p><span style=\" color:#000000;\">TextLabel</span></p></body></html>", nullptr));
-        label_7->setText(QCoreApplication::translate("Information", "<html><head/><body><p><span style=\" font-size:12pt; color:#000000;\">\344\270\272\346\202\250\346\216\250\350\215\220\347\232\204\350\267\257\347\272\277\344\270\272\357\274\232</span></p></body></html>", nullptr));
-        label_8->setText(QString());
-        label_12->setText(QCoreApplication::translate("Information", "\350\265\267\347\202\271\347\274\226\345\217\267\357\274\232", nullptr));
-        label_13->setText(QCoreApplication::translate("Information", "\347\273\210\347\202\271\357\274\232", nullptr));
-        dfsButton->setText(QCoreApplication::translate("Information", "DFS", nullptr));
-        shortestPathButton->setText(QCoreApplication::translate("Information", "\346\234\200\347\237\255\350\267\257\345\276\204", nullptr));
-        mstButton->setText(QCoreApplication::translate("Information", "mstButton", nullptr));
+        label_12->setText(QCoreApplication::translate("mainwindow", "\350\265\267\347\202\271\347\274\226\345\217\267\357\274\232", nullptr));
+        label_13->setText(QCoreApplication::translate("mainwindow", "\351\200\211\346\213\251\347\273\210\347\202\271\357\274\232", nullptr));
+        dfsButton->setText(QCoreApplication::translate("mainwindow", "DFS", nullptr));
+        shortestPathButton->setText(QCoreApplication::translate("mainwindow", "\346\234\200\347\237\255\350\267\257\345\276\204", nullptr));
+        mstButton->setText(QCoreApplication::translate("mainwindow", "\346\234\200\345\260\217\347\224\237\346\210\220\346\240\221", nullptr));
         pathInfoLabel->setText(QString());
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Information: public Ui_Information {};
+    class mainwindow: public Ui_mainwindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE
 
-#endif // UI_INFORMATION_H
+#endif // UI_MAINWINDOW_H
