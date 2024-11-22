@@ -168,7 +168,6 @@ void Information::onDFSButtonClicked() {
     // 触发重绘，更新图形
     update();  // 调用 `paintEvent` 重新绘制图形
 }
-
 void Information::onShortestPathButtonClicked() {
         // 获取起点编号
         bool ok;
@@ -214,7 +213,6 @@ void Information::onShortestPathButtonClicked() {
         // 显示路径信息
         ui->pathInfoLabel->setText(pathInfo);
 }
-
 void Information::onMSTButtonClicked() {
     // 调用 Prim 算法
     QVector<QPair<int, int>> mstEdges = primMST();
@@ -246,7 +244,6 @@ void Information::DFS(int start, QVector<int> &visited, QVector<int> &path, QVec
     visited[start] = 0;  // 标记当前点为未访问
     path.removeLast();   // 移除当前点，回溯到上一个点
 }
-
 // 计算路径的总长度
 int Information::calculatePathLength(const QVector<int>& path) {
     int totalLength = 0;
@@ -258,7 +255,6 @@ int Information::calculatePathLength(const QVector<int>& path) {
     }
     return totalLength;
 }
-
 // 显示路径及其总长度到界面
 void Information::displayPathsAndLength(const QVector<QVector<int>>& allPaths) {
     // 清除之前的显示内容
@@ -285,7 +281,6 @@ void Information::displayPathsAndLength(const QVector<QVector<int>>& allPaths) {
         ui->dfsRoute->addItem(item);
     }
 }
-
 void Information::onPathItemClicked(QListWidgetItem *item) {
     // 获取用户点击的路径文本
     QString selectedPath = item->text();
@@ -329,7 +324,6 @@ void Information::onPathItemClicked(QListWidgetItem *item) {
     // 触发重绘，更新图形
     update();  // 调用 `paintEvent` 重新绘制图形
 }
-
 // 自定义解析路径字符串的函数
 QVector<int> Information::parsePathString(const QString& pathStr) {
     QVector<int> path;
@@ -348,7 +342,6 @@ QVector<int> Information::parsePathString(const QString& pathStr) {
 
     return path;
 }
-
 //Dijkstra 算法求从起点到其他景点的最短路径
 QPair<int, QVector<int>> Information::dijkstra(int start, int end) {
     QVector<int> dist(12, INT_MAX); // 距离数组
@@ -388,7 +381,6 @@ QPair<int, QVector<int>> Information::dijkstra(int start, int end) {
 
     return qMakePair(totalDistance, path); // 返回路径和总距离
 }
-
 //使用 Prim 算法构造最小生成树
 QVector<QPair<int, int>> Information::primMST() {
     QVector<bool> inMST(12, false);
@@ -425,7 +417,6 @@ QVector<QPair<int, int>> Information::primMST() {
     }
     return mstEdges;
 }
-
 //绘制路径
 void Information::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
@@ -544,6 +535,7 @@ void Information::ToPath(bool){
     map->show();
 }
 */
+
 void Information::doProcessDataToInform(int selectedPlaceNum){
     emit SignalDataToMap(selectedPlaceNum);
 }
