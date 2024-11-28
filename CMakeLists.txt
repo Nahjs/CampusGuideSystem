@@ -10,13 +10,19 @@ set(CMAKE_AUTORCC ON)
 # 查找Qt6模块
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Quick)
 
+# 添加资源文件
+set(QRC
+        res/res.qrc
+)
+
 # 添加可执行文件
-add_executable(${PROJECT_NAME}
+add_executable(${PROJECT_NAME} ${QRC}
         mainwindow.cpp
         main.cpp
         mainwindow.h
         matrices.h
         mainwindow.ui
+
 )
 
 # 链接Qt6库

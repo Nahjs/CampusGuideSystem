@@ -397,6 +397,6 @@ D:/CLion/CampusGuide/mainwindow.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
 D:/CLion/CampusGuide/matrices.h
-D:/CLion/CampusGuide/main.cpp
 D:/CLion/CampusGuide/mainwindow.cpp
  uic:ui_mainwindow.h
+D:/CLion/CampusGuide/main.cpp

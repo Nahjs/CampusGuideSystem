@@ -12,6 +12,20 @@ mainwindow::mainwindow(QWidget *parent) :
     ui(new Ui::mainwindow)
 {
     ui->setupUi(this);
+
+    ui->spot1->setIcon(QIcon(":/res/location1.png"));
+    ui->spot2->setIcon(QIcon(":/res/location2.png"));
+    ui->spot3->setIcon(QIcon(":/res/location3.png"));
+    ui->spot4->setIcon(QIcon(":/res/location4.png"));
+    ui->spot5->setIcon(QIcon(":/res/location5.png"));
+    ui->spot6->setIcon(QIcon(":/res/location6.png"));
+    ui->spot7->setIcon(QIcon(":/res/location7.png"));
+    ui->spot8->setIcon(QIcon(":/res/location8.png"));
+    ui->spot9->setIcon(QIcon(":/res/location9.png"));
+    ui->spot10->setIcon(QIcon(":/res/location10.png"));
+    ui->spot11->setIcon(QIcon(":/res/location11.png"));
+    ui->spot12->setIcon(QIcon(":/res/location12.png"));
+
     Init();
 }
 
@@ -531,7 +545,7 @@ void mainwindow::paintEvent(QPaintEvent *event) {
     painter.eraseRect(0, 0, width(), height());  // 清除整个区域
 
     // 绘制背景图
-    painter.drawPixmap(-60, 0, 761, 571, QPixmap("D:\\CLion\\CampusGuide\\Resource\\bjtu01.jpg"));
+    painter.drawPixmap(-60, 0, 761, 571, QPixmap(":res/bjtuMap.jpg"));
 
     // 绘制默认路径：例如手动指定的一些路径
     QPen pen1, pen2;
@@ -631,78 +645,63 @@ void mainwindow::doProcessAddPlace(bool){
 void mainwindow::ShowIntroduction(){
     if(place == 1){
         ui->textEdit->setText(Intro[0].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\1西操.jpg");
+        QPixmap pic=QPixmap(":/res/1西操.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 2){
         ui->textEdit->setText(Intro[1].str);
         //ui->textEdit->append(Intro[1].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\2家属区.jpg");
+        QPixmap pic=QPixmap(":/res/2家属区.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 3){
         ui->textEdit->setText(Intro[2].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\3东门.jpg");
+        QPixmap pic=QPixmap(":/res/3东门.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 4){
         ui->textEdit->setText(Intro[3].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\4思源楼.jpg");
+        QPixmap pic=QPixmap(":/res/4思源楼.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 5){
         ui->textEdit->setText(Intro[4].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\5明湖.jpg");
+        QPixmap pic=QPixmap(":/res/5明湖.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 6){
         ui->textEdit->setText(Intro[5].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\6逸夫楼.jpg");
+        QPixmap pic=QPixmap(":/res/6逸夫楼.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 7){
         ui->textEdit->setText(Intro[6].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\7南门.jpg");
+        QPixmap pic=QPixmap(":/res/7南门.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 8){
         ui->textEdit->setText(Intro[7].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\8东区一教.jpg");
+        QPixmap pic=QPixmap(":/res/8东区一教.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 9){
         ui->textEdit->setText(Intro[8].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\9交大公交站.jpg");
+        QPixmap pic=QPixmap(":/res/9交大公交站.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 10){
         ui->textEdit->setText(Intro[9].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\10学生活动中心.jpg");
+        QPixmap pic=QPixmap(":/res/10学生活动中心.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 11){
         ui->textEdit->setText(Intro[10].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\11图书馆.jpg");
+        QPixmap pic=QPixmap(":/res/11图书馆.jpg");
         ui->label_picture->setPixmap(pic);
     }
     if(place == 12){
         ui->textEdit->setText(Intro[11].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\12天佑会堂.jpg");
-        ui->label_picture->setPixmap(pic);
-    }
-    if(place == 13){
-    ui->textEdit->setText(Intro[12].str);
-    QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\13嘉园.jpg");
-    ui->label_picture->setPixmap(pic);
-    }
-    if(place == 14){
-        ui->textEdit->setText(Intro[13].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\14校医院.jpg");
-        ui->label_picture->setPixmap(pic);
-    }
-    if(place == 15){
-        ui->textEdit->setText(Intro[14].str);
-        QPixmap pic=QPixmap("C:\\Users\\lenovo\\Desktop\\res\\15麦当劳.jpg");
+        QPixmap pic=QPixmap(":/res/12天佑会堂.jpg");
         ui->label_picture->setPixmap(pic);
     }
 }

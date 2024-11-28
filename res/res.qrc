@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>1西操.jpg</file>
+        <file>2家属区.jpg</file>
+        <file>3东门.jpg</file>
+        <file>4思源楼.jpg</file>
+        <file>5明湖.jpg</file>
+        <file>6逸夫楼.jpg</file>
+        <file>7南门.jpg</file>
+        <file>8东区一教.jpg</file>
+        <file>9交大公交站.jpg</file>
+        <file>10学生活动中心.jpg</file>
+        <file>11图书馆.jpg</file>
+        <file>12天佑会堂.jpg</file>
+        <file>bjtuMap.jpg</file>
+        <file>location.png</file>
+        <file>location1.png</file>
+        <file>location2.png</file>
+        <file>location3.png</file>
+        <file>location4.png</file>
+        <file>location5.png</file>
+        <file>location6.png</file>
+        <file>location7.png</file>
+        <file>location8.png</file>
+        <file>location9.png</file>
+        <file>location10.png</file>
+        <file>location11.png</file>
+        <file>location12.png</file>
+    </qresource>
+</RCC>
